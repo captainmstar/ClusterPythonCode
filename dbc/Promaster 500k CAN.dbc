@@ -1,0 +1,183 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ Key_Signal 3 "Key is on IGN" 2 "NA, only ON,OFF, IGN" 1 "Key is at ON" 0 "Key is at OFF" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ VehicleSpeed_Copy_2 : 0|14@0- (0.05625,0) [-460.8|460.74375] "" Vector__XXX
+ SG_ BrakeLamp : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Unkown8bit : 0|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ RPM : 0|11@0+ (4,0) [0|8188] "" Vector__XXX
+ SG_ Unkown_14Bit_2 : 0|14@0+ (1,0) [0|16383] "" Vector__XXX
+ SG_ Aux_Status : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IG_Status : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Unkown_14Bit : 0|14@0+ (1,0) [0|16383] "" Vector__XXX
+ SG_ Unkown8bit_9 : 0|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit : 0|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ EnginePressureMaybe : 0|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ RPM : 0|11@0+ (4,0) [0|8188] "" Vector__XXX
+ SG_ Unkown8bit_3 : 0|5@0- (1,0) [-128|127] "" Vector__XXX
+
+BO_ 2317131777 Unknown_A1CA001: 8 Vector__XXX
+ SG_ Unkown8bit_3 : 23|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_8 : 63|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_7 : 55|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_6 : 47|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_5 : 39|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_4 : 31|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_2 : 15|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_1 : 7|8@0- (1,0) [-128|127] "" Vector__XXX
+
+BO_ 2250809345 Unkown_628A001: 8 Vector__XXX
+ SG_ Unkown8bit_8 : 63|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_5 : 39|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_2 : 15|8@0- (1,0) [-128|127] "" Vector__XXX
+
+BO_ 2265158406 Unknown1: 8 Vector__XXX
+
+BO_ 2283184385 PreTearDown_StaticID: 8 Vector__XXX
+ SG_ Unkown8bit_8 : 63|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_7 : 55|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_6 : 47|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_5 : 39|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_4 : 31|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_3 : 23|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_2 : 15|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_1 : 7|8@0- (1,0) [-128|127] "" Vector__XXX
+
+BO_ 2316869633 Cluster_RPM_Temp: 8 Vector__XXX
+ SG_ WarningLight_Lamp : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OilCheck_Lamp : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineCheck_Lamp_Strobe : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineCheck_Lamp : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACCSet_Lamp : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OilChange : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineTemp : 31|7@0+ (1,0) [90|217] "" Vector__XXX
+ SG_ Coolant_Lamp : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RPM : 55|8@0+ (32,0) [0|8160] "%" Vector__XXX
+
+BO_ 2316869638 Cluster_VehSpd: 8 Vector__XXX
+ SG_ VehicleSpeed : 20|13@0+ (0.06625,0) [0|460.74375] "" Vector__XXX
+
+BO_ 2351734784 StaticID6: 8 Vector__XXX
+
+BO_ 2351472640 StaticID5: 1 Vector__XXX
+ SG_ Unkown5Bit : 12|5@0+ (1,0) [0|31] "" Vector__XXX
+
+BO_ 2351210496 StaticID4: 8 Vector__XXX
+
+BO_ 2350948352 StaticID2: 8 Vector__XXX
+
+BO_ 2350686208 Unkown2: 8 Vector__XXX
+
+BO_ 2316869654 StaticID3: 4 Vector__XXX
+
+BO_ 2316869644 StaticAll0: 1 Vector__XXX
+
+BO_ 2300059392 StaticID: 2 Vector__XXX
+
+BO_ 2283122432 Unkown: 4 Vector__XXX
+
+BO_ 2282790934 Unkown_PostrunActive2: 4 Vector__XXX
+
+BO_ 2282790912 Unkown_PostrunActive: 5 Vector__XXX
+
+BO_ 2182127622 Unknown: 8 Vector__XXX
+ SG_ Unkown8bit_7 : 55|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_8 : 7|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_4 : 63|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit : 23|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ AliveCounter_4Bit : 11|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ VehicleSpeed : 36|13@0+ (0.05625,0) [0|460.74375] "" Vector__XXX
+
+BO_ 2316869643 Transmission: 8 Vector__XXX
+ SG_ Unkown8bit_8 : 63|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_7 : 55|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_6 : 47|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_4 : 31|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_3 : 20|5@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_2 : 15|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_1 : 7|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ GearChangeAllowed : 38|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ GearStatus : 23|3@0+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2316869632 Body: 3 Vector__XXX
+ SG_ Key_Position : 23|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DoorStatus : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2150146054 Cluster: 3 Vector__XXX
+ SG_ Yaw : 23|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Ax : 6|8@0- (0.125,0) [-16|15.875] "" Vector__XXX
+
+BO_ 2148573190 ABS: 3 Vector__XXX
+ SG_ ESC_ON_OFF : 6|1@0- (1,0) [0|1] "" Vector__XXX
+ SG_ BrakePressure : 23|8@0+ (1,0) [0|255] "Bar" Vector__XXX
+
+BO_ 2317918208 VehicleSpeed: 8 Vector__XXX
+ SG_ AliveCounter_4Bit : 55|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Unkown8bit_3 : 31|5@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_2 : 63|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ VehicleSpeed : 5|14@0- (0.05625,0) [-460.8|460.74375] "" Vector__XXX
+
+BO_ 2151194636 Steering: 4 Vector__XXX
+ SG_ AliveCounter_4Bit : 35|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ SteeringRequestDelta : 22|11@0+ (0.18,180) [0|368.46] "" Vector__XXX
+ SG_ SteeringPosition : 5|14@0+ (0.355,0) [0|5815.965] "" Vector__XXX
+
+BO_ 2182651910 WheelSpeed: 8 Vector__XXX
+ SG_ Whl_RR : 53|14@0+ (0.05625,0) [0|921.54375] "" Vector__XXX
+ SG_ Whl_RL : 37|14@0+ (0.05625,0) [0|921.54375] "" Vector__XXX
+ SG_ Whl_FR : 21|14@0+ (0.05625,0) [0|921.54375] "" Vector__XXX
+ SG_ Whl_FL : 5|14@0+ (0.05625,0) [0|921.54375] "" Vector__XXX
+
+BO_ 2249760769 Engine: 8 Vector__XXX
+ SG_ Unkown8bit_7 : 55|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_6 : 47|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_5 : 39|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_4 : 31|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_3 : 23|5@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_2 : 15|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Unkown8bit_1 : 7|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ AcceleratorPedal : 63|8@0+ (0.39215,0) [0|99.99825] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2316869632 Key_Position 3 "Key is on IGN" 2 "NA, only ON,OFF, IGN" 1 "Key is at ON" 0 "Key is at OFF" ;
+

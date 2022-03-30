@@ -1,0 +1,273 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: MCU VCU
+VAL_TABLE_ Vt_ParkPawl_StateCode 6 "Fault - 5 times afterwards" 5 "Fault - retrying" 4 "Disengaged" 3 "Disengaging" 2 "Engaged" 1 "Engaging" 0 "Init" ;
+VAL_TABLE_ Vt_ParkPawl_MPRStatus 3 "Disengaged" 2 "Engaged" 1 "Unknown" 0 "Init" ;
+VAL_TABLE_ Vt_ParkPawl_ActuatorStatus 6 "Disengaged Endstop" 5 "Disengaged" 4 "Between Engaged and Disengaged" 3 "Engaged" 2 "Engaged Endstop" 1 "Unknown" 0 "Init" ;
+VAL_TABLE_ Vt_ParkPawl_PawlStatus 5 "Disengaged" 4 "Tooth-to-Tooth" 3 "Between Engaged and Disengaged" 2 "Engaged" 1 "Unknown" 0 "Init" ;
+VAL_TABLE_ Vt_ParkPawl_FaultLevel 3 "Critical fault, no recover" 2 "Fault retrying" 1 "Dereating" 0 "No fault" ;
+VAL_TABLE_ Vt_VCU_ParkPawl_BrakeCmd 3 "Invalid" 2 "Reserved" 1 "Pressed" 0 "Not pressed" ;
+VAL_TABLE_ Vt_VCU_ParkPawl_TargetCmd 3 "Invalid" 2 "Engage" 1 "Disengage" 0 "No Operation" ;
+
+
+BO_ 769 VCU_MCU_Ctrl_R: 8 VCU
+ SG_ VCU_MCU_StModeReq : 11|4@0+ (1,0) [0|14] ""  MCU
+ SG_ VCU_MCU_TorqSetP : 7|12@0+ (0.5,-500) [-500|500] "Nm"  MCU
+ SG_ VCU_MCU_SpdSetP : 39|16@0+ (1,-6000) [-6000|16000] "rpm"  MCU
+ SG_ VCU_MCU_Ctrl_ctRoll : 59|4@0+ (1,0) [0|14] ""  MCU
+
+BO_ 770 VCU_MCU_TorqLimit: 8 VCU
+ SG_ VCU_MCU_TqPAMax : 7|12@0+ (0.5,0) [0|500] "Nm"  MCU
+ SG_ VCU_MCU_TqPAMin : 23|12@0+ (0.5,-500) [-500|0] "Nm"  MCU
+ SG_ VCU_MCU_SpPAMax : 39|12@0+ (4,0) [0|16384] "rpm"  MCU
+ SG_ VCU_MCU_SpPAMin : 55|12@0+ (4,-6000) [-6000|0] "rpm"  MCU
+ SG_ VCU_MCU_TorqLimit_ctRoll : 59|4@0+ (1,0) [0|14] ""  MCU
+
+BO_ 801 MCU_General: 8 MCU
+ SG_ MCU_ActRotSpd : 7|16@0+ (1,-16000) [-16000|16000] "rpm"  VCU
+ SG_ MCU_StMode : 27|4@0+ (1,0) [0|14] ""  VCU
+ SG_ MCU_ActTorq : 39|12@0+ (0.5,-500) [-500|500] "Nm"  VCU
+ SG_ MCU_General_ctRoll : 59|4@0+ (1,0) [0|14] ""  VCU
+
+BO_ 802 MCU_Temp: 8 MCU
+ SG_ MCU_MotorActTemp : 7|8@0+ (1,-40) [-40|213] "deg"  VCU
+ SG_ MCU_InverterActTemp : 23|8@0+ (1,-40) [-40|213] "deg"  VCU
+ SG_ MCU_Temp_ctRoll : 59|4@0+ (1,0) [0|14] ""  VCU
+
+BO_ 803 MCU_Limits: 8 MCU
+ SG_ MCU_NegTorqLimit : 7|10@0+ (0.5,-500) [-500|0] "Nm"  VCU
+ SG_ MCU_PositiveTorqLimit : 23|10@0+ (0.5,0) [0|500] "Nm"  VCU
+ SG_ MCU_MotorRotationCount : 55|8@0+ (1,0) [0|255] "r"  VCU
+ SG_ MCU_Limits_ctRoll : 59|4@0+ (1,0) [0|14] ""  VCU
+
+BO_ 804 MCU_Volt_Curr: 8 MCU
+ SG_ MCU_ActHV_Cur : 7|11@0+ (1,-1000) [-1000|1000] "A"  VCU
+ SG_ MCU_ActHV_Volt : 23|10@0+ (1,0) [0|1000] "V"  VCU
+ SG_ MCU_Volt_Curr_ctRoll : 59|4@0+ (1,0) [0|14] ""  VCU
+
+BO_ 805 MCU_Failure: 8 MCU
+ SG_ MCU_DTCCode : 7|16@0+ (1,0) [0|65535] ""  VCU
+ SG_ MCU_SWVersion : 23|16@0+ (1,0) [0|65535] ""  VCU
+ SG_ MCU_Hardware_Error_Code : 39|8@0+ (1,0) [0|255] ""  VCU
+ SG_ MCU_HWVersion : 47|8@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ MCU_Failure_ctRoll : 59|4@0+ (1,0) [0|14] ""  VCU
+ SG_ MCU_FailSt : 63|2@0+ (1,0) [0|3] ""  VCU
+
+
+
+CM_ SG_ 769 VCU_MCU_StModeReq "requestable state/mode of MCU;
+Standby:LV_Up;
+Ready:HV_Up;
+TorqueCtrl:Torque Control Mode;
+SpeedCtrl:Speed Control Mode;
+emDischarge:Active Discharge;";
+CM_ SG_ 769 VCU_MCU_Ctrl_ctRoll "rolling counter";
+CM_ SG_ 770 VCU_MCU_TqPAMax "Torque demand limitHigh(PositiveValue)";
+CM_ SG_ 770 VCU_MCU_TqPAMin "Torque demand limitLow(NegativeValue)";
+CM_ SG_ 770 VCU_MCU_SpPAMax "Speed demand limitHigh(PositiveValue)";
+CM_ SG_ 770 VCU_MCU_SpPAMin "Speed demand limitLow(NegativeValue)";
+CM_ SG_ 770 VCU_MCU_TorqLimit_ctRoll "rolling counter";
+CM_ SG_ 801 MCU_ActRotSpd "actual rotation speed MCU";
+CM_ SG_ 801 MCU_StMode "MCU State mode
+Init:Initializing System;
+Standby:LV_Up_OK;
+Ready:HV_Up_OK;
+TorqueCtrl:Torque Control Mode;
+SpeedCtrl:Speed Control Mode;
+Failure:System Shut Down;
+emDischarge:Active Discharge;";
+CM_ SG_ 801 MCU_ActTorq "actual torque MCU";
+CM_ SG_ 801 MCU_General_ctRoll "rolling counter";
+CM_ SG_ 802 MCU_MotorActTemp "Actual temperature of MCU";
+CM_ SG_ 802 MCU_InverterActTemp "Actual temperature of inverter";
+CM_ SG_ 802 MCU_Temp_ctRoll "rolling counter";
+CM_ SG_ 803 MCU_NegTorqLimit "Torque demand limitHigh(PositiveValue)";
+CM_ SG_ 803 MCU_PositiveTorqLimit "Torque demand limitLow(NegativeValue)";
+CM_ SG_ 803 MCU_MotorRotationCount "Count Motor Rotation Number from 0 to 255 in cycles";
+CM_ SG_ 803 MCU_Limits_ctRoll "rolling counter";
+CM_ SG_ 804 MCU_ActHV_Cur "actual HV current at MCUMCU";
+CM_ SG_ 804 MCU_ActHV_Volt "actual HV voltage at MCUMCU";
+CM_ SG_ 804 MCU_Volt_Curr_ctRoll "rolling counter";
+CM_ SG_ 805 MCU_SWVersion "according to XiaoPeng Definition (see Diagnostic Tables)";
+CM_ SG_ 805 MCU_HWVersion "MCU inner version";
+CM_ SG_ 805 MCU_Failure_ctRoll "rolling counter";
+CM_ SG_ 805 MCU_FailSt "MCU Fail state";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "InvalidHex" STRING ;
+BA_DEF_ SG_  "NWM_WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 1215752192;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "NetworkInitializationCommand" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkWakeUp" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkInitialization" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 100000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 100;
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 10000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "FixedPeriodic","Event","EnabledPeriodic","NotUsed","NotUsed","EventPeriodic","NotUsed","NotUsed","NoMsgSendType";
+BA_DEF_ BO_  "TpTxIndex" INT 0 10000;
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "NmCAN" INT 1 2;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NetworkInitializationUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 127;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "Project" STRING ;
+BA_DEF_  "Version" STRING ;
+BA_DEF_  "Date" STRING ;
+BA_DEF_  "Author" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 0 2047;
+BA_DEF_  "NmMessageCount" INT 0 128;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "InvalidHex" "";
+BA_DEF_DEF_  "NWM_WakeupAllowed" "No";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "NetworkInitializationCommand" "No";
+BA_DEF_DEF_  "NetworkWakeUp" "No";
+BA_DEF_DEF_  "NetworkInitialization" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "GenMsgDelayTime" 10;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 1;
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "NmCAN" 1;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NetworkInitializationUsed" "No";
+BA_DEF_DEF_  "NmNode" "No";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "ILUsed" "";
+BA_DEF_DEF_  "Manufacturer" "XP";
+BA_DEF_DEF_  "Project" "";
+BA_DEF_DEF_  "Version" "N";
+BA_DEF_DEF_  "Date" "N";
+BA_DEF_DEF_  "Author" "N";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "NmBaseAddress" 0;
+BA_DEF_DEF_  "NmMessageCount" 0;
+BA_ "BusType" "CAN";
+BA_ "Manufacturer" "XP";
+BA_ "Project" "   Byte  ";
+BA_ "Version" "   Byte  ";
+BA_ "Date" "bit";
+BA_ "Author" "Bit length";
+BA_ "GenMsgSendType" BO_ 769 0;
+BA_ "GenMsgCycleTime" BO_ 769 10;
+BA_ "GenMsgSendType" BO_ 770 0;
+BA_ "GenMsgCycleTime" BO_ 770 20;
+BA_ "GenMsgSendType" BO_ 801 0;
+BA_ "GenMsgCycleTime" BO_ 801 10;
+BA_ "GenMsgSendType" BO_ 802 0;
+BA_ "GenMsgCycleTime" BO_ 802 100;
+BA_ "GenMsgSendType" BO_ 803 0;
+BA_ "GenMsgCycleTime" BO_ 803 10;
+BA_ "GenMsgSendType" BO_ 804 0;
+BA_ "GenMsgCycleTime" BO_ 804 10;
+BA_ "GenMsgSendType" BO_ 805 0;
+BA_ "GenMsgCycleTime" BO_ 805 20;
+BA_ "GenSigStartValue" SG_ 769 VCU_MCU_StModeReq 0;
+BA_ "InvalidHex" SG_ 769 VCU_MCU_StModeReq ">14";
+BA_ "GenSigStartValue" SG_ 769 VCU_MCU_TorqSetP 1000;
+BA_ "InvalidHex" SG_ 769 VCU_MCU_TorqSetP ">500";
+BA_ "GenSigStartValue" SG_ 769 VCU_MCU_SpdSetP 6000;
+BA_ "InvalidHex" SG_ 769 VCU_MCU_SpdSetP ">15000";
+BA_ "GenSigStartValue" SG_ 769 VCU_MCU_Ctrl_ctRoll 0;
+BA_ "GenSigStartValue" SG_ 770 VCU_MCU_TqPAMax 0;
+BA_ "InvalidHex" SG_ 770 VCU_MCU_TqPAMax ">500";
+BA_ "GenSigStartValue" SG_ 770 VCU_MCU_TqPAMin 1000;
+BA_ "InvalidHex" SG_ 770 VCU_MCU_TqPAMin ">0";
+BA_ "GenSigStartValue" SG_ 770 VCU_MCU_SpPAMax 0;
+BA_ "InvalidHex" SG_ 770 VCU_MCU_SpPAMax ">16384";
+BA_ "GenSigStartValue" SG_ 770 VCU_MCU_SpPAMin 1500;
+BA_ "InvalidHex" SG_ 770 VCU_MCU_SpPAMin ">0";
+BA_ "GenSigStartValue" SG_ 770 VCU_MCU_TorqLimit_ctRoll 0;
+BA_ "GenSigStartValue" SG_ 801 MCU_ActRotSpd 16000;
+BA_ "InvalidHex" SG_ 801 MCU_ActRotSpd "> 15000 ";
+BA_ "GenSigStartValue" SG_ 801 MCU_StMode 1;
+BA_ "GenSigStartValue" SG_ 801 MCU_ActTorq 1000;
+BA_ "InvalidHex" SG_ 801 MCU_ActTorq ">500";
+BA_ "GenSigStartValue" SG_ 801 MCU_General_ctRoll 0;
+BA_ "GenSigStartValue" SG_ 802 MCU_MotorActTemp 40;
+BA_ "InvalidHex" SG_ 802 MCU_MotorActTemp ">213";
+BA_ "GenSigStartValue" SG_ 802 MCU_InverterActTemp 40;
+BA_ "InvalidHex" SG_ 802 MCU_InverterActTemp ">213";
+BA_ "GenSigStartValue" SG_ 802 MCU_Temp_ctRoll 0;
+BA_ "GenSigStartValue" SG_ 803 MCU_NegTorqLimit 1000;
+BA_ "InvalidHex" SG_ 803 MCU_NegTorqLimit ">500";
+BA_ "GenSigStartValue" SG_ 803 MCU_PositiveTorqLimit 0;
+BA_ "InvalidHex" SG_ 803 MCU_PositiveTorqLimit ">0";
+BA_ "GenSigStartValue" SG_ 803 MCU_MotorRotationCount 0;
+BA_ "InvalidHex" SG_ 803 MCU_MotorRotationCount ">255";
+BA_ "GenSigStartValue" SG_ 803 MCU_Limits_ctRoll 0;
+BA_ "GenSigStartValue" SG_ 804 MCU_ActHV_Cur 1000;
+BA_ "InvalidHex" SG_ 804 MCU_ActHV_Cur "> 1000";
+BA_ "GenSigStartValue" SG_ 804 MCU_ActHV_Volt 0;
+BA_ "InvalidHex" SG_ 804 MCU_ActHV_Volt "> 1000 ";
+BA_ "GenSigStartValue" SG_ 804 MCU_Volt_Curr_ctRoll 0;
+BA_ "GenSigStartValue" SG_ 805 MCU_DTCCode 0;
+BA_ "InvalidHex" SG_ 805 MCU_DTCCode ">65535";
+BA_ "GenSigStartValue" SG_ 805 MCU_SWVersion 0;
+BA_ "GenSigStartValue" SG_ 805 MCU_Hardware_Error_Code 0;
+BA_ "InvalidHex" SG_ 805 MCU_Hardware_Error_Code ">255";
+BA_ "GenSigStartValue" SG_ 805 MCU_HWVersion 0;
+BA_ "GenSigStartValue" SG_ 805 MCU_Failure_ctRoll 0;
+BA_ "GenSigStartValue" SG_ 805 MCU_FailSt 0;
+BA_ "InvalidHex" SG_ 805 MCU_FailSt ">3";
+VAL_ 769 VCU_MCU_StModeReq 2 "Standby" 3 " Ready" 8 " TrqCtrl" 9 "SpeedCtrl" 14 " emDischarge" ;
+VAL_ 801 MCU_StMode 1 " Init" 3 " Standby" 4 " Ready" 8 "TrqCtrl" 9 "SpeedCtrl" 13 " Failure" 14 " emDischarge" ;
+VAL_ 805 MCU_FailSt 0 " no error" 1 " reduce power" 2 " disable MCU" 3 " system shutdown" ;
+

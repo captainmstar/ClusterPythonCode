@@ -1,0 +1,84 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ IsolationStatus_Value_Table 2 "not measured" 1 "iso breakdown alarm" 0 "status ok" ;
+VAL_TABLE_ BMS_Mode_Value_Table 7 "unavailable" 6 "error fault" 5 "contactors opening" 4 "connected" 3 "disconnected" 2 "forced disconnect" 1 "precharge" 0 "wake up" ;
+
+
+BO_ 2147485731 VCU_to_BCU_CAN: 8 Vector__XXX
+ SG_ ContactorCloseRequested : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147485730 BCU_to_VCU_CAN_2: 8 Vector__XXX
+ SG_ unused2 : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ unused : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SOC : 0|8@1+ (0.5,0) [0|127] "%" Vector__XXX
+ SG_ PrechargeInhibited : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PackTemperature : 16|8@1- (0.5,0) [-40|87.5] "C" Vector__XXX
+ SG_ ContactorRequestAck : 47|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ContactorOn : 55|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AmbientTemperature : 32|8@1- (0.5,0) [-40|87.5] "C" Vector__XXX
+
+BO_ 2147485729 BCU_to_VCU_CAN_1: 8 Vector__XXX
+ SG_ PilotStatus : 51|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxAllowedRegenPwr : 40|8@1+ (2,0) [0|500] "kW" Vector__XXX
+ SG_ MaxAllowedDischargePwr : 32|8@1+ (2,0) [0|500] "kW" Vector__XXX
+ SG_ KeyStatus : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IsolationStatus : 49|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IsolationResistance : 56|8@1+ (4,0) [0|1000] "kOhm" Vector__XXX
+ SG_ BMS_Mode : 53|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BatteryPackVoltage : 16|16@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ BatteryPackCurrent : 0|16@1- (0.1,0) [0|0] "A" Vector__XXX
+
+
+
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "INDI_BMS";
+VAL_ 2147485729 IsolationStatus 2 "not measured" 1 "iso breakdown alarm" 0 "status ok" ;
+VAL_ 2147485729 BMS_Mode 7 "unavailable" 6 "error fault" 5 "contactors opening" 4 "connected" 3 "disconnected" 2 "forced disconnect" 1 "precharge" 0 "wake up" ;
+

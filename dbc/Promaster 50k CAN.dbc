@@ -1,0 +1,91 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ BrakeLamp 1 "Brake pedal is applied" 0 "Brake pedal is not applied" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ UnkownByte_8bit_5 : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ UnkownByte_8bit_3 : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ UnkownByte_8bit : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EngineCheck_Lamp_Strobe_Copy_4 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineCheck_Lamp_Strobe_Copy_3 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AliveCounter_4Bit : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1 New_Message_8: 8 Vector__XXX
+ SG_ GearChangeAllowed : 44|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 0 Cluster_RPM_VehSpeed: 8 Vector__XXX
+
+BO_ 2217295873 Unknown_4294001x: 8 Vector__XXX
+
+BO_ 2216771595 Unknown_421400Bx: 8 Vector__XXX
+ SG_ UnkownByte_8bit_3 : 20|5@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ UnkownByte_8bit_4 : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ UnkownByte_8bit_8 : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ UnkownByte_8bit_7 : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ UnkownByte_8bit_6 : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ UnkownByte_8bit_2 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ UnkownByte_8bit_1 : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ GearChangeAllowed : 38|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GearStatus : 23|3@0+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2216771590 Unknown_4214006x: 8 Vector__XXX
+
+BO_ 2216771585 Cluster_4214001x: 8 Vector__XXX
+ SG_ WarningLight_Lamp : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OilCheck_Lamp : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineCheck_Lamp_Strobe : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineCheck_Lamp : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ACCSet_Lamp : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RPM : 55|8@0+ (32,0) [0|8160] "%" Vector__XXX
+ SG_ OilChange : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngineTemp : 31|7@0+ (1,0) [0|127] "" Vector__XXX
+ SG_ CoolantLamp : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2218344448 VehicleSpeed2: 4 Vector__XXX
+ SG_ VehicleSpeed : 5|14@0- (0.05625,0) [-460.8|460.74375] "" Vector__XXX
+
+BO_ 2183217152 BrakeLamp: 1 Vector__XXX
+ SG_ BrakeLamp : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2183217152 BrakeLamp 1 "Brake pedal is applied" 0 "Brake pedal is not applied" ;
+

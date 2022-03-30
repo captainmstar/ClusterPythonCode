@@ -1,0 +1,538 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CIM
+
+
+BO_ 2566878604 pRVC1_140: 8 CIM
+ SG_ pLowBeamControlCmd : 18|2@1+ (1,0) [0|3] "State" Vector__XXX
+ SG_ pStartStopCmd : 10|2@1+ (1,0) [0|3] "State" Vector__XXX
+ SG_ pPowertrainModeCmd : 28|4@1+ (1,0) [0|15] "State" Vector__XXX
+ SG_ pOperationModeCmd : 8|2@1+ (1,0) [0|3] "State" Vector__XXX
+ SG_ pNormAccPosCmd : 0|8@1+ (0.4,0) [0|100] "Percent" Vector__XXX
+ SG_ pDrivelineModeCmd : 24|4@1+ (1,0) [0|15] "State" Vector__XXX
+ SG_ pHighBeamControlCmd : 16|2@1+ (1,0) [0|3] "State" Vector__XXX
+ SG_ pIRControlCmd : 12|2@1+ (1,0) [0|3] "State" Vector__XXX
+ SG_ pBlackoutModeCmd : 14|2@1+ (1,0) [0|3] "State" Vector__XXX
+ SG_ pTransRangeCmd : 32|16@1+ (1,0) [0|65535] "ASCII" Vector__XXX
+ SG_ pMessageCounter : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ pMessageChecksum : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2365554174 pRBC1_254: 8 CIM
+ SG_ Checksum : 60|4@1+ (1,0) [0|15] "Count" Vector__XXX
+ SG_ MessageCounter : 56|4@1+ (1,0) [0|15] "Count" Vector__XXX
+ SG_ pActualBrakingApplication : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ pRequestedBrakingApplication : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566877989 pRSC1_37: 8 CIM
+ SG_ pCommandMessageCounter_521205 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ pCommandMessageChecksum_521206 : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ pEPS_CommandedVar2 : 48|16@1+ (0.1,-3276.5) [-3276.5|3276.5] "deg/s" Vector__XXX
+ SG_ pEPS_CommandedVar1 : 32|16@1+ (0.1,-3276.5) [-3276.5|3276.5] "deg" Vector__XXX
+ SG_ pEPS_CommandControlMode : 0|4@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2348941146 TC1_90: 8 Vector__XXX
+ SG_ TransGearShiftInhibitRq : 0|2@1+ (1,0) [0|3] ""  CIM
+
+BO_ 2566853722 pWattMsg_90: 8 Vector__XXX
+ SG_ pRangeToEmptyEV : 16|16@1+ (0.1,0) [0|6425.5] "km"  CIM
+
+BO_ 2566799450 LD_90: 8 Vector__XXX
+ SG_ IRBrakeLightStatus : 50|2@1+ (1,0) [0|3] ""  CIM
+ SG_ IRLightStatus : 48|2@1+ (1,0) [0|3] ""  CIM
+ SG_ LeftBrakeLightStatus : 22|2@1+ (1,0) [0|3] ""  CIM
+ SG_ RightBrakeLightStatus : 20|2@1+ (1,0) [0|3] ""  CIM
+ SG_ HighBeamHeadLightStatus : 6|2@1+ (1,0) [0|3] ""  CIM
+ SG_ LowBeamHeadLightStatus : 4|2@1+ (1,0) [0|3] ""  CIM
+ SG_ TaillightStatus : 0|2@1+ (1,0) [0|3] ""  CIM
+
+BO_ 2365553932 pRBC1_13: 8 Vector__XXX
+ SG_ Checksum : 60|4@1+ (1,0) [0|15] "Count"  CIM
+ SG_ MessageCounter : 56|4@1+ (1,0) [0|15] "Count"  CIM
+ SG_ pActualBrakingApplication : 8|8@1+ (0.4,0) [0|100] "%"  CIM
+
+BO_ 2566885722 pRF3_90: 8 Vector__XXX
+ SG_ pPowertrainMode : 4|4@1+ (1,0) [0|15] "State"  CIM
+
+BO_ 2566844762 CCVS1_90: 8 Vector__XXX
+ SG_ ParkingBrakeSwitch : 2|2@1+ (1,0) [0|3] ""  CIM
+ SG_ Wheel_BasedVehicleSpeed : 8|16@1+ (0.00390625,0) [0|251] "km/h"  CIM
+ SG_ BrakeSwitch : 28|2@1+ (1,0) [0|3] ""  CIM
+ SG_ pMessageCounter : 52|4@1+ (1,0) [0|15] ""  CIM
+ SG_ pMessageChecksum : 56|8@1+ (1,0) [0|255] ""  CIM
+
+BO_ 2365551635 pEPS2_19: 8 Vector__XXX
+ SG_ pEPS2_MessageCounter : 56|4@1+ (1,0) [0|15] ""  CIM
+ SG_ pEPS2_MessageChecksum : 60|4@1+ (1,0) [0|15] ""  CIM
+ SG_ pEPSLowResShaftPosition : 40|16@1+ (0.1,-3276.5) [-3276.5|3276.5] "degrees"  CIM
+ SG_ pEPSShaftVelocity : 16|16@1+ (0.1,-3276.5) [-3276.5|3276.5] "degrees per second"  CIM
+ SG_ pEPSShaftPosition : 0|16@1+ (0.1,-3276.5) [-3276.5|3276.5] "degrees"  CIM
+ SG_ pEPSOperationMode : 32|8@1+ (1,0) [0|255] ""  CIM
+
+BO_ 2566874899 pEPAS_19: 8 Vector__XXX
+ SG_ pEPS_MessageCounter : 56|4@1+ (1,0) [0|15] ""  CIM
+ SG_ pEPS_MessageChecksum : 60|4@1+ (1,0) [0|15] ""  CIM
+ SG_ pSensedInputSteeringTorque : 0|16@1+ (0.1,-3200) [-3200|3353.5] "Nm"  CIM
+ SG_ pSensedOutputSteeringTorque : 16|16@1+ (0.1,-3200) [-3200|3353.5] "Nm"  CIM
+ SG_ pGeneratedCurrentCommand : 32|16@1+ (0.00381467265625,-125) [-125|124.994572527] "A"  CIM
+ SG_ pVTemp : 48|8@1+ (1,-40) [-40|215] "C"  CIM
+
+BO_ 2566847488 DD_0: 8 Vector__XXX
+ SG_ FuelLevel : 8|8@1+ (0.4,0) [0|100] "%"  CIM
+
+BO_ 2566841600 HOURS_0: 8 Vector__XXX
+ SG_ EngTotalHoursOfOper : 0|32@1+ (0.05,0) [0|210554060.75] "h"  CIM
+ SG_ TotalEngineRevolutions : 32|32@1+ (1000,0) [0|4211081215000] "r"  CIM
+
+BO_ 2633883392 FWD_0: 8 Vector__XXX
+ SG_ FrtWheelDriveActuatorStatus : 0|2@1+ (1,0) [0|3] ""  CIM
+
+BO_ 2365548032 pEngICS_0: 8 Vector__XXX
+ SG_ pFuelRange : 24|16@1+ (1,0) [0|64255] "km"  CIM
+
+BO_ 2566843904 ET1_0: 8 Vector__XXX
+ SG_ EngineCoolantTemperature : 0|8@1+ (1,-40) [-40|210] "°C"  CIM
+
+BO_ 2566844928 LFE1_0: 8 Vector__XXX
+ SG_ EngineFuelRate : 0|16@1+ (0.05,0) [0|3212.75] "L/h"  CIM
+ SG_ InstantaneousFuelEconomy : 16|16@1+ (0.00195312,0) [0|125.5] "km"  CIM
+ SG_ AverageFuelEconomy : 32|16@1+ (0.00195312,0) [0|125.5] "km"  CIM
+
+BO_ 2566832474 VDHR_90: 8 Vector__XXX
+ SG_ HighResolTotalVehicleDistance : 0|32@1+ (0.005,0) [0|21055406] "km"  CIM
+ SG_ HighResolTripDistance : 32|32@1+ (0.005,0) [0|21055406] "km"  CIM
+
+BO_ 2565866842 ETC2_90: 8 Vector__XXX
+ SG_ TransmissionRqstedRange : 32|16@1+ (1,0) [0|255] "ASCII"  CIM
+ SG_ TransmissionCurrentRange : 48|16@1+ (1,0) [0|65535] "ASCII"  CIM
+
+BO_ 2565866330 EEC2_90: 8 Vector__XXX
+ SG_ AccelPedalPosition1 : 8|8@1+ (0.4,0) [0|100] "%"  CIM
+
+
+
+CM_ BU_ CIM "Communications Interface Module";
+CM_ BO_ 2566878604 "Remote Vehicle Control Message 1";
+CM_ SG_ 2566878604 pLowBeamControlCmd "Signal to command the headlight beam to low or high.";
+CM_ SG_ 2566878604 pStartStopCmd "Commanded Status of the Start Button";
+CM_ SG_ 2566878604 pPowertrainModeCmd "Signal to command the powertrain mode.";
+CM_ SG_ 2566878604 pOperationModeCmd "Status of Manned or Remote Vehicle Operation Mode";
+CM_ SG_ 2566878604 pNormAccPosCmd "Indication of the current accelerator pedal position normalized to 0 to 100 %.  Commanded accelerator position as a percent of maximum accelerator position. ";
+CM_ SG_ 2566878604 pDrivelineModeCmd "Signal to command the driveline mode.";
+CM_ SG_ 2566878604 pHighBeamControlCmd "Signal to command the headlight beam to low or high.";
+CM_ SG_ 2566878604 pIRControlCmd "Signal to command infrared lighting on or off.";
+CM_ SG_ 2566878604 pBlackoutModeCmd "Signal to command the light system into blackout mode.";
+CM_ SG_ 2566878604 pTransRangeCmd "Signal to command the transmission gear and/or direction.  The data is two chacater ASCII value and when the value is a single character the first character is a space.";
+CM_ SG_ 2566878604 pMessageCounter "The message counter is used to detect situations where the transmitting ECU malfunction repeats the same frame all the time";
+CM_ SG_ 2566878604 pMessageChecksum "Message Checksum=((Byte 1+Byte 2+Byte 3+Byte 4+Byte 5+Byte 6+Byte 7+Message ID low order byte+Message ID mid low byte+Message ID mid high byte+Message ID high order byte) & 0xFF)
++ is the XOR Operator
+& is the AND Operator";
+CM_ BO_ 2365554174 "Remote Brake Control 1
+Communicated on the vehicle communication bus. Contains signals to command the vehicle’s braking system.";
+CM_ SG_ 2365554174 Checksum "Used to verify the signal path from the transmitting device to the receiving device. The message checksum is
+calculated using the first 7 data bytes, the message counter and the bytes of the message identifier";
+CM_ SG_ 2365554174 pActualBrakingApplication "Actual braking application in percent of braking pressure available";
+CM_ SG_ 2365554174 pRequestedBrakingApplication "Requested Braking Application in Percent of Breaking Pressure Available";
+CM_ BO_ 2566877989 "Remote Steering Control 1
+Communicated on the vehicle communication bus. Contains signals to command the vehicle’s steering system.";
+CM_ SG_ 2566877989 pCommandMessageCounter_521205 "The message counter is used to detect situations where the transmitting ECU malfunction repeats the same frame all the time";
+CM_ SG_ 2566877989 pCommandMessageChecksum_521206 "Used to verify the signal path from the transmitting device to the receiving device. The message checksum is calculated using the first 7 data bytes, the message counter and the bytes of the message identifier.";
+CM_ SG_ 2566877989 pEPS_CommandedVar2 "EPS Mode 5: Var2 = Shaft Speed (deg/s)";
+CM_ SG_ 2566877989 pEPS_CommandedVar1 "EPS Mode 5 and Mode 16: Var1 = Shaft Position (deg)";
+CM_ SG_ 2566877989 pEPS_CommandControlMode "Commands the control mode that the EPS should be operating in.";
+CM_ BO_ 2348941146 "Transmission Control 1";
+CM_ SG_ 2348941146 TransGearShiftInhibitRq "Command signal to inhibit gear shifts.
+00 Gear shifts are allowed  (disable function)
+01 Gear shifts are inhibited  (enable function)
+10 Reserved
+11 Take no action  (leave function as is)";
+CM_ BO_ 2566853722 "Contains information used on the Watt platform for electrical characteristics of the vehicle.";
+CM_ SG_ 2566853722 pRangeToEmptyEV "Calculated range on remaining electrical power";
+CM_ BO_ 2566799450 "Lighting Data
+This lighting message is a response to the request for lighting data in the lighting command message.  Each lighting controller on the tractor and attached implements must transmit this message to the Tractor ECU when requested.  The ...";
+CM_ SG_ 2566799450 IRBrakeLightStatus "This parameter provides measured data from the implement OEM option 1 light.
+00 De-activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+CM_ SG_ 2566799450 IRLightStatus "This parameter provides measured data from the implement OEM option 2 light.
+00 De-activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+CM_ SG_ 2566799450 LeftBrakeLightStatus "This parameter provides measured data from the tractor and attached implement left stop lights.
+00 De-activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+CM_ SG_ 2566799450 RightBrakeLightStatus "This parameter provides measured data from the tractor and attached implement right stop lights.
+00 De-activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+CM_ SG_ 2566799450 HighBeamHeadLightStatus "This parameter provides measured data from the tractor high beam head light lamps.
+00 De-activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+CM_ SG_ 2566799450 LowBeamHeadLightStatus "This parameter provides measured data from the tractor low beam head light lamps.
+00 De-activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+CM_ SG_ 2566799450 TaillightStatus "This parameter provides measured data from the vehicle’s running lights.
+00 De-activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+CM_ BO_ 2365553932 "Remote Brake Control 1
+Communicated on the vehicle communication bus. Contains signals to command the vehicle’s braking system.";
+CM_ SG_ 2365553932 Checksum "Used to verify the signal path from the transmitting device to the receiving device. The message checksum is
+calculated using the first 7 data bytes, the message counter and the bytes of the message identifier";
+CM_ SG_ 2365553932 pActualBrakingApplication "Actual braking application in percent of braking pressure available";
+CM_ BO_ 2566844762 "Cruise Control Status and Vehicle Speed Information";
+CM_ SG_ 2566844762 ParkingBrakeSwitch "Switch signal which indicates when the parking brake is set. In general the switch actuated by the operator's park brake control,
+whether a pedal, lever, or other control mechanism.";
+CM_ SG_ 2566844762 Wheel_BasedVehicleSpeed "Speed of the vehicle as calculated from wheel or tailshaft speed.";
+CM_ SG_ 2566844762 BrakeSwitch "Switch signal which indicates that the driver operated brake foot pedal is being pressed";
+CM_ SG_ 2566844762 pMessageCounter "Rolling Counter (ensures updated message is used)";
+CM_ SG_ 2566844762 pMessageChecksum "XOR of bytes 0-6 (ensures data is valid before use)";
+CM_ SG_ 2365551635 pEPSLowResShaftPosition "The low res position of the output shaft of the power steering unit";
+CM_ SG_ 2365551635 pEPSShaftVelocity "The rotational velocity of the output shaft of the power steering unit";
+CM_ SG_ 2365551635 pEPSShaftPosition "The absolute position of the output shaft of the power steering unit";
+CM_ SG_ 2365551635 pEPSOperationMode "The mode that the power steering unit is currently functioning in";
+CM_ BO_ 2566874899 "Signal group for Electric Power Assisted Steering";
+CM_ SG_ 2566874899 pSensedInputSteeringTorque "?";
+CM_ SG_ 2566874899 pSensedOutputSteeringTorque "?";
+CM_ SG_ 2566874899 pGeneratedCurrentCommand "?";
+CM_ SG_ 2566874899 pVTemp "Temperature of the PCB near the motor inverter.  Used to derate or turn off the inverter based on preset limits.";
+CM_ SG_ 2566847488 FuelLevel "Ratio of volume of fuel to the total volume of fuel storage container.";
+CM_ SG_ 2566841600 EngTotalHoursOfOper "Accumulated time of operation of engine";
+CM_ SG_ 2566841600 TotalEngineRevolutions "(Accumulated number of revolutions of engine crankshaft during its operation)";
+CM_ BO_ 2633883392 "Front wheel drive ECU information.";
+CM_ SG_ 2633883392 FrtWheelDriveActuatorStatus "Feedback on the front wheel drive actuator.";
+CM_ BO_ 2365548032 "Engine Instrument Cluster Fast Update";
+CM_ SG_ 2365548032 pFuelRange "Distance vehicle can travel on fuel remaining in fuel tank";
+CM_ BO_ 2566843904 "Engine Temperature 1";
+CM_ SG_ 2566843904 EngineCoolantTemperature "Temperature of the liquid in the engine cooling system.";
+CM_ BO_ 2566844928 "Engine Fuel Economy Data";
+CM_ SG_ 2566844928 EngineFuelRate "Amount of fuel consumed by engine per unit of time";
+CM_ SG_ 2566844928 InstantaneousFuelEconomy "Current fuel economy at current vehicle velocity.";
+CM_ SG_ 2566844928 AverageFuelEconomy "Average of instantaneous fuel economy for that segment of vehicle operation of interest.";
+CM_ SG_ 2566832474 HighResolTotalVehicleDistance "Accumulated distance traveled by the vehicle during its operation";
+CM_ SG_ 2566832474 HighResolTripDistance "Distance traveled during all or part of a journey";
+CM_ BO_ 2565866842 "Electronic Transmission Controller 2";
+CM_ SG_ 2565866842 TransmissionRqstedRange "Range selected by the operator.";
+CM_ SG_ 2565866842 TransmissionCurrentRange "Range currently being commanded by the transmission control system. Characters may include P, Rx, Rx-1...R2, R1, R, Nx, Nx-1...N2, N1, N, D, D1, D2..., Dx, L, L1, L2..., Lx-1, 1, 2, 3,... If only one displayed character is required, the second ...";
+CM_ BO_ 2565866330 "Identifies electronic engine control related parameters";
+CM_ SG_ 2565866330 AccelPedalPosition1 "The ratio of actual position of the analog engine speed/torque request input device to the maximum position of the input device.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","spontaneous","cyclicIfActive","spontaneousWithDelay","cyclicAndSpontaneous","cyclicAndSpontaneousWithDelay","spontaneousWithRepetition","cyclicIfActiveAndSpontaneousWD","OnRequest";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_ "BusType" "CAN";
+BA_ "DBName" "CIM";
+BA_ "NmStationAddress" BU_ CIM 140;
+BA_ "GenMsgSendType" BO_ 2566878604 0;
+BA_ "GenMsgRequestable" BO_ 2566878604 0;
+BA_ "GenMsgCycleTime" BO_ 2566878604 10;
+BA_ "VFrameFormat" BO_ 2566878604 3;
+BA_ "GenMsgSendType" BO_ 2365554174 0;
+BA_ "GenMsgCycleTime" BO_ 2365554174 10;
+BA_ "VFrameFormat" BO_ 2365554174 3;
+BA_ "GenMsgSendType" BO_ 2566877989 0;
+BA_ "GenMsgCycleTime" BO_ 2566877989 10;
+BA_ "VFrameFormat" BO_ 2566877989 3;
+BA_ "GenMsgSendType" BO_ 2348941146 0;
+BA_ "GenMsgRequestable" BO_ 2348941146 0;
+BA_ "GenMsgCycleTime" BO_ 2348941146 50;
+BA_ "VFrameFormat" BO_ 2348941146 3;
+BA_ "GenMsgSendType" BO_ 2566853722 0;
+BA_ "GenMsgRequestable" BO_ 2566853722 0;
+BA_ "GenMsgCycleTime" BO_ 2566853722 100;
+BA_ "VFrameFormat" BO_ 2566853722 3;
+BA_ "GenMsgSendType" BO_ 2566799450 4;
+BA_ "GenMsgRequestable" BO_ 2566799450 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2566799450 100;
+BA_ "GenMsgCycleTime" BO_ 2566799450 1000;
+BA_ "VFrameFormat" BO_ 2566799450 3;
+BA_ "GenMsgSendType" BO_ 2365553932 0;
+BA_ "GenMsgCycleTime" BO_ 2365553932 10;
+BA_ "VFrameFormat" BO_ 2365553932 3;
+BA_ "GenMsgSendType" BO_ 2566885722 4;
+BA_ "GenMsgRequestable" BO_ 2566885722 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2566885722 10;
+BA_ "GenMsgCycleTime" BO_ 2566885722 100;
+BA_ "VFrameFormat" BO_ 2566885722 3;
+BA_ "GenMsgSendType" BO_ 2566844762 0;
+BA_ "GenMsgRequestable" BO_ 2566844762 0;
+BA_ "GenMsgCycleTime" BO_ 2566844762 100;
+BA_ "VFrameFormat" BO_ 2566844762 3;
+BA_ "GenMsgSendType" BO_ 2365551635 0;
+BA_ "GenMsgCycleTime" BO_ 2365551635 100;
+BA_ "VFrameFormat" BO_ 2365551635 3;
+BA_ "GenMsgSendType" BO_ 2566874899 0;
+BA_ "GenMsgCycleTime" BO_ 2566874899 100;
+BA_ "VFrameFormat" BO_ 2566874899 3;
+BA_ "GenMsgSendType" BO_ 2566847488 0;
+BA_ "GenMsgCycleTime" BO_ 2566847488 1000;
+BA_ "VFrameFormat" BO_ 2566847488 3;
+BA_ "GenMsgSendType" BO_ 2566841600 0;
+BA_ "GenMsgRequestable" BO_ 2566841600 1;
+BA_ "GenMsgCycleTime" BO_ 2566841600 100;
+BA_ "VFrameFormat" BO_ 2566841600 3;
+BA_ "GenMsgSendType" BO_ 2633883392 0;
+BA_ "GenMsgCycleTime" BO_ 2633883392 500;
+BA_ "VFrameFormat" BO_ 2633883392 3;
+BA_ "GenMsgSendType" BO_ 2365548032 0;
+BA_ "GenMsgCycleTime" BO_ 2365548032 100;
+BA_ "VFrameFormat" BO_ 2365548032 3;
+BA_ "GenMsgSendType" BO_ 2566843904 0;
+BA_ "GenMsgCycleTime" BO_ 2566843904 1000;
+BA_ "VFrameFormat" BO_ 2566843904 3;
+BA_ "GenMsgSendType" BO_ 2566844928 0;
+BA_ "GenMsgCycleTime" BO_ 2566844928 100;
+BA_ "VFrameFormat" BO_ 2566844928 3;
+BA_ "GenMsgSendType" BO_ 2566832474 0;
+BA_ "GenMsgRequestable" BO_ 2566832474 0;
+BA_ "GenMsgCycleTime" BO_ 2566832474 1000;
+BA_ "VFrameFormat" BO_ 2566832474 3;
+BA_ "GenMsgSendType" BO_ 2565866842 0;
+BA_ "GenMsgRequestable" BO_ 2565866842 0;
+BA_ "GenMsgCycleTime" BO_ 2565866842 100;
+BA_ "VFrameFormat" BO_ 2565866842 3;
+BA_ "GenMsgSendType" BO_ 2565866330 0;
+BA_ "GenMsgRequestable" BO_ 2565866330 0;
+BA_ "GenMsgCycleTime" BO_ 2565866330 50;
+BA_ "VFrameFormat" BO_ 2565866330 3;
+BA_ "SigType" SG_ 2566878604 pLowBeamControlCmd 1;
+BA_ "GenSigSendType" SG_ 2566878604 pLowBeamControlCmd 4;
+BA_ "SigType" SG_ 2566878604 pStartStopCmd 5;
+BA_ "SPN" SG_ 2566878604 pStartStopCmd 520497;
+BA_ "SigType" SG_ 2566878604 pPowertrainModeCmd 5;
+BA_ "SPN" SG_ 2566878604 pPowertrainModeCmd 520652;
+BA_ "SigType" SG_ 2566878604 pOperationModeCmd 5;
+BA_ "SPN" SG_ 2566878604 pOperationModeCmd 524120;
+BA_ "SigType" SG_ 2566878604 pNormAccPosCmd 1;
+BA_ "SPN" SG_ 2566878604 pNormAccPosCmd 520354;
+BA_ "SigType" SG_ 2566878604 pDrivelineModeCmd 5;
+BA_ "SPN" SG_ 2566878604 pDrivelineModeCmd 520651;
+BA_ "SigType" SG_ 2566878604 pHighBeamControlCmd 5;
+BA_ "GenSigSendType" SG_ 2566878604 pHighBeamControlCmd 4;
+BA_ "SigType" SG_ 2566878604 pIRControlCmd 5;
+BA_ "SPN" SG_ 2566878604 pIRControlCmd 520641;
+BA_ "GenSigSendType" SG_ 2566878604 pIRControlCmd 4;
+BA_ "SigType" SG_ 2566878604 pBlackoutModeCmd 5;
+BA_ "SPN" SG_ 2566878604 pBlackoutModeCmd 520640;
+BA_ "GenSigSendType" SG_ 2566878604 pBlackoutModeCmd 4;
+BA_ "SigType" SG_ 2566878604 pTransRangeCmd 3;
+BA_ "SPN" SG_ 2566878604 pTransRangeCmd 520481;
+BA_ "GenSigSendType" SG_ 2566878604 pTransRangeCmd 4;
+BA_ "SigType" SG_ 2566878604 pMessageCounter 11;
+BA_ "SPN" SG_ 2566878604 pMessageCounter 524122;
+BA_ "SigType" SG_ 2566878604 pMessageChecksum 12;
+BA_ "SPN" SG_ 2566878604 pMessageChecksum 524123;
+BA_ "SigType" SG_ 2365554174 Checksum 1;
+BA_ "SigType" SG_ 2365554174 MessageCounter 1;
+BA_ "SPN" SG_ 2365554174 MessageCounter 4206;
+BA_ "SigType" SG_ 2365554174 pActualBrakingApplication 1;
+BA_ "SigType" SG_ 2365554174 pRequestedBrakingApplication 1;
+BA_ "SigType" SG_ 2566877989 pCommandMessageCounter_521205 1;
+BA_ "SPN" SG_ 2566877989 pCommandMessageCounter_521205 521205;
+BA_ "SigType" SG_ 2566877989 pCommandMessageChecksum_521206 1;
+BA_ "SPN" SG_ 2566877989 pCommandMessageChecksum_521206 521206;
+BA_ "GenSigSendType" SG_ 2566877989 pCommandMessageChecksum_521206 0;
+BA_ "SigType" SG_ 2566877989 pEPS_CommandedVar2 1;
+BA_ "SigType" SG_ 2566877989 pEPS_CommandedVar1 1;
+BA_ "SPN" SG_ 2566877989 pEPS_CommandControlMode 524111;
+BA_ "SigType" SG_ 2348941146 TransGearShiftInhibitRq 5;
+BA_ "SPN" SG_ 2348941146 TransGearShiftInhibitRq 681;
+BA_ "SigType" SG_ 2566853722 pRangeToEmptyEV 1;
+BA_ "SPN" SG_ 2566853722 pRangeToEmptyEV 520529;
+BA_ "SigType" SG_ 2566799450 IRBrakeLightStatus 4;
+BA_ "SPN" SG_ 2566799450 IRBrakeLightStatus 2396;
+BA_ "SigType" SG_ 2566799450 IRLightStatus 4;
+BA_ "SPN" SG_ 2566799450 IRLightStatus 2398;
+BA_ "SigType" SG_ 2566799450 LeftBrakeLightStatus 4;
+BA_ "SPN" SG_ 2566799450 LeftBrakeLightStatus 2372;
+BA_ "SigType" SG_ 2566799450 RightBrakeLightStatus 4;
+BA_ "SPN" SG_ 2566799450 RightBrakeLightStatus 2374;
+BA_ "SigType" SG_ 2566799450 HighBeamHeadLightStatus 4;
+BA_ "SPN" SG_ 2566799450 HighBeamHeadLightStatus 2348;
+BA_ "SigType" SG_ 2566799450 LowBeamHeadLightStatus 4;
+BA_ "SPN" SG_ 2566799450 LowBeamHeadLightStatus 2350;
+BA_ "SigType" SG_ 2566799450 TaillightStatus 4;
+BA_ "SPN" SG_ 2566799450 TaillightStatus 2404;
+BA_ "SigType" SG_ 2365553932 Checksum 1;
+BA_ "SigType" SG_ 2365553932 MessageCounter 1;
+BA_ "SPN" SG_ 2365553932 MessageCounter 4206;
+BA_ "SigType" SG_ 2365553932 pActualBrakingApplication 1;
+BA_ "SigType" SG_ 2566885722 pPowertrainMode 1;
+BA_ "SPN" SG_ 2566885722 pPowertrainMode 520652;
+BA_ "SigType" SG_ 2566844762 ParkingBrakeSwitch 1.7E-308;
+BA_ "SPN" SG_ 2566844762 ParkingBrakeSwitch 70;
+BA_ "SigType" SG_ 2566844762 Wheel_BasedVehicleSpeed 1;
+BA_ "SPN" SG_ 2566844762 Wheel_BasedVehicleSpeed 84;
+BA_ "SigType" SG_ 2566844762 BrakeSwitch 1.7E-308;
+BA_ "SPN" SG_ 2566844762 BrakeSwitch 597;
+BA_ "SigType" SG_ 2566844762 pMessageCounter 11;
+BA_ "SPN" SG_ 2566844762 pMessageCounter 524080;
+BA_ "SigType" SG_ 2566844762 pMessageChecksum 12;
+BA_ "SPN" SG_ 2566844762 pMessageChecksum 524079;
+BA_ "SigType" SG_ 2365551635 pEPS2_MessageCounter 1;
+BA_ "SPN" SG_ 2365551635 pEPS2_MessageCounter 524134;
+BA_ "GenSigSendType" SG_ 2365551635 pEPS2_MessageCounter 0;
+BA_ "SigType" SG_ 2365551635 pEPS2_MessageChecksum 1;
+BA_ "SPN" SG_ 2365551635 pEPS2_MessageChecksum 524135;
+BA_ "GenSigSendType" SG_ 2365551635 pEPS2_MessageChecksum 0;
+BA_ "SigType" SG_ 2365551635 pEPSLowResShaftPosition 1;
+BA_ "SPN" SG_ 2365551635 pEPSLowResShaftPosition 524117;
+BA_ "SigType" SG_ 2365551635 pEPSShaftVelocity 1;
+BA_ "SPN" SG_ 2365551635 pEPSShaftVelocity 524115;
+BA_ "GenSigStartValue" SG_ 2365551635 pEPSShaftVelocity 0;
+BA_ "SigType" SG_ 2365551635 pEPSShaftPosition 1;
+BA_ "SPN" SG_ 2365551635 pEPSShaftPosition 524114;
+BA_ "SPN" SG_ 2365551635 pEPSOperationMode 524116;
+BA_ "SigType" SG_ 2566874899 pEPS_MessageCounter 1;
+BA_ "SPN" SG_ 2566874899 pEPS_MessageCounter 524010;
+BA_ "GenSigSendType" SG_ 2566874899 pEPS_MessageCounter 0;
+BA_ "SigType" SG_ 2566874899 pEPS_MessageChecksum 1;
+BA_ "SPN" SG_ 2566874899 pEPS_MessageChecksum 524011;
+BA_ "GenSigSendType" SG_ 2566874899 pEPS_MessageChecksum 0;
+BA_ "SigType" SG_ 2566874899 pSensedInputSteeringTorque 1;
+BA_ "SPN" SG_ 2566874899 pSensedInputSteeringTorque 524002;
+BA_ "SigType" SG_ 2566874899 pSensedOutputSteeringTorque 1;
+BA_ "SPN" SG_ 2566874899 pSensedOutputSteeringTorque 524003;
+BA_ "GenSigStartValue" SG_ 2566874899 pSensedOutputSteeringTorque 0;
+BA_ "SigType" SG_ 2566874899 pGeneratedCurrentCommand 1;
+BA_ "SPN" SG_ 2566874899 pGeneratedCurrentCommand 524004;
+BA_ "SigType" SG_ 2566874899 pVTemp 1;
+BA_ "SPN" SG_ 2566874899 pVTemp 524005;
+BA_ "SigType" SG_ 2566847488 FuelLevel 1;
+BA_ "SPN" SG_ 2566847488 FuelLevel 96;
+BA_ "SigType" SG_ 2566841600 EngTotalHoursOfOper 1;
+BA_ "SPN" SG_ 2566841600 EngTotalHoursOfOper 247;
+BA_ "SigType" SG_ 2566841600 TotalEngineRevolutions 1;
+BA_ "SPN" SG_ 2566841600 TotalEngineRevolutions 249;
+BA_ "SigType" SG_ 2633883392 FrtWheelDriveActuatorStatus 1.7E-308;
+BA_ "SPN" SG_ 2633883392 FrtWheelDriveActuatorStatus 2612;
+BA_ "SigType" SG_ 2365548032 pFuelRange 1;
+BA_ "SPN" SG_ 2365548032 pFuelRange 524088;
+BA_ "SigType" SG_ 2566843904 EngineCoolantTemperature 1;
+BA_ "SPN" SG_ 2566843904 EngineCoolantTemperature 110;
+BA_ "SigType" SG_ 2566844928 EngineFuelRate 1;
+BA_ "SPN" SG_ 2566844928 EngineFuelRate 183;
+BA_ "SigType" SG_ 2566844928 InstantaneousFuelEconomy 1;
+BA_ "SPN" SG_ 2566844928 InstantaneousFuelEconomy 184;
+BA_ "SigType" SG_ 2566844928 AverageFuelEconomy 1;
+BA_ "SPN" SG_ 2566844928 AverageFuelEconomy 185;
+BA_ "SigType" SG_ 2566832474 HighResolTotalVehicleDistance 1;
+BA_ "SPN" SG_ 2566832474 HighResolTotalVehicleDistance 917;
+BA_ "SigType" SG_ 2566832474 HighResolTripDistance 1;
+BA_ "SPN" SG_ 2566832474 HighResolTripDistance 918;
+BA_ "SigType" SG_ 2565866842 TransmissionRqstedRange 3;
+BA_ "SPN" SG_ 2565866842 TransmissionRqstedRange 162;
+BA_ "SigType" SG_ 2565866842 TransmissionCurrentRange 3;
+BA_ "SPN" SG_ 2565866842 TransmissionCurrentRange 163;
+BA_ "SigType" SG_ 2565866330 AccelPedalPosition1 1;
+BA_ "SPN" SG_ 2565866330 AccelPedalPosition1 91;
+VAL_ 2566878604 pLowBeamControlCmd 0 "Low Beams Off" 1 "Low Beams On" 2 "Reserved" 3 "Don't Care/Take No Action" ;
+VAL_ 2566878604 pStartStopCmd 0 "Stop Engine" 1 "Start Engine" 2 "Reserved" 3 "Don't Care/Take No Action" ;
+VAL_ 2566878604 pPowertrainModeCmd 0 "Mode 1 (Hybrid - Economy)" 1 "Mode 2 (Hybrid - Performance)" 2 "Mode 3 (Hybrid - Remote)" 3 "Mode 4 (Stealth - Economy)" 4 "Mode 5 (Stealth - Performance)" 5 "Mode 6 (Stealth - Remote)" 6 "Mode 7 (Future)" 7 "Mode 8 (Future)" 8 "Mode 9 (Future)" 9 "Mode 10 (Future)" 10 "Mode 11 (Future)" 11 "Mode 12 (Future)" 12 "Mode 13 (Future)" 13 "Mode 14 (Future)" 14 "Reserved" 15 "Don't Care/Take No Action" ;
+VAL_ 2566878604 pOperationModeCmd 0 "Manned Mode" 1 "Remote Mode" 2 "Reserved" 3 "Don't Care/Take No Action" ;
+VAL_ 2566878604 pDrivelineModeCmd 0 "2WD" 1 "AWD" 2 "ADC" 3 "TURF" 14 "Error" 15 "Not Available" ;
+VAL_ 2566878604 pHighBeamControlCmd 0 "High Beams Off" 1 "High Beams On" 2 "Reserved" 3 "Don't Care/Take No Action" ;
+VAL_ 2566878604 pIRControlCmd 0 "Infrared Lighting Off" 1 "Infrared Lighting On" 2 "Reserved" 3 "Don't Care/Take No Action" ;
+VAL_ 2566878604 pBlackoutModeCmd 0 "Blackout Mode Off" 1 "Blackout Mode On" 2 "Reserved" 3 "Don't Care/Take No Action" ;
+VAL_ 2566878604 pTransRangeCmd 8237 "Invalid" 8264 "High" 8268 "Low" 8270 "Neutral" 8272 "Park" 8274 "Reverse" ;
+VAL_ 2566877989 pEPS_CommandControlMode 0 "Off" 1 "Torque Mode" 2 "Torque Assist" 3 "Speed" 4 "Position" 5 "Position w/Speed" 6 "Position w/Torque Limit" 7 "Initializing" 8 "Fault" ;
+VAL_ 2348941146 TransGearShiftInhibitRq 0 "Gear shifts are allowed " 1 "Gear shifts are inhibited " 2 "Reserved" 3 "Take no action " ;
+VAL_ 2566799450 IRBrakeLightStatus 0 "De-activated" 1 "Activated" 2 "Fault Detected" 3 "Not Available" ;
+VAL_ 2566799450 IRLightStatus 0 "De-activated" 1 "Activated" 2 "Fault Detected" 3 "Not Available" ;
+VAL_ 2566799450 LeftBrakeLightStatus 0 "De-activated" 1 "Activated" 2 "Fault Detected" 3 "Not Available" ;
+VAL_ 2566799450 RightBrakeLightStatus 0 "De-activated" 1 "Activated" 2 "Fault Detected" 3 "Not Available" ;
+VAL_ 2566799450 HighBeamHeadLightStatus 0 "De-activated" 1 "Activated" 2 "Fault Detected" 3 "Not Available" ;
+VAL_ 2566799450 LowBeamHeadLightStatus 0 "De-activated" 1 "Activated" 2 "Fault Detected" 3 "Not Available" ;
+VAL_ 2566799450 TaillightStatus 0 "De-activated" 1 "Activated" 2 "Fault Detected" 3 "Not Available" ;
+VAL_ 2566885722 pPowertrainMode 0 "Mode 1 (Hybrid - Economy)" 1 "Mode 2 (Hybrid - Performance)" 2 "Mode 3 (Hybrid - Remote)" 3 "Mode 4 (Stealth - Economy)" 4 "Mode 5 (Stealth - Performance)" 5 "Mode 6 (Stealth - Remote)" 6 "Mode 7 (Future)" 7 "Mode 8 (Future)" 8 "Mode 9 (Future)" 9 "Mode 10 (Future)" 10 "Mode 11 (Future)" 11 "Mode 12 (Future)" 12 "Mode 13 (Future)" 13 "Mode 14 (Future)" 14 "Error" 15 "Not Available" ;
+VAL_ 2566844762 ParkingBrakeSwitch 0 "NotSet" 1 "Set" 2 "Error" 3 "NotAvailable" ;
+VAL_ 2566844762 BrakeSwitch 0 "PedalReleased" 1 "PedalDepressed" 2 "Error" 3 "NotAvailable" ;
+VAL_ 2365551635 pEPSOperationMode 0 "Off" 2 "Torque Assist" 3 "Speed" 4 "Position" 5 "Position w/Speed" 6 "Position w/Torque Limit" 7 "Initializing" 8 "Fault" 9 "Default Torque Assist" 254 "Error" 255 "Not Available" ;
+VAL_ 2633883392 FrtWheelDriveActuatorStatus 0 "Front Wheel Drive Actuator not e" 1 "Front Wheel Drive Actuator engag" 2 "Error" 3 "Not available" ;
+VAL_ 2565866842 TransmissionRqstedRange 8284 "Invalid" 8274 "Reverse" 8272 "Park" 8270 "Neutral" 8268 "Low" 8264 "High" ;
+VAL_ 2565866842 TransmissionCurrentRange 8284 "Invalid" 8274 "Reverse" 8272 "Park" 8270 "Neutral" 8268 "Low" 8264 "High" ;
+

@@ -1,0 +1,53 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ ASC2 92 "All ON" 90 "Z" 89 "Y" 88 "X" 87 "W" 86 "V" 85 "U" 84 "T" 83 "S" 82 "R" 81 "Q" 80 "P" 79 "O" 78 "N" 77 "M" 76 "L" 75 "K" 74 "J" 73 "I" 72 "H" 71 "G" 70 "F" 69 "E" 68 "D" 67 "C" 66 "B" 65 "A" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 32 "space (blank)" ;
+VAL_TABLE_ Shift_Req_Value 254 "Err" 252 "D" 251 "P" 249 "Upshift" 247 "Downshift" 224 "Idel" 223 "R" 125 "N" ;
+
+
+BO_ 2565866755 VCU2shifter: 8 Vector__XXX
+ SG_ ShifterDisplay : 40|8@1+ (1,0) [0|255] "NA" Vector__XXX
+
+BO_ 2348876549 Shifter2VCU: 8 Vector__XXX
+ SG_ Shift_Req : 16|8@1+ (1,0) [0|255] "NA" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2565866755 ShifterDisplay 92 "All ON" 90 "Z" 89 "Y" 88 "X" 87 "W" 86 "V" 85 "U" 84 "T" 83 "S" 82 "R" 81 "Q" 80 "P" 79 "O" 78 "N" 77 "M" 76 "L" 75 "K" 74 "J" 73 "I" 72 "H" 71 "G" 70 "F" 69 "E" 68 "D" 67 "C" 66 "B" 65 "A" 57 "9" 56 "8" 55 "7" 54 "6" 53 "5" 52 "4" 51 "3" 50 "2" 49 "1" 48 "0" 32 "space (blank)" ;
+VAL_ 2348876549 Shift_Req 254 "Err" 252 "D" 251 "P" 249 "Upshift" 247 "Downshift" 224 "Idel" 223 "R" 125 "N" ;
+

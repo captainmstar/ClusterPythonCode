@@ -1,0 +1,1672 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ IPS_DcdcHwSt 1 "DCDC" 0 "IPS" ;
+VAL_TABLE_ IPS_DCDC_Err 1 "Err" 0 "NoErr" ;
+VAL_TABLE_ Vist_Set_CC 7 "Notuse" 6 "Notuse" 5 "2K" 4 "220" 3 "680" 2 "HalfConnect" 1 "DisConnect" 0 "Notuse" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ IPS_DCDCVoltLvOvrErr : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_IntMsg9 : 0|16@0+ (1,0) [0|65535] "-" Vector__XXX
+ SG_ IPS_DCDCState6 : 0|9@0+ (1,0) [0|511] "-" Vector__XXX
+ SG_ Notused2 : 0|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_State7 : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Error_State6 : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ New_Signal_176 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_175 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_174 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_200 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_199 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_OBCChgCurrMax : 0|10@0+ (0.1,0) [0|102.3] "A" Vector__XXX
+ SG_ IPS_OBC_4_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_OBC_4_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+ SG_ IPS_OBCDsgPortPwrCons : 0|12@0+ (10,0) [0|40000] "W" Vector__XXX
+ SG_ IPS_DCDC_4_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_DCDC_4_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+ SG_ Notused2 : 0|36@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCDispDiagInfo : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Bit_Resere3 : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bit_Resere2 : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bit_Resere1 : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DearteByHighVout : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCHG_AcFrqErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Amb_OTP : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Water_OTP : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LLC_OTP : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PFC_OTP : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LLCOcp_Hard : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CHG_AcFrqErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_CRC_VCU_ErrFlag : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_Value_VCU_ErrFlag : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_RC_BMS1_ErrFlag : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_CRC_BMS1_ErrFlag : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_Value_BMS1_ErrFlag : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Prechargefailt : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DearteByLowVout : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DearteByVin : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DearteByLowTemp : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_RC_VCU_ErrFlag : 0|1@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ DearteByWaterH : 0|1@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ CP_Frequency : 0|16@0+ (1,0) [0|65535] "Hz" Vector__XXX
+ SG_ IPS_DCDCVoltLvOvrErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCVoltLvUndErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCVoltHvUndErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCVoltHvOvrErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCIntErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCCurrLvOvrErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCCurrHvOvrErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_KeySt : 0|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_soc : 0|10@0+ (0.1,0) [0|102.3] "" Vector__XXX
+ SG_ VCU_NMWakeupOrigin_E : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_NMDataField2 : 0|32@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ VCU_SubNetWakeRq : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ VCU_NMDataField1 : 0|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ VCU_NMNodeAddress : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ TEL_NMDataField2 : 0|32@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ TEL_SubNetWakeRq : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ TEL_NMDataField1 : 0|16@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ TEL_NodeAddress : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ GWM_NMDataField : 0|56@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ GWM_NMNodeAddress : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ DCU_NMWakeupOrigin : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCU_NMDataField2 : 0|32@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ DCU_SubNetWakeRq : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ DCU_NMDataField1 : 0|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ DCU_NMNodeAddress : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ BMS_NMWakeupOrigin : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_NMDataField2 : 0|32@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ BMS_SubNetWakeRq : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ BMS_NMDataField1 : 0|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ BMS_NodeAddress : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ TEL_Time_Sec : 0|6@0+ (1,0) [0|59] "s" Vector__XXX
+ SG_ TEL_Time_Min : 0|6@0+ (1,0) [0|59] "min" Vector__XXX
+ SG_ TEL_Time_Day : 0|5@0+ (1,0) [1|31] "d" Vector__XXX
+ SG_ TEL_Time_Hour : 0|5@0+ (1,0) [0|23] "h" Vector__XXX
+ SG_ TEL_Time_Month : 0|4@0+ (1,0) [1|12] "m" Vector__XXX
+ SG_ TEL_Time_Year : 0|8@0+ (1,2000) [2000|2255] "y" Vector__XXX
+ SG_ IPS_NMDataField2 : 0|32@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ IPS_SubNetWakeRq : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_NMWakeupOrigin : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_NMDataField1 : 0|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ IPS_NMNodeAddress : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_6_Notused3 : 0|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_6_Notused2 : 0|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_6_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_6_Notused1 : 0|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_6_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+ SG_ IPS_DCDCDiagErrCode : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ IPS_OBCDiagErrCode : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Notused3 : 0|56@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Notused2 : 0|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_TEL_DCDCModeSt : 0|2@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ IPS_TEL_DCDCTempOvrErr : 0|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ IPS_TEL_DCDCFaultLampInd : 0|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ Notused1 : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_Diag_Request : 0|64@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_16_E_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ VCU_16_E_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+ SG_ VCU_6_E_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ VCU_6_E_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+ SG_ VCU_5_E_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ VCU_5_E_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+ SG_ BMS_1_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ BMS_1_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+ SG_ BMS_PwrDwnReq : 0|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ IPS_Diag_Response : 0|64@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ IPS_OBC_1_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_OBC_1_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+ SG_ IPS_DCDC_2_Checksum : 0|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_DCDC_2_MsgCounter : 0|4@0+ (1,0) [0|15] "-" Vector__XXX
+
+BO_ 893 VCU_16_E: 8 Vector__XXX
+ SG_ VCU_IPS_OBCChgCurrReq : 23|16@0+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ VCU_IPS_OBCChgVoltReq : 7|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+
+BO_ 673 VCU_6_E: 8 Vector__XXX
+ SG_ VCU_IPS_OBCDsChDCCurrLim : 17|10@0+ (0.1,0) [0|102.3] "A" Vector__XXX
+ SG_ VCU_IPS_OBCModeReq : 12|3@0+ (1,0) [0|7] "-" Vector__XXX
+
+BO_ 680 VCU_5_E: 8 Vector__XXX
+ SG_ VCU_IPS_DCDCLvCurrLim : 45|10@0+ (0.5,0) [0|511.5] "A" Vector__XXX
+ SG_ VCU_IPS_DCDCModeReq : 10|3@0+ (1,0) [0|7] "-" Vector__XXX
+ SG_ VCU_IPS_DCDCVoltLvSet : 7|8@0+ (0.25,0) [0|63.75] "V" Vector__XXX
+
+BO_ 1630 IPS_DEBUG_4: 8 Vector__XXX
+ SG_ BitRsvd1_IPS_DEBUG4 : 7|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_Set_PP : 10|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ Disable_Vol : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Disable_Roll : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Disable_DchgCp : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Disable_Crc : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Disable_CP : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DebugModeReq : 2|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ IPS_IntMsg12 : 55|16@0+ (1,0) [0|65535] "-" Vector__XXX
+ SG_ IPS_IntMsg11 : 39|16@0+ (1,0) [0|65535] "-" Vector__XXX
+ SG_ IPS_IntMsg10 : 23|16@0+ (1,0) [0|65535] "-" Vector__XXX
+
+BO_ 1743 IPS_DEBUG_3: 8 Vector__XXX
+ SG_ DCCmd_DCWorkMode : 55|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_DchgIoutLimit : 39|16@0+ (0.01,0) [0|655.35] "A" Vector__XXX
+ SG_ OBCCmdCurrent : 23|16@0+ (0.01,0) [0|655.35] "A" Vector__XXX
+ SG_ OBCCmdVoltage : 7|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+
+BO_ 1742 IPS_DEBUG_2: 8 Vector__XXX
+ SG_ OBC_WorkState : 51|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCCmd_ReqVoltage : 63|8@0+ (0.25,0) [0|63.75] "V" Vector__XXX
+ SG_ KL15Voltage : 15|8@0+ (0.1,0) [0|25.5] "V" Vector__XXX
+ SG_ OBC_Cmd : 55|4@0+ (1,0) [0|65535] "-" Vector__XXX
+ SG_ VBulk : 39|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ VdcOut : 23|16@0+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ KL30Voltage : 7|8@0+ (0.1,0) [0|65535] "V" Vector__XXX
+
+BO_ 1747 IPS_DEBUG_1: 8 Vector__XXX
+ SG_ IPS_OBCState9 : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ IPS_OBCState8 : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ IPS_OBCState7 : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ IPS_OBCState6 : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ IPS_DCDCSwVersion : 23|16@0+ (1,0) [0|65535] "-" Vector__XXX
+ SG_ IPS_DCDCID : 7|16@0+ (1,0) [0|65535] "-" Vector__XXX
+
+BO_ 884 IPS_OBC_5: 8 Vector__XXX
+ SG_ IPS_OBCDispDiagInfo : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ IPS_OBCTempAct : 15|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ IPS_OBCEnergyDirCap : 7|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ Notused2 : 6|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_OBCFaultLampInd : 5|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ IPS_OBCFlowReq : 4|4@0+ (1,0) [0|15] "LpMin" Vector__XXX
+ SG_ Notused1 : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 746 IPS_OBC_4: 8 Vector__XXX
+ SG_ IPS_OBCChgPwrMax : 12|10@0+ (0.05,0) [0|51.15] "kW" Vector__XXX
+ SG_ Notused3 : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_OBCHvDcVoltAct : 33|10@0+ (1,0) [0|1023] "V" Vector__XXX
+ SG_ Notused2 : 39|6@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_OBCHvDcCurrAct : 18|11@0+ (0.1,-102.4) [-102.4|102.3] "A" Vector__XXX
+ SG_ Notused1 : 7|11@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 917 IPS_OBC_3: 8 Vector__XXX
+ SG_ Notuse1 : 49|10@0+ (10,0) [0|1023] "" Vector__XXX
+ SG_ IPS_OBCCurrActL3 : 42|9@0+ (0.1,0) [0|51.1] "A" Vector__XXX
+ SG_ IPS_OBCCurrActL2 : 35|9@0+ (0.1,0) [0|51.1] "A" Vector__XXX
+ SG_ IPS_OBCCurrActL1 : 28|9@0+ (0.1,0) [0|51.1] "A" Vector__XXX
+ SG_ IPS_OBCUacActL3 : 21|9@0+ (1,0) [0|511] "V" Vector__XXX
+ SG_ IPS_OBCUacActL2 : 14|9@0+ (1,0) [0|511] "V" Vector__XXX
+ SG_ IPS_OBCUacActL1 : 7|9@0+ (1,0) [0|511] "V" Vector__XXX
+
+BO_ 925 IPS_OBC_2: 8 Vector__XXX
+ SG_ Notused2 : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_OBCState5 : 55|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_OBCState4 : 47|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_OBCState3 : 39|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_OBCState2 : 23|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_OBCState1 : 31|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ Notused1 : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 924 IPS_OBC_1: 8 Vector__XXX
+ SG_ Notused4 : 55|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_OBCStStep : 53|2@0+ (1,0) [0|3] "-" Vector__XXX
+ SG_ IPS_OBCCPVolt : 47|8@0+ (0.1,0) [0|12.7] "V" Vector__XXX
+ SG_ IPS_OBCCp_DutyCycle : 25|10@0+ (0.1,0) [0|100] "-" Vector__XXX
+ SG_ IPS_OBCCPSt : 31|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ IPS_OBCCpFreqSt : 30|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ IPS_OBCCpS2St : 29|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ Notuse5 : 28|3@0+ (1,0) [0|7] "-" Vector__XXX
+ SG_ IPS_ACHvilSt : 23|2@0+ (1,0) [0|3] "-" Vector__XXX
+ SG_ IPS_OBCModeSt : 21|3@0+ (1,0) [0|7] "-" Vector__XXX
+ SG_ Notused3 : 18|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_OBCDschCPSt : 8|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ Notused2 : 15|7@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_OBCPP_St : 7|3@0+ (1,0) [0|7] "-" Vector__XXX
+ SG_ Notused1 : 4|5@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 897 IPS_DCDC_3: 8 Vector__XXX
+ SG_ IPS_DcdcHwSt : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ res1 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCHwErr : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Notused3 : 59|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCFlowReq : 63|4@0+ (1,0) [0|15] "LpMin" Vector__XXX
+ SG_ IPS_DCDCState5 : 55|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_DCDCState4 : 47|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_DCDCState3 : 39|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_DCDCState2 : 31|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ IPS_DCDCState1 : 23|8@0+ (1,0) [0|255] "-" Vector__XXX
+ SG_ Notused2 : 14|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCFaultLampInd : 9|1@0+ (1,0) [0|1] "-" Vector__XXX
+
+BO_ 889 IPS_DCDC_2: 8 Vector__XXX
+ SG_ IPS_DCDCVoltHvAct : 47|10@0+ (1,0) [0|1023] "V" Vector__XXX
+ SG_ Notused : 53|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IPS_DCDCTempAct : 39|8@0+ (1,-40) [-40|215] "degC" Vector__XXX
+ SG_ IPS_DCDCCurrLvAct : 16|9@0+ (1,0) [0|511] "A" Vector__XXX
+ SG_ IPS_DCDCCurrHvAct : 9|9@0+ (0.125,0) [0|63.875] "A" Vector__XXX
+ SG_ IPS_DCDCVoltLvAct : 2|9@0+ (0.125,0) [0|63.875] "V" Vector__XXX
+ SG_ IPS_HVDCHVilSt : 7|2@0+ (1,0) [0|3] "-" Vector__XXX
+ SG_ IPS_DCDCModeSt : 5|3@0+ (1,0) [0|7] "-" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 IPS_IntMsg9 "IPS internal message";
+CM_ SG_ 3221225472 IPS_DCDCState6 "DCDC state information 6";
+CM_ SG_ 3221225472 IPS_OBCChgCurrMax "Available OBC charging current depending on provided current from charging station, limitations from cable and OBC derating.";
+CM_ SG_ 3221225472 IPS_OBC_4_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 IPS_OBC_4_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 3221225472 IPS_OBCDsgPortPwrCons "V2V, V2L discharge port constant power max (CC£¬IPS discharging max power)";
+CM_ SG_ 3221225472 IPS_DCDC_4_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 IPS_DCDC_4_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 3221225472 IPS_DCDCDispDiagInfo "DCDC diagnostics Information for display";
+CM_ SG_ 3221225472 CP_Frequency "IPS internal message";
+CM_ SG_ 3221225472 BCM_KeySt "Ignition key position status";
+CM_ SG_ 3221225472 VCU_NMDataField2 "VCU Network management data";
+CM_ SG_ 3221225472 VCU_SubNetWakeRq "SubNet wake up request";
+CM_ SG_ 3221225472 VCU_NMDataField1 "VCU Network management data";
+CM_ SG_ 3221225472 VCU_NMNodeAddress "VCU node adress";
+CM_ SG_ 3221225472 TEL_NMDataField2 "TEL Network management data";
+CM_ SG_ 3221225472 TEL_SubNetWakeRq "SubNet wake up request";
+CM_ SG_ 3221225472 TEL_NMDataField1 "TEL Network management data";
+CM_ SG_ 3221225472 TEL_NodeAddress "TEL node adress";
+CM_ SG_ 3221225472 GWM_NMDataField "GWM Network management data";
+CM_ SG_ 3221225472 GWM_NMNodeAddress "GWM node address";
+CM_ SG_ 3221225472 DCU_NMDataField2 "DCU Network management data";
+CM_ SG_ 3221225472 DCU_SubNetWakeRq "SubNet wake up request";
+CM_ SG_ 3221225472 DCU_NMDataField1 "DCU Network management data";
+CM_ SG_ 3221225472 DCU_NMNodeAddress "DCU node address";
+CM_ SG_ 3221225472 BMS_NMWakeupOrigin "Origin of the wake up";
+CM_ SG_ 3221225472 BMS_NMDataField2 "BMS Network management data";
+CM_ SG_ 3221225472 BMS_SubNetWakeRq "SubNet wake up request";
+CM_ SG_ 3221225472 BMS_NMDataField1 "BMS Network management data";
+CM_ SG_ 3221225472 BMS_NodeAddress "BMS node adress";
+CM_ SG_ 3221225472 TEL_Time_Sec "Second number";
+CM_ SG_ 3221225472 TEL_Time_Min "Minute number";
+CM_ SG_ 3221225472 TEL_Time_Day "Day number";
+CM_ SG_ 3221225472 TEL_Time_Hour "Hour number";
+CM_ SG_ 3221225472 TEL_Time_Month "Month number";
+CM_ SG_ 3221225472 TEL_Time_Year "Year number";
+CM_ SG_ 3221225472 IPS_NMDataField2 "IPS Network management data";
+CM_ SG_ 3221225472 IPS_SubNetWakeRq "SubNet wake up request";
+CM_ SG_ 3221225472 IPS_NMWakeupOrigin "Origin of the wake up";
+CM_ SG_ 3221225472 IPS_NMDataField1 "IPS Network management data";
+CM_ SG_ 3221225472 IPS_NMNodeAddress "IPS node address";
+CM_ SG_ 3221225472 IPS_6_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 IPS_6_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 3221225472 IPS_DCDCDiagErrCode "DCDC diagnostics error code";
+CM_ SG_ 3221225472 IPS_OBCDiagErrCode "OBC diagnostics error code";
+CM_ SG_ 3221225472 IPS_TEL_DCDCModeSt "mode status of DCDC for TEL";
+CM_ SG_ 3221225472 IPS_TEL_DCDCTempOvrErr "over temperature, DCDC not able to work, FOR TEL";
+CM_ SG_ 3221225472 IPS_TEL_DCDCFaultLampInd "Warning indicator to lighten fault lamp (Malfunction Indication Lamp, MIL), FOR TEL";
+CM_ SG_ 3221225472 IPS_Diag_Request "Diagnostic physical request";
+CM_ SG_ 3221225472 VCU_16_E_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 VCU_16_E_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 3221225472 VCU_6_E_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 VCU_6_E_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 3221225472 VCU_5_E_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 VCU_5_E_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 3221225472 BMS_1_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 BMS_1_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 3221225472 BMS_PwrDwnReq "Emergency power-off warning. when the HV battery needs an emergency power-off, this signal is used to notify each HV node. The received node should reduce their power  to 0  as soon as possible.";
+CM_ SG_ 3221225472 IPS_Diag_Response "IPS diagnostic response";
+CM_ SG_ 3221225472 IPS_OBC_1_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 IPS_OBC_1_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 3221225472 IPS_DCDC_2_Checksum "Message checksum CRC in accordance with J1850";
+CM_ SG_ 3221225472 IPS_DCDC_2_MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 893 VCU_IPS_OBCChgCurrReq "Required AC charge current  from IPS_OBC";
+CM_ SG_ 893 VCU_IPS_OBCChgVoltReq "Required AC charge valtage from IPS_OBC";
+CM_ SG_ 673 VCU_IPS_OBCDsChDCCurrLim "max allowed (limit) discharging current on DC side of OBC";
+CM_ SG_ 673 VCU_IPS_OBCModeReq "OBC mode request (0: no request, sleep indication allowed)";
+CM_ SG_ 680 VCU_IPS_DCDCLvCurrLim "Limitation of DCDC LV output current. Current is positive, if energy flow is from IPS into the LV system.";
+CM_ SG_ 680 VCU_IPS_DCDCModeReq "requestable target mode for DCDC";
+CM_ SG_ 680 VCU_IPS_DCDCVoltLvSet "requestable target output DC voltage at LV of DCDC";
+CM_ SG_ 1630 Disable_Vol "disable HV battery detection";
+CM_ SG_ 1630 Disable_Roll "disable rolling counter check";
+CM_ SG_ 1630 Disable_DchgCp "disable CP detection if working in inverter mode";
+CM_ SG_ 1630 Disable_Crc "disable CRC check";
+CM_ SG_ 1630 Disable_CP "disable CP detection";
+CM_ SG_ 1630 IPS_IntMsg12 "IPS internal message";
+CM_ SG_ 1630 IPS_IntMsg11 "IPS internal message";
+CM_ SG_ 1630 IPS_IntMsg10 "IPS internal message";
+CM_ SG_ 1743 OBC_DchgIoutLimit "IPS internal message";
+CM_ SG_ 1743 OBCCmdCurrent "IPS internal message";
+CM_ SG_ 1743 OBCCmdVoltage "IPS internal message";
+CM_ SG_ 1742 OBC_Cmd "IPS internal message";
+CM_ SG_ 1742 VBulk "IPS internal message";
+CM_ SG_ 1742 VdcOut "IPS internal message";
+CM_ SG_ 1742 KL30Voltage "IPS internal message";
+CM_ SG_ 1747 IPS_DCDCSwVersion "software version of DCDC, according to GAC Definition (see Diagnostic Tables)";
+CM_ SG_ 1747 IPS_DCDCID "ID of DCDC, according to GAC Definition (see Diagnostic Tables)";
+CM_ SG_ 884 IPS_OBCDispDiagInfo "OBC diagnostics Information for display";
+CM_ SG_ 884 IPS_OBCTempAct "OBC internal temperature";
+CM_ SG_ 884 IPS_OBCEnergyDirCap "The capability of energy flow direction of IPS_OBC";
+CM_ SG_ 884 IPS_OBCFaultLampInd "Warning indicator to lighten fault 
+lamp (Malfunction Indication Lamp, 
+MIL";
+CM_ SG_ 884 IPS_OBCFlowReq "The OBC required coolant flow speed  (L/min)";
+CM_ SG_ 746 IPS_OBCHvDcVoltAct "OBC HVDC voltage";
+CM_ SG_ 746 IPS_OBCHvDcCurrAct "OBC HVDC actual current";
+CM_ SG_ 917 Notuse1 "CC Resistance value in Ohm";
+CM_ SG_ 917 IPS_OBCCurrActL3 "L3 phase current";
+CM_ SG_ 917 IPS_OBCCurrActL2 "L2 phase current";
+CM_ SG_ 917 IPS_OBCCurrActL1 "L1 phase current";
+CM_ SG_ 917 IPS_OBCUacActL3 "L3 phase voltage";
+CM_ SG_ 917 IPS_OBCUacActL2 "L2 phase voltage";
+CM_ SG_ 917 IPS_OBCUacActL1 "L1 phase voltage";
+CM_ SG_ 925 IPS_OBCState5 "OBC state information 5";
+CM_ SG_ 925 IPS_OBCState4 "OBC state information 4";
+CM_ SG_ 925 IPS_OBCState3 "OBC state information 3";
+CM_ SG_ 925 IPS_OBCState2 "OBC state information 2";
+CM_ SG_ 925 IPS_OBCState1 "OBC state information 1";
+CM_ SG_ 924 IPS_OBCStStep "OBC Charging or V2V orV2L state Step";
+CM_ SG_ 924 IPS_OBCCPVolt "CP high level";
+CM_ SG_ 924 IPS_OBCCp_DutyCycle "CP Duty";
+CM_ SG_ 924 IPS_OBCCPSt "Status of control pilot signal (CP) for charging";
+CM_ SG_ 924 IPS_OBCCpFreqSt "CP frequency state in the J1772 range";
+CM_ SG_ 924 IPS_OBCCpS2St "S2 swtich state";
+CM_ SG_ 924 Notuse5 "AC charging capability of the charging cable detected by OBC";
+CM_ SG_ 924 IPS_ACHvilSt "IPS send AC side HVIL status measued by itself";
+CM_ SG_ 924 IPS_OBCModeSt "OBC mode state";
+CM_ SG_ 924 IPS_OBCDschCPSt "Status of control pilot signal (CP) for discharging";
+CM_ SG_ 924 IPS_OBCPP_St "Status of show charging cable connection (PP) including type of connected cable (charging/V2V, or V2L)";
+CM_ SG_ 897 IPS_DcdcHwSt "tell it is that IPS or
+DCDC(because they are same";
+CM_ SG_ 897 IPS_DCDCFlowReq "The DCDC required coolant flow speed  (L/min)";
+CM_ SG_ 897 IPS_DCDCState5 "DCDC state information 5";
+CM_ SG_ 897 IPS_DCDCState4 "DCDC state information 4";
+CM_ SG_ 897 IPS_DCDCState3 "DCDC state information 3";
+CM_ SG_ 897 IPS_DCDCState2 "DCDC state information 2";
+CM_ SG_ 897 IPS_DCDCState1 "DCDC state information 1";
+CM_ SG_ 897 IPS_DCDCFaultLampInd "Warning indicator to lighten fault 
+lamp (Malfunction Indication Lamp, 
+MIL";
+CM_ SG_ 889 IPS_DCDCVoltHvAct "actual HV voltage at DCDC";
+CM_ SG_ 889 IPS_DCDCTempAct "Actual temperature of DCDC";
+CM_ SG_ 889 IPS_DCDCCurrLvAct "actual (output) Current at LV 
+voltage of DCDC";
+CM_ SG_ 889 IPS_DCDCCurrHvAct "actual (input) current at HV voltage 
+of DCDC";
+CM_ SG_ 889 IPS_DCDCVoltLvAct "actual LV voltage at DCDC";
+CM_ SG_ 889 IPS_HVDCHVilSt "IPS send DC side HVIL status measued by itself";
+CM_ SG_ 889 IPS_DCDCModeSt "mode status of DCDC";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "Remark" STRING ;
+BA_DEF_ SG_  "EventCommandSignal" ENUM  "No","Yes";
+BA_DEF_ SG_  "GatewayedSignals" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInvalidValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "DiagMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Trigger","Passive";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Periodic","Event","IfActive","POE","PA";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "Remark" "*";
+BA_DEF_DEF_  "EventCommandSignal" "No";
+BA_DEF_DEF_  "GatewayedSignals" "No";
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInvalidValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "DiagMessage" "No";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Trigger";
+BA_DEF_DEF_  "GenMsgSendType" "Periodic";
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 893 200;
+BA_ "GenMsgCycleTimeFast" BO_ 893 0;
+BA_ "GenMsgSendType" BO_ 893 0;
+BA_ "GenMsgCycleTime" BO_ 673 20;
+BA_ "GenMsgCycleTimeFast" BO_ 673 0;
+BA_ "GenMsgSendType" BO_ 673 0;
+BA_ "GenMsgCycleTime" BO_ 680 100;
+BA_ "GenMsgCycleTimeFast" BO_ 680 0;
+BA_ "GenMsgSendType" BO_ 680 0;
+BA_ "GenMsgCycleTime" BO_ 1630 500;
+BA_ "GenMsgCycleTimeFast" BO_ 1630 0;
+BA_ "GenMsgSendType" BO_ 1630 0;
+BA_ "GenMsgCycleTime" BO_ 1743 500;
+BA_ "GenMsgCycleTimeFast" BO_ 1743 0;
+BA_ "GenMsgSendType" BO_ 1743 0;
+BA_ "GenMsgCycleTime" BO_ 1742 500;
+BA_ "GenMsgCycleTimeFast" BO_ 1742 0;
+BA_ "GenMsgSendType" BO_ 1742 0;
+BA_ "GenMsgCycleTime" BO_ 1747 1000;
+BA_ "GenMsgCycleTimeFast" BO_ 1747 0;
+BA_ "GenMsgSendType" BO_ 1747 0;
+BA_ "GenMsgCycleTime" BO_ 884 500;
+BA_ "GenMsgCycleTimeFast" BO_ 884 0;
+BA_ "GenMsgSendType" BO_ 884 0;
+BA_ "GenMsgCycleTime" BO_ 746 100;
+BA_ "GenMsgCycleTimeFast" BO_ 746 0;
+BA_ "GenMsgSendType" BO_ 746 0;
+BA_ "GenMsgCycleTime" BO_ 917 100;
+BA_ "GenMsgCycleTimeFast" BO_ 917 0;
+BA_ "GenMsgSendType" BO_ 917 0;
+BA_ "GenMsgCycleTime" BO_ 925 100;
+BA_ "GenMsgCycleTimeFast" BO_ 925 0;
+BA_ "GenMsgSendType" BO_ 925 0;
+BA_ "GenMsgCycleTime" BO_ 924 20;
+BA_ "GenMsgCycleTimeFast" BO_ 924 0;
+BA_ "GenMsgSendType" BO_ 924 0;
+BA_ "GenMsgCycleTime" BO_ 897 200;
+BA_ "GenMsgCycleTimeFast" BO_ 897 0;
+BA_ "GenMsgSendType" BO_ 897 0;
+BA_ "GenMsgCycleTime" BO_ 889 20;
+BA_ "GenMsgCycleTimeFast" BO_ 889 0;
+BA_ "GenMsgSendType" BO_ 889 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_IntMsg9 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_IntMsg9 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_IntMsg9 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_IntMsg9 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_IntMsg9 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_IntMsg9 0;
+BA_ "Remark" SG_ 3221225472 IPS_IntMsg9 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_IntMsg9 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_DCDCState6 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_DCDCState6 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_DCDCState6 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_DCDCState6 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_DCDCState6 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_DCDCState6 0;
+BA_ "Remark" SG_ 3221225472 IPS_DCDCState6 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_DCDCState6 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Notused2 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 Notused2 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 Notused2 0;
+BA_ "GenSigSendType" SG_ 3221225472 Notused2 1;
+BA_ "GatewayedSignals" SG_ 3221225472 Notused2 0;
+BA_ "EventCommandSignal" SG_ 3221225472 Notused2 0;
+BA_ "Remark" SG_ 3221225472 Notused2 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 Notused2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_OBCChgCurrMax 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_OBCChgCurrMax 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_OBCChgCurrMax 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_OBCChgCurrMax 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_OBCChgCurrMax 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_OBCChgCurrMax 0;
+BA_ "Remark" SG_ 3221225472 IPS_OBCChgCurrMax "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_OBCChgCurrMax 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_OBC_4_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_OBC_4_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_OBC_4_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_OBC_4_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_OBC_4_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_OBC_4_Checksum 0;
+BA_ "Remark" SG_ 3221225472 IPS_OBC_4_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_OBC_4_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_OBC_4_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_OBC_4_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_OBC_4_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_OBC_4_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_OBC_4_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_OBC_4_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 IPS_OBC_4_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_OBC_4_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_OBCDsgPortPwrCons 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_OBCDsgPortPwrCons 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_OBCDsgPortPwrCons 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_OBCDsgPortPwrCons 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_OBCDsgPortPwrCons 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_OBCDsgPortPwrCons 0;
+BA_ "Remark" SG_ 3221225472 IPS_OBCDsgPortPwrCons "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_OBCDsgPortPwrCons 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_DCDC_4_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_DCDC_4_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_DCDC_4_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_DCDC_4_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_DCDC_4_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_DCDC_4_Checksum 0;
+BA_ "Remark" SG_ 3221225472 IPS_DCDC_4_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_DCDC_4_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_DCDC_4_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_DCDC_4_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_DCDC_4_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_DCDC_4_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_DCDC_4_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_DCDC_4_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 IPS_DCDC_4_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_DCDC_4_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_DCDCDispDiagInfo 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_DCDCDispDiagInfo 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_DCDCDispDiagInfo 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_DCDCDispDiagInfo 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_DCDCDispDiagInfo 1;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_DCDCDispDiagInfo 0;
+BA_ "Remark" SG_ 3221225472 IPS_DCDCDispDiagInfo "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_DCDCDispDiagInfo 0;
+BA_ "GenSigStartValue" SG_ 3221225472 CP_Frequency 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 CP_Frequency 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 CP_Frequency 0;
+BA_ "GenSigSendType" SG_ 3221225472 CP_Frequency 1;
+BA_ "GatewayedSignals" SG_ 3221225472 CP_Frequency 0;
+BA_ "EventCommandSignal" SG_ 3221225472 CP_Frequency 0;
+BA_ "Remark" SG_ 3221225472 CP_Frequency "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 CP_Frequency 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_NMDataField2 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_NMDataField2 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_NMDataField2 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_NMDataField2 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_NMDataField2 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_NMDataField2 0;
+BA_ "Remark" SG_ 3221225472 VCU_NMDataField2 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_NMDataField2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_SubNetWakeRq 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_SubNetWakeRq 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_SubNetWakeRq 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_SubNetWakeRq 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_SubNetWakeRq 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_SubNetWakeRq 0;
+BA_ "Remark" SG_ 3221225472 VCU_SubNetWakeRq "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_SubNetWakeRq 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_NMDataField1 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_NMDataField1 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_NMDataField1 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_NMDataField1 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_NMDataField1 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_NMDataField1 0;
+BA_ "Remark" SG_ 3221225472 VCU_NMDataField1 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_NMDataField1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_NMNodeAddress 2;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_NMNodeAddress 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_NMNodeAddress 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_NMNodeAddress 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_NMNodeAddress 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_NMNodeAddress 0;
+BA_ "Remark" SG_ 3221225472 VCU_NMNodeAddress "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_NMNodeAddress 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_NMDataField2 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_NMDataField2 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_NMDataField2 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_NMDataField2 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_NMDataField2 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_NMDataField2 0;
+BA_ "Remark" SG_ 3221225472 TEL_NMDataField2 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_NMDataField2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_SubNetWakeRq 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_SubNetWakeRq 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_SubNetWakeRq 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_SubNetWakeRq 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_SubNetWakeRq 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_SubNetWakeRq 0;
+BA_ "Remark" SG_ 3221225472 TEL_SubNetWakeRq "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_SubNetWakeRq 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_NMDataField1 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_NMDataField1 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_NMDataField1 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_NMDataField1 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_NMDataField1 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_NMDataField1 0;
+BA_ "Remark" SG_ 3221225472 TEL_NMDataField1 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_NMDataField1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_NodeAddress 45;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_NodeAddress 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_NodeAddress 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_NodeAddress 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_NodeAddress 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_NodeAddress 0;
+BA_ "Remark" SG_ 3221225472 TEL_NodeAddress "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_NodeAddress 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GWM_NMDataField 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 GWM_NMDataField 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 GWM_NMDataField 0;
+BA_ "GenSigSendType" SG_ 3221225472 GWM_NMDataField 1;
+BA_ "GatewayedSignals" SG_ 3221225472 GWM_NMDataField 0;
+BA_ "EventCommandSignal" SG_ 3221225472 GWM_NMDataField 0;
+BA_ "Remark" SG_ 3221225472 GWM_NMDataField "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 GWM_NMDataField 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GWM_NMNodeAddress 79;
+BA_ "GenSigInvalidValue" SG_ 3221225472 GWM_NMNodeAddress 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 GWM_NMNodeAddress 0;
+BA_ "GenSigSendType" SG_ 3221225472 GWM_NMNodeAddress 1;
+BA_ "GatewayedSignals" SG_ 3221225472 GWM_NMNodeAddress 0;
+BA_ "EventCommandSignal" SG_ 3221225472 GWM_NMNodeAddress 0;
+BA_ "Remark" SG_ 3221225472 GWM_NMNodeAddress "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 GWM_NMNodeAddress 0;
+BA_ "GenSigStartValue" SG_ 3221225472 DCU_NMDataField2 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 DCU_NMDataField2 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 DCU_NMDataField2 0;
+BA_ "GenSigSendType" SG_ 3221225472 DCU_NMDataField2 1;
+BA_ "GatewayedSignals" SG_ 3221225472 DCU_NMDataField2 0;
+BA_ "EventCommandSignal" SG_ 3221225472 DCU_NMDataField2 0;
+BA_ "Remark" SG_ 3221225472 DCU_NMDataField2 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 DCU_NMDataField2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 DCU_SubNetWakeRq 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 DCU_SubNetWakeRq 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 DCU_SubNetWakeRq 0;
+BA_ "GenSigSendType" SG_ 3221225472 DCU_SubNetWakeRq 1;
+BA_ "GatewayedSignals" SG_ 3221225472 DCU_SubNetWakeRq 0;
+BA_ "EventCommandSignal" SG_ 3221225472 DCU_SubNetWakeRq 0;
+BA_ "Remark" SG_ 3221225472 DCU_SubNetWakeRq "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 DCU_SubNetWakeRq 0;
+BA_ "GenSigStartValue" SG_ 3221225472 DCU_NMDataField1 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 DCU_NMDataField1 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 DCU_NMDataField1 0;
+BA_ "GenSigSendType" SG_ 3221225472 DCU_NMDataField1 1;
+BA_ "GatewayedSignals" SG_ 3221225472 DCU_NMDataField1 0;
+BA_ "EventCommandSignal" SG_ 3221225472 DCU_NMDataField1 0;
+BA_ "Remark" SG_ 3221225472 DCU_NMDataField1 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 DCU_NMDataField1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 DCU_NMNodeAddress 6;
+BA_ "GenSigInvalidValue" SG_ 3221225472 DCU_NMNodeAddress 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 DCU_NMNodeAddress 0;
+BA_ "GenSigSendType" SG_ 3221225472 DCU_NMNodeAddress 1;
+BA_ "GatewayedSignals" SG_ 3221225472 DCU_NMNodeAddress 0;
+BA_ "EventCommandSignal" SG_ 3221225472 DCU_NMNodeAddress 0;
+BA_ "Remark" SG_ 3221225472 DCU_NMNodeAddress "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 DCU_NMNodeAddress 0;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_NMDataField2 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 BMS_NMDataField2 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 BMS_NMDataField2 0;
+BA_ "GenSigSendType" SG_ 3221225472 BMS_NMDataField2 1;
+BA_ "GatewayedSignals" SG_ 3221225472 BMS_NMDataField2 0;
+BA_ "EventCommandSignal" SG_ 3221225472 BMS_NMDataField2 0;
+BA_ "Remark" SG_ 3221225472 BMS_NMDataField2 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 BMS_NMDataField2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_SubNetWakeRq 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 BMS_SubNetWakeRq 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 BMS_SubNetWakeRq 0;
+BA_ "GenSigSendType" SG_ 3221225472 BMS_SubNetWakeRq 1;
+BA_ "GatewayedSignals" SG_ 3221225472 BMS_SubNetWakeRq 0;
+BA_ "EventCommandSignal" SG_ 3221225472 BMS_SubNetWakeRq 0;
+BA_ "Remark" SG_ 3221225472 BMS_SubNetWakeRq "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 BMS_SubNetWakeRq 0;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_NMDataField1 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 BMS_NMDataField1 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 BMS_NMDataField1 0;
+BA_ "GenSigSendType" SG_ 3221225472 BMS_NMDataField1 1;
+BA_ "GatewayedSignals" SG_ 3221225472 BMS_NMDataField1 0;
+BA_ "EventCommandSignal" SG_ 3221225472 BMS_NMDataField1 0;
+BA_ "Remark" SG_ 3221225472 BMS_NMDataField1 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 BMS_NMDataField1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_NodeAddress 4;
+BA_ "GenSigInvalidValue" SG_ 3221225472 BMS_NodeAddress 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 BMS_NodeAddress 0;
+BA_ "GenSigSendType" SG_ 3221225472 BMS_NodeAddress 1;
+BA_ "GatewayedSignals" SG_ 3221225472 BMS_NodeAddress 0;
+BA_ "EventCommandSignal" SG_ 3221225472 BMS_NodeAddress 0;
+BA_ "Remark" SG_ 3221225472 BMS_NodeAddress "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 BMS_NodeAddress 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_Time_Sec 1;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_Time_Sec 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_Time_Sec 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_Time_Sec 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_Time_Sec 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_Time_Sec 0;
+BA_ "Remark" SG_ 3221225472 TEL_Time_Sec "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_Time_Sec 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_Time_Min 1;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_Time_Min 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_Time_Min 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_Time_Min 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_Time_Min 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_Time_Min 0;
+BA_ "Remark" SG_ 3221225472 TEL_Time_Min "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_Time_Min 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_Time_Day 1;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_Time_Day 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_Time_Day 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_Time_Day 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_Time_Day 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_Time_Day 0;
+BA_ "Remark" SG_ 3221225472 TEL_Time_Day "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_Time_Day 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_Time_Hour 1;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_Time_Hour 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_Time_Hour 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_Time_Hour 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_Time_Hour 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_Time_Hour 0;
+BA_ "Remark" SG_ 3221225472 TEL_Time_Hour "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_Time_Hour 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_Time_Month 1;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_Time_Month 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_Time_Month 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_Time_Month 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_Time_Month 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_Time_Month 0;
+BA_ "Remark" SG_ 3221225472 TEL_Time_Month "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_Time_Month 0;
+BA_ "GenSigStartValue" SG_ 3221225472 TEL_Time_Year 15;
+BA_ "GenSigInvalidValue" SG_ 3221225472 TEL_Time_Year 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 TEL_Time_Year 0;
+BA_ "GenSigSendType" SG_ 3221225472 TEL_Time_Year 1;
+BA_ "GatewayedSignals" SG_ 3221225472 TEL_Time_Year 0;
+BA_ "EventCommandSignal" SG_ 3221225472 TEL_Time_Year 0;
+BA_ "Remark" SG_ 3221225472 TEL_Time_Year "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 TEL_Time_Year 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_NMDataField2 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_NMDataField2 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_NMDataField2 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_NMDataField2 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_NMDataField2 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_NMDataField2 0;
+BA_ "Remark" SG_ 3221225472 IPS_NMDataField2 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_NMDataField2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_SubNetWakeRq 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_SubNetWakeRq 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_SubNetWakeRq 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_SubNetWakeRq 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_SubNetWakeRq 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_SubNetWakeRq 0;
+BA_ "Remark" SG_ 3221225472 IPS_SubNetWakeRq "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_SubNetWakeRq 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_NMWakeupOrigin 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_NMWakeupOrigin 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_NMWakeupOrigin 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_NMWakeupOrigin 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_NMWakeupOrigin 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_NMWakeupOrigin 0;
+BA_ "Remark" SG_ 3221225472 IPS_NMWakeupOrigin "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_NMWakeupOrigin 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_NMDataField1 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_NMDataField1 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_NMDataField1 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_NMDataField1 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_NMDataField1 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_NMDataField1 0;
+BA_ "Remark" SG_ 3221225472 IPS_NMDataField1 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_NMDataField1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_NMNodeAddress 10;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_NMNodeAddress 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_NMNodeAddress 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_NMNodeAddress 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_NMNodeAddress 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_NMNodeAddress 0;
+BA_ "Remark" SG_ 3221225472 IPS_NMNodeAddress "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_NMNodeAddress 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_6_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_6_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_6_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_6_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_6_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_6_Checksum 0;
+BA_ "Remark" SG_ 3221225472 IPS_6_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_6_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_6_Notused1 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_6_Notused1 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_6_Notused1 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_6_Notused1 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_6_Notused1 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_6_Notused1 0;
+BA_ "Remark" SG_ 3221225472 IPS_6_Notused1 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_6_Notused1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_6_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_6_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_6_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_6_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_6_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_6_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 IPS_6_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_6_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_DCDCDiagErrCode 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_DCDCDiagErrCode 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_DCDCDiagErrCode 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_DCDCDiagErrCode 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_DCDCDiagErrCode 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_DCDCDiagErrCode 0;
+BA_ "Remark" SG_ 3221225472 IPS_DCDCDiagErrCode "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_DCDCDiagErrCode 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_OBCDiagErrCode 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_OBCDiagErrCode 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_OBCDiagErrCode 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_OBCDiagErrCode 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_OBCDiagErrCode 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_OBCDiagErrCode 0;
+BA_ "Remark" SG_ 3221225472 IPS_OBCDiagErrCode "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_OBCDiagErrCode 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Notused3 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 Notused3 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 Notused3 0;
+BA_ "GenSigSendType" SG_ 3221225472 Notused3 1;
+BA_ "GatewayedSignals" SG_ 3221225472 Notused3 0;
+BA_ "EventCommandSignal" SG_ 3221225472 Notused3 0;
+BA_ "Remark" SG_ 3221225472 Notused3 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 Notused3 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_TEL_DCDCModeSt 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_TEL_DCDCModeSt 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_TEL_DCDCModeSt 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_TEL_DCDCModeSt 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_TEL_DCDCModeSt 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_TEL_DCDCModeSt 0;
+BA_ "Remark" SG_ 3221225472 IPS_TEL_DCDCModeSt "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_TEL_DCDCModeSt 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_TEL_DCDCTempOvrErr 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_TEL_DCDCTempOvrErr 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_TEL_DCDCTempOvrErr 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_TEL_DCDCTempOvrErr 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_TEL_DCDCTempOvrErr 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_TEL_DCDCTempOvrErr 0;
+BA_ "Remark" SG_ 3221225472 IPS_TEL_DCDCTempOvrErr "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_TEL_DCDCTempOvrErr 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_TEL_DCDCFaultLampInd 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_TEL_DCDCFaultLampInd 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_TEL_DCDCFaultLampInd 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_TEL_DCDCFaultLampInd 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_TEL_DCDCFaultLampInd 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_TEL_DCDCFaultLampInd 0;
+BA_ "Remark" SG_ 3221225472 IPS_TEL_DCDCFaultLampInd "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_TEL_DCDCFaultLampInd 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Notused1 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 Notused1 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 Notused1 0;
+BA_ "GenSigSendType" SG_ 3221225472 Notused1 1;
+BA_ "GatewayedSignals" SG_ 3221225472 Notused1 0;
+BA_ "EventCommandSignal" SG_ 3221225472 Notused1 0;
+BA_ "Remark" SG_ 3221225472 Notused1 "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 Notused1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_Diag_Request 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_Diag_Request 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_Diag_Request 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_Diag_Request 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_Diag_Request 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_Diag_Request 0;
+BA_ "Remark" SG_ 3221225472 IPS_Diag_Request "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_Diag_Request 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_16_E_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_16_E_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_16_E_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_16_E_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_16_E_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_16_E_Checksum 0;
+BA_ "Remark" SG_ 3221225472 VCU_16_E_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_16_E_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_16_E_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_16_E_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_16_E_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_16_E_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_16_E_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_16_E_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 VCU_16_E_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_16_E_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_6_E_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_6_E_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_6_E_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_6_E_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_6_E_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_6_E_Checksum 0;
+BA_ "Remark" SG_ 3221225472 VCU_6_E_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_6_E_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_6_E_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_6_E_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_6_E_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_6_E_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_6_E_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_6_E_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 VCU_6_E_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_6_E_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_5_E_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_5_E_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_5_E_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_5_E_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_5_E_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_5_E_Checksum 0;
+BA_ "Remark" SG_ 3221225472 VCU_5_E_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_5_E_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_5_E_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 VCU_5_E_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 VCU_5_E_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 VCU_5_E_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 VCU_5_E_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 VCU_5_E_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 VCU_5_E_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 VCU_5_E_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_1_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 BMS_1_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 BMS_1_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 BMS_1_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 BMS_1_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 BMS_1_Checksum 0;
+BA_ "Remark" SG_ 3221225472 BMS_1_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 BMS_1_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_1_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 BMS_1_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 BMS_1_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 BMS_1_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 BMS_1_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 BMS_1_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 BMS_1_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 BMS_1_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_PwrDwnReq 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 BMS_PwrDwnReq 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 BMS_PwrDwnReq 0;
+BA_ "GenSigSendType" SG_ 3221225472 BMS_PwrDwnReq 1;
+BA_ "GatewayedSignals" SG_ 3221225472 BMS_PwrDwnReq 1;
+BA_ "EventCommandSignal" SG_ 3221225472 BMS_PwrDwnReq 0;
+BA_ "Remark" SG_ 3221225472 BMS_PwrDwnReq "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 BMS_PwrDwnReq 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_Diag_Response 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_Diag_Response 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_Diag_Response 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_Diag_Response 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_Diag_Response 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_Diag_Response 0;
+BA_ "Remark" SG_ 3221225472 IPS_Diag_Response "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_Diag_Response 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_OBC_1_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_OBC_1_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_OBC_1_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_OBC_1_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_OBC_1_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_OBC_1_Checksum 0;
+BA_ "Remark" SG_ 3221225472 IPS_OBC_1_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_OBC_1_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_OBC_1_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_OBC_1_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_OBC_1_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_OBC_1_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_OBC_1_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_OBC_1_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 IPS_OBC_1_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_OBC_1_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_DCDC_2_Checksum 85;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_DCDC_2_Checksum 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_DCDC_2_Checksum 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_DCDC_2_Checksum 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_DCDC_2_Checksum 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_DCDC_2_Checksum 0;
+BA_ "Remark" SG_ 3221225472 IPS_DCDC_2_Checksum "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_DCDC_2_Checksum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IPS_DCDC_2_MsgCounter 0;
+BA_ "GenSigInvalidValue" SG_ 3221225472 IPS_DCDC_2_MsgCounter 0;
+BA_ "GenSigInactiveValue" SG_ 3221225472 IPS_DCDC_2_MsgCounter 0;
+BA_ "GenSigSendType" SG_ 3221225472 IPS_DCDC_2_MsgCounter 1;
+BA_ "GatewayedSignals" SG_ 3221225472 IPS_DCDC_2_MsgCounter 0;
+BA_ "EventCommandSignal" SG_ 3221225472 IPS_DCDC_2_MsgCounter 0;
+BA_ "Remark" SG_ 3221225472 IPS_DCDC_2_MsgCounter "";
+BA_ "GenSigTimeoutValue" SG_ 3221225472 IPS_DCDC_2_MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 893 VCU_IPS_OBCChgCurrReq 0;
+BA_ "GenSigInvalidValue" SG_ 893 VCU_IPS_OBCChgCurrReq 0;
+BA_ "GenSigInactiveValue" SG_ 893 VCU_IPS_OBCChgCurrReq 0;
+BA_ "GenSigSendType" SG_ 893 VCU_IPS_OBCChgCurrReq 1;
+BA_ "GatewayedSignals" SG_ 893 VCU_IPS_OBCChgCurrReq 0;
+BA_ "EventCommandSignal" SG_ 893 VCU_IPS_OBCChgCurrReq 0;
+BA_ "Remark" SG_ 893 VCU_IPS_OBCChgCurrReq "";
+BA_ "GenSigTimeoutValue" SG_ 893 VCU_IPS_OBCChgCurrReq 0;
+BA_ "GenSigStartValue" SG_ 893 VCU_IPS_OBCChgVoltReq 0;
+BA_ "GenSigInvalidValue" SG_ 893 VCU_IPS_OBCChgVoltReq 0;
+BA_ "GenSigInactiveValue" SG_ 893 VCU_IPS_OBCChgVoltReq 0;
+BA_ "GenSigSendType" SG_ 893 VCU_IPS_OBCChgVoltReq 1;
+BA_ "GatewayedSignals" SG_ 893 VCU_IPS_OBCChgVoltReq 0;
+BA_ "EventCommandSignal" SG_ 893 VCU_IPS_OBCChgVoltReq 0;
+BA_ "Remark" SG_ 893 VCU_IPS_OBCChgVoltReq "";
+BA_ "GenSigTimeoutValue" SG_ 893 VCU_IPS_OBCChgVoltReq 0;
+BA_ "GenSigStartValue" SG_ 673 VCU_IPS_OBCDsChDCCurrLim 0;
+BA_ "GenSigInvalidValue" SG_ 673 VCU_IPS_OBCDsChDCCurrLim 0;
+BA_ "GenSigInactiveValue" SG_ 673 VCU_IPS_OBCDsChDCCurrLim 0;
+BA_ "GenSigSendType" SG_ 673 VCU_IPS_OBCDsChDCCurrLim 1;
+BA_ "GatewayedSignals" SG_ 673 VCU_IPS_OBCDsChDCCurrLim 0;
+BA_ "EventCommandSignal" SG_ 673 VCU_IPS_OBCDsChDCCurrLim 0;
+BA_ "Remark" SG_ 673 VCU_IPS_OBCDsChDCCurrLim "";
+BA_ "GenSigTimeoutValue" SG_ 673 VCU_IPS_OBCDsChDCCurrLim 0;
+BA_ "GenSigStartValue" SG_ 673 VCU_IPS_OBCModeReq 0;
+BA_ "GenSigInvalidValue" SG_ 673 VCU_IPS_OBCModeReq 0;
+BA_ "GenSigInactiveValue" SG_ 673 VCU_IPS_OBCModeReq 0;
+BA_ "GenSigSendType" SG_ 673 VCU_IPS_OBCModeReq 1;
+BA_ "GatewayedSignals" SG_ 673 VCU_IPS_OBCModeReq 0;
+BA_ "EventCommandSignal" SG_ 673 VCU_IPS_OBCModeReq 0;
+BA_ "Remark" SG_ 673 VCU_IPS_OBCModeReq "";
+BA_ "GenSigTimeoutValue" SG_ 673 VCU_IPS_OBCModeReq 0;
+BA_ "GenSigStartValue" SG_ 680 VCU_IPS_DCDCLvCurrLim 0;
+BA_ "GenSigInvalidValue" SG_ 680 VCU_IPS_DCDCLvCurrLim 0;
+BA_ "GenSigInactiveValue" SG_ 680 VCU_IPS_DCDCLvCurrLim 0;
+BA_ "GenSigSendType" SG_ 680 VCU_IPS_DCDCLvCurrLim 1;
+BA_ "GatewayedSignals" SG_ 680 VCU_IPS_DCDCLvCurrLim 0;
+BA_ "EventCommandSignal" SG_ 680 VCU_IPS_DCDCLvCurrLim 0;
+BA_ "Remark" SG_ 680 VCU_IPS_DCDCLvCurrLim "";
+BA_ "GenSigTimeoutValue" SG_ 680 VCU_IPS_DCDCLvCurrLim 0;
+BA_ "GenSigStartValue" SG_ 680 VCU_IPS_DCDCModeReq 2;
+BA_ "GenSigInvalidValue" SG_ 680 VCU_IPS_DCDCModeReq 0;
+BA_ "GenSigInactiveValue" SG_ 680 VCU_IPS_DCDCModeReq 0;
+BA_ "GenSigSendType" SG_ 680 VCU_IPS_DCDCModeReq 1;
+BA_ "GatewayedSignals" SG_ 680 VCU_IPS_DCDCModeReq 0;
+BA_ "EventCommandSignal" SG_ 680 VCU_IPS_DCDCModeReq 0;
+BA_ "Remark" SG_ 680 VCU_IPS_DCDCModeReq "";
+BA_ "GenSigTimeoutValue" SG_ 680 VCU_IPS_DCDCModeReq 0;
+BA_ "GenSigStartValue" SG_ 680 VCU_IPS_DCDCVoltLvSet 55;
+BA_ "GenSigInvalidValue" SG_ 680 VCU_IPS_DCDCVoltLvSet 0;
+BA_ "GenSigInactiveValue" SG_ 680 VCU_IPS_DCDCVoltLvSet 0;
+BA_ "GenSigSendType" SG_ 680 VCU_IPS_DCDCVoltLvSet 1;
+BA_ "GatewayedSignals" SG_ 680 VCU_IPS_DCDCVoltLvSet 0;
+BA_ "EventCommandSignal" SG_ 680 VCU_IPS_DCDCVoltLvSet 0;
+BA_ "Remark" SG_ 680 VCU_IPS_DCDCVoltLvSet "";
+BA_ "GenSigTimeoutValue" SG_ 680 VCU_IPS_DCDCVoltLvSet 0;
+BA_ "GenSigStartValue" SG_ 1630 IPS_IntMsg12 0;
+BA_ "GenSigInvalidValue" SG_ 1630 IPS_IntMsg12 0;
+BA_ "GenSigInactiveValue" SG_ 1630 IPS_IntMsg12 0;
+BA_ "GenSigSendType" SG_ 1630 IPS_IntMsg12 1;
+BA_ "GatewayedSignals" SG_ 1630 IPS_IntMsg12 0;
+BA_ "EventCommandSignal" SG_ 1630 IPS_IntMsg12 0;
+BA_ "Remark" SG_ 1630 IPS_IntMsg12 "";
+BA_ "GenSigTimeoutValue" SG_ 1630 IPS_IntMsg12 0;
+BA_ "GenSigStartValue" SG_ 1630 IPS_IntMsg11 0;
+BA_ "GenSigInvalidValue" SG_ 1630 IPS_IntMsg11 0;
+BA_ "GenSigInactiveValue" SG_ 1630 IPS_IntMsg11 0;
+BA_ "GenSigSendType" SG_ 1630 IPS_IntMsg11 1;
+BA_ "GatewayedSignals" SG_ 1630 IPS_IntMsg11 0;
+BA_ "EventCommandSignal" SG_ 1630 IPS_IntMsg11 0;
+BA_ "Remark" SG_ 1630 IPS_IntMsg11 "";
+BA_ "GenSigTimeoutValue" SG_ 1630 IPS_IntMsg11 0;
+BA_ "GenSigStartValue" SG_ 1630 IPS_IntMsg10 0;
+BA_ "GenSigInvalidValue" SG_ 1630 IPS_IntMsg10 0;
+BA_ "GenSigInactiveValue" SG_ 1630 IPS_IntMsg10 0;
+BA_ "GenSigSendType" SG_ 1630 IPS_IntMsg10 1;
+BA_ "GatewayedSignals" SG_ 1630 IPS_IntMsg10 0;
+BA_ "EventCommandSignal" SG_ 1630 IPS_IntMsg10 0;
+BA_ "Remark" SG_ 1630 IPS_IntMsg10 "";
+BA_ "GenSigTimeoutValue" SG_ 1630 IPS_IntMsg10 0;
+BA_ "GenSigStartValue" SG_ 1743 OBC_DchgIoutLimit 0;
+BA_ "GenSigInvalidValue" SG_ 1743 OBC_DchgIoutLimit 0;
+BA_ "GenSigInactiveValue" SG_ 1743 OBC_DchgIoutLimit 0;
+BA_ "GenSigSendType" SG_ 1743 OBC_DchgIoutLimit 1;
+BA_ "GatewayedSignals" SG_ 1743 OBC_DchgIoutLimit 0;
+BA_ "EventCommandSignal" SG_ 1743 OBC_DchgIoutLimit 0;
+BA_ "Remark" SG_ 1743 OBC_DchgIoutLimit "";
+BA_ "GenSigTimeoutValue" SG_ 1743 OBC_DchgIoutLimit 0;
+BA_ "GenSigStartValue" SG_ 1743 OBCCmdCurrent 0;
+BA_ "GenSigInvalidValue" SG_ 1743 OBCCmdCurrent 0;
+BA_ "GenSigInactiveValue" SG_ 1743 OBCCmdCurrent 0;
+BA_ "GenSigSendType" SG_ 1743 OBCCmdCurrent 1;
+BA_ "GatewayedSignals" SG_ 1743 OBCCmdCurrent 0;
+BA_ "EventCommandSignal" SG_ 1743 OBCCmdCurrent 0;
+BA_ "Remark" SG_ 1743 OBCCmdCurrent "";
+BA_ "GenSigTimeoutValue" SG_ 1743 OBCCmdCurrent 0;
+BA_ "GenSigStartValue" SG_ 1743 OBCCmdVoltage 0;
+BA_ "GenSigInvalidValue" SG_ 1743 OBCCmdVoltage 0;
+BA_ "GenSigInactiveValue" SG_ 1743 OBCCmdVoltage 0;
+BA_ "GenSigSendType" SG_ 1743 OBCCmdVoltage 1;
+BA_ "GatewayedSignals" SG_ 1743 OBCCmdVoltage 0;
+BA_ "EventCommandSignal" SG_ 1743 OBCCmdVoltage 0;
+BA_ "Remark" SG_ 1743 OBCCmdVoltage "";
+BA_ "GenSigTimeoutValue" SG_ 1743 OBCCmdVoltage 0;
+BA_ "GenSigStartValue" SG_ 1742 OBC_Cmd 0;
+BA_ "GenSigInvalidValue" SG_ 1742 OBC_Cmd 0;
+BA_ "GenSigInactiveValue" SG_ 1742 OBC_Cmd 0;
+BA_ "GenSigSendType" SG_ 1742 OBC_Cmd 1;
+BA_ "GatewayedSignals" SG_ 1742 OBC_Cmd 0;
+BA_ "EventCommandSignal" SG_ 1742 OBC_Cmd 0;
+BA_ "Remark" SG_ 1742 OBC_Cmd "";
+BA_ "GenSigTimeoutValue" SG_ 1742 OBC_Cmd 0;
+BA_ "GenSigStartValue" SG_ 1742 VBulk 0;
+BA_ "GenSigInvalidValue" SG_ 1742 VBulk 0;
+BA_ "GenSigInactiveValue" SG_ 1742 VBulk 0;
+BA_ "GenSigSendType" SG_ 1742 VBulk 1;
+BA_ "GatewayedSignals" SG_ 1742 VBulk 0;
+BA_ "EventCommandSignal" SG_ 1742 VBulk 0;
+BA_ "Remark" SG_ 1742 VBulk "";
+BA_ "GenSigTimeoutValue" SG_ 1742 VBulk 0;
+BA_ "GenSigStartValue" SG_ 1742 VdcOut 0;
+BA_ "GenSigInvalidValue" SG_ 1742 VdcOut 0;
+BA_ "GenSigInactiveValue" SG_ 1742 VdcOut 0;
+BA_ "GenSigSendType" SG_ 1742 VdcOut 1;
+BA_ "GatewayedSignals" SG_ 1742 VdcOut 0;
+BA_ "EventCommandSignal" SG_ 1742 VdcOut 0;
+BA_ "Remark" SG_ 1742 VdcOut "";
+BA_ "GenSigTimeoutValue" SG_ 1742 VdcOut 0;
+BA_ "GenSigStartValue" SG_ 1742 KL30Voltage 0;
+BA_ "GenSigInvalidValue" SG_ 1742 KL30Voltage 0;
+BA_ "GenSigInactiveValue" SG_ 1742 KL30Voltage 0;
+BA_ "GenSigSendType" SG_ 1742 KL30Voltage 1;
+BA_ "GatewayedSignals" SG_ 1742 KL30Voltage 0;
+BA_ "EventCommandSignal" SG_ 1742 KL30Voltage 0;
+BA_ "Remark" SG_ 1742 KL30Voltage "";
+BA_ "GenSigTimeoutValue" SG_ 1742 KL30Voltage 0;
+BA_ "GenSigStartValue" SG_ 1747 IPS_DCDCSwVersion 0;
+BA_ "GenSigInvalidValue" SG_ 1747 IPS_DCDCSwVersion 0;
+BA_ "GenSigInactiveValue" SG_ 1747 IPS_DCDCSwVersion 0;
+BA_ "GenSigSendType" SG_ 1747 IPS_DCDCSwVersion 1;
+BA_ "GatewayedSignals" SG_ 1747 IPS_DCDCSwVersion 0;
+BA_ "EventCommandSignal" SG_ 1747 IPS_DCDCSwVersion 0;
+BA_ "Remark" SG_ 1747 IPS_DCDCSwVersion "";
+BA_ "GenSigTimeoutValue" SG_ 1747 IPS_DCDCSwVersion 0;
+BA_ "GenSigStartValue" SG_ 1747 IPS_DCDCID 0;
+BA_ "GenSigInvalidValue" SG_ 1747 IPS_DCDCID 0;
+BA_ "GenSigInactiveValue" SG_ 1747 IPS_DCDCID 0;
+BA_ "GenSigSendType" SG_ 1747 IPS_DCDCID 1;
+BA_ "GatewayedSignals" SG_ 1747 IPS_DCDCID 0;
+BA_ "EventCommandSignal" SG_ 1747 IPS_DCDCID 0;
+BA_ "Remark" SG_ 1747 IPS_DCDCID "";
+BA_ "GenSigTimeoutValue" SG_ 1747 IPS_DCDCID 0;
+BA_ "GenSigStartValue" SG_ 884 IPS_OBCDispDiagInfo 0;
+BA_ "GenSigInvalidValue" SG_ 884 IPS_OBCDispDiagInfo 0;
+BA_ "GenSigInactiveValue" SG_ 884 IPS_OBCDispDiagInfo 0;
+BA_ "GenSigSendType" SG_ 884 IPS_OBCDispDiagInfo 1;
+BA_ "GatewayedSignals" SG_ 884 IPS_OBCDispDiagInfo 1;
+BA_ "EventCommandSignal" SG_ 884 IPS_OBCDispDiagInfo 0;
+BA_ "Remark" SG_ 884 IPS_OBCDispDiagInfo "";
+BA_ "GenSigTimeoutValue" SG_ 884 IPS_OBCDispDiagInfo 0;
+BA_ "GenSigStartValue" SG_ 884 IPS_OBCTempAct 0;
+BA_ "GenSigInvalidValue" SG_ 884 IPS_OBCTempAct 0;
+BA_ "GenSigInactiveValue" SG_ 884 IPS_OBCTempAct 0;
+BA_ "GenSigSendType" SG_ 884 IPS_OBCTempAct 1;
+BA_ "GatewayedSignals" SG_ 884 IPS_OBCTempAct 0;
+BA_ "EventCommandSignal" SG_ 884 IPS_OBCTempAct 0;
+BA_ "Remark" SG_ 884 IPS_OBCTempAct "";
+BA_ "GenSigTimeoutValue" SG_ 884 IPS_OBCTempAct 0;
+BA_ "GenSigStartValue" SG_ 884 IPS_OBCEnergyDirCap 0;
+BA_ "GenSigInvalidValue" SG_ 884 IPS_OBCEnergyDirCap 0;
+BA_ "GenSigInactiveValue" SG_ 884 IPS_OBCEnergyDirCap 0;
+BA_ "GenSigSendType" SG_ 884 IPS_OBCEnergyDirCap 1;
+BA_ "GatewayedSignals" SG_ 884 IPS_OBCEnergyDirCap 0;
+BA_ "EventCommandSignal" SG_ 884 IPS_OBCEnergyDirCap 0;
+BA_ "Remark" SG_ 884 IPS_OBCEnergyDirCap "";
+BA_ "GenSigTimeoutValue" SG_ 884 IPS_OBCEnergyDirCap 0;
+BA_ "GenSigStartValue" SG_ 884 Notused2 0;
+BA_ "GenSigInvalidValue" SG_ 884 Notused2 0;
+BA_ "GenSigInactiveValue" SG_ 884 Notused2 0;
+BA_ "GenSigSendType" SG_ 884 Notused2 1;
+BA_ "GatewayedSignals" SG_ 884 Notused2 0;
+BA_ "EventCommandSignal" SG_ 884 Notused2 0;
+BA_ "Remark" SG_ 884 Notused2 "";
+BA_ "GenSigTimeoutValue" SG_ 884 Notused2 0;
+BA_ "GenSigStartValue" SG_ 884 IPS_OBCFaultLampInd 0;
+BA_ "GenSigInvalidValue" SG_ 884 IPS_OBCFaultLampInd 0;
+BA_ "GenSigInactiveValue" SG_ 884 IPS_OBCFaultLampInd 0;
+BA_ "GenSigSendType" SG_ 884 IPS_OBCFaultLampInd 1;
+BA_ "GatewayedSignals" SG_ 884 IPS_OBCFaultLampInd 1;
+BA_ "EventCommandSignal" SG_ 884 IPS_OBCFaultLampInd 0;
+BA_ "Remark" SG_ 884 IPS_OBCFaultLampInd "";
+BA_ "GenSigTimeoutValue" SG_ 884 IPS_OBCFaultLampInd 0;
+BA_ "GenSigStartValue" SG_ 884 IPS_OBCFlowReq 0;
+BA_ "GenSigInvalidValue" SG_ 884 IPS_OBCFlowReq 0;
+BA_ "GenSigInactiveValue" SG_ 884 IPS_OBCFlowReq 0;
+BA_ "GenSigSendType" SG_ 884 IPS_OBCFlowReq 1;
+BA_ "GatewayedSignals" SG_ 884 IPS_OBCFlowReq 0;
+BA_ "EventCommandSignal" SG_ 884 IPS_OBCFlowReq 0;
+BA_ "Remark" SG_ 884 IPS_OBCFlowReq "";
+BA_ "GenSigTimeoutValue" SG_ 884 IPS_OBCFlowReq 0;
+BA_ "GenSigStartValue" SG_ 884 Notused1 0;
+BA_ "GenSigInvalidValue" SG_ 884 Notused1 0;
+BA_ "GenSigInactiveValue" SG_ 884 Notused1 0;
+BA_ "GenSigSendType" SG_ 884 Notused1 1;
+BA_ "GatewayedSignals" SG_ 884 Notused1 0;
+BA_ "EventCommandSignal" SG_ 884 Notused1 0;
+BA_ "Remark" SG_ 884 Notused1 "";
+BA_ "GenSigTimeoutValue" SG_ 884 Notused1 0;
+BA_ "GenSigStartValue" SG_ 746 Notused3 0;
+BA_ "GenSigInvalidValue" SG_ 746 Notused3 0;
+BA_ "GenSigInactiveValue" SG_ 746 Notused3 0;
+BA_ "GenSigSendType" SG_ 746 Notused3 1;
+BA_ "GatewayedSignals" SG_ 746 Notused3 0;
+BA_ "EventCommandSignal" SG_ 746 Notused3 0;
+BA_ "Remark" SG_ 746 Notused3 "";
+BA_ "GenSigTimeoutValue" SG_ 746 Notused3 0;
+BA_ "GenSigStartValue" SG_ 746 IPS_OBCHvDcVoltAct 0;
+BA_ "GenSigInvalidValue" SG_ 746 IPS_OBCHvDcVoltAct 0;
+BA_ "GenSigInactiveValue" SG_ 746 IPS_OBCHvDcVoltAct 0;
+BA_ "GenSigSendType" SG_ 746 IPS_OBCHvDcVoltAct 1;
+BA_ "GatewayedSignals" SG_ 746 IPS_OBCHvDcVoltAct 0;
+BA_ "EventCommandSignal" SG_ 746 IPS_OBCHvDcVoltAct 0;
+BA_ "Remark" SG_ 746 IPS_OBCHvDcVoltAct "";
+BA_ "GenSigTimeoutValue" SG_ 746 IPS_OBCHvDcVoltAct 0;
+BA_ "GenSigStartValue" SG_ 746 Notused2 0;
+BA_ "GenSigInvalidValue" SG_ 746 Notused2 0;
+BA_ "GenSigInactiveValue" SG_ 746 Notused2 0;
+BA_ "GenSigSendType" SG_ 746 Notused2 1;
+BA_ "GatewayedSignals" SG_ 746 Notused2 0;
+BA_ "EventCommandSignal" SG_ 746 Notused2 0;
+BA_ "Remark" SG_ 746 Notused2 "";
+BA_ "GenSigTimeoutValue" SG_ 746 Notused2 0;
+BA_ "GenSigStartValue" SG_ 746 IPS_OBCHvDcCurrAct 1024;
+BA_ "GenSigInvalidValue" SG_ 746 IPS_OBCHvDcCurrAct 0;
+BA_ "GenSigInactiveValue" SG_ 746 IPS_OBCHvDcCurrAct 0;
+BA_ "GenSigSendType" SG_ 746 IPS_OBCHvDcCurrAct 1;
+BA_ "GatewayedSignals" SG_ 746 IPS_OBCHvDcCurrAct 0;
+BA_ "EventCommandSignal" SG_ 746 IPS_OBCHvDcCurrAct 0;
+BA_ "Remark" SG_ 746 IPS_OBCHvDcCurrAct "";
+BA_ "GenSigTimeoutValue" SG_ 746 IPS_OBCHvDcCurrAct 0;
+BA_ "GenSigStartValue" SG_ 746 Notused1 0;
+BA_ "GenSigInvalidValue" SG_ 746 Notused1 0;
+BA_ "GenSigInactiveValue" SG_ 746 Notused1 0;
+BA_ "GenSigSendType" SG_ 746 Notused1 1;
+BA_ "GatewayedSignals" SG_ 746 Notused1 0;
+BA_ "EventCommandSignal" SG_ 746 Notused1 0;
+BA_ "Remark" SG_ 746 Notused1 "";
+BA_ "GenSigTimeoutValue" SG_ 746 Notused1 0;
+BA_ "GenSigStartValue" SG_ 917 Notuse1 0;
+BA_ "GenSigInvalidValue" SG_ 917 Notuse1 0;
+BA_ "GenSigInactiveValue" SG_ 917 Notuse1 0;
+BA_ "GenSigSendType" SG_ 917 Notuse1 1;
+BA_ "GatewayedSignals" SG_ 917 Notuse1 0;
+BA_ "EventCommandSignal" SG_ 917 Notuse1 0;
+BA_ "Remark" SG_ 917 Notuse1 "";
+BA_ "GenSigTimeoutValue" SG_ 917 Notuse1 0;
+BA_ "GenSigStartValue" SG_ 917 IPS_OBCCurrActL3 0;
+BA_ "GenSigInvalidValue" SG_ 917 IPS_OBCCurrActL3 0;
+BA_ "GenSigInactiveValue" SG_ 917 IPS_OBCCurrActL3 0;
+BA_ "GenSigSendType" SG_ 917 IPS_OBCCurrActL3 1;
+BA_ "GatewayedSignals" SG_ 917 IPS_OBCCurrActL3 0;
+BA_ "EventCommandSignal" SG_ 917 IPS_OBCCurrActL3 0;
+BA_ "Remark" SG_ 917 IPS_OBCCurrActL3 "";
+BA_ "GenSigTimeoutValue" SG_ 917 IPS_OBCCurrActL3 0;
+BA_ "GenSigStartValue" SG_ 917 IPS_OBCCurrActL2 0;
+BA_ "GenSigInvalidValue" SG_ 917 IPS_OBCCurrActL2 0;
+BA_ "GenSigInactiveValue" SG_ 917 IPS_OBCCurrActL2 0;
+BA_ "GenSigSendType" SG_ 917 IPS_OBCCurrActL2 1;
+BA_ "GatewayedSignals" SG_ 917 IPS_OBCCurrActL2 0;
+BA_ "EventCommandSignal" SG_ 917 IPS_OBCCurrActL2 0;
+BA_ "Remark" SG_ 917 IPS_OBCCurrActL2 "";
+BA_ "GenSigTimeoutValue" SG_ 917 IPS_OBCCurrActL2 0;
+BA_ "GenSigStartValue" SG_ 917 IPS_OBCCurrActL1 0;
+BA_ "GenSigInvalidValue" SG_ 917 IPS_OBCCurrActL1 0;
+BA_ "GenSigInactiveValue" SG_ 917 IPS_OBCCurrActL1 0;
+BA_ "GenSigSendType" SG_ 917 IPS_OBCCurrActL1 1;
+BA_ "GatewayedSignals" SG_ 917 IPS_OBCCurrActL1 0;
+BA_ "EventCommandSignal" SG_ 917 IPS_OBCCurrActL1 0;
+BA_ "Remark" SG_ 917 IPS_OBCCurrActL1 "";
+BA_ "GenSigTimeoutValue" SG_ 917 IPS_OBCCurrActL1 0;
+BA_ "GenSigStartValue" SG_ 917 IPS_OBCUacActL3 0;
+BA_ "GenSigInvalidValue" SG_ 917 IPS_OBCUacActL3 0;
+BA_ "GenSigInactiveValue" SG_ 917 IPS_OBCUacActL3 0;
+BA_ "GenSigSendType" SG_ 917 IPS_OBCUacActL3 1;
+BA_ "GatewayedSignals" SG_ 917 IPS_OBCUacActL3 0;
+BA_ "EventCommandSignal" SG_ 917 IPS_OBCUacActL3 0;
+BA_ "Remark" SG_ 917 IPS_OBCUacActL3 "";
+BA_ "GenSigTimeoutValue" SG_ 917 IPS_OBCUacActL3 0;
+BA_ "GenSigStartValue" SG_ 917 IPS_OBCUacActL2 0;
+BA_ "GenSigInvalidValue" SG_ 917 IPS_OBCUacActL2 0;
+BA_ "GenSigInactiveValue" SG_ 917 IPS_OBCUacActL2 0;
+BA_ "GenSigSendType" SG_ 917 IPS_OBCUacActL2 1;
+BA_ "GatewayedSignals" SG_ 917 IPS_OBCUacActL2 0;
+BA_ "EventCommandSignal" SG_ 917 IPS_OBCUacActL2 0;
+BA_ "Remark" SG_ 917 IPS_OBCUacActL2 "";
+BA_ "GenSigTimeoutValue" SG_ 917 IPS_OBCUacActL2 0;
+BA_ "GenSigStartValue" SG_ 917 IPS_OBCUacActL1 0;
+BA_ "GenSigInvalidValue" SG_ 917 IPS_OBCUacActL1 0;
+BA_ "GenSigInactiveValue" SG_ 917 IPS_OBCUacActL1 0;
+BA_ "GenSigSendType" SG_ 917 IPS_OBCUacActL1 1;
+BA_ "GatewayedSignals" SG_ 917 IPS_OBCUacActL1 0;
+BA_ "EventCommandSignal" SG_ 917 IPS_OBCUacActL1 0;
+BA_ "Remark" SG_ 917 IPS_OBCUacActL1 "";
+BA_ "GenSigTimeoutValue" SG_ 917 IPS_OBCUacActL1 0;
+BA_ "GenSigStartValue" SG_ 925 Notused2 0;
+BA_ "GenSigInvalidValue" SG_ 925 Notused2 0;
+BA_ "GenSigInactiveValue" SG_ 925 Notused2 0;
+BA_ "GenSigSendType" SG_ 925 Notused2 1;
+BA_ "GatewayedSignals" SG_ 925 Notused2 0;
+BA_ "EventCommandSignal" SG_ 925 Notused2 0;
+BA_ "Remark" SG_ 925 Notused2 "";
+BA_ "GenSigTimeoutValue" SG_ 925 Notused2 0;
+BA_ "GenSigStartValue" SG_ 925 IPS_OBCState5 0;
+BA_ "GenSigInvalidValue" SG_ 925 IPS_OBCState5 0;
+BA_ "GenSigInactiveValue" SG_ 925 IPS_OBCState5 0;
+BA_ "GenSigSendType" SG_ 925 IPS_OBCState5 1;
+BA_ "GatewayedSignals" SG_ 925 IPS_OBCState5 0;
+BA_ "EventCommandSignal" SG_ 925 IPS_OBCState5 0;
+BA_ "Remark" SG_ 925 IPS_OBCState5 "";
+BA_ "GenSigTimeoutValue" SG_ 925 IPS_OBCState5 0;
+BA_ "GenSigStartValue" SG_ 925 IPS_OBCState4 0;
+BA_ "GenSigInvalidValue" SG_ 925 IPS_OBCState4 0;
+BA_ "GenSigInactiveValue" SG_ 925 IPS_OBCState4 0;
+BA_ "GenSigSendType" SG_ 925 IPS_OBCState4 1;
+BA_ "GatewayedSignals" SG_ 925 IPS_OBCState4 0;
+BA_ "EventCommandSignal" SG_ 925 IPS_OBCState4 0;
+BA_ "Remark" SG_ 925 IPS_OBCState4 "";
+BA_ "GenSigTimeoutValue" SG_ 925 IPS_OBCState4 0;
+BA_ "GenSigStartValue" SG_ 925 IPS_OBCState3 0;
+BA_ "GenSigInvalidValue" SG_ 925 IPS_OBCState3 0;
+BA_ "GenSigInactiveValue" SG_ 925 IPS_OBCState3 0;
+BA_ "GenSigSendType" SG_ 925 IPS_OBCState3 1;
+BA_ "GatewayedSignals" SG_ 925 IPS_OBCState3 0;
+BA_ "EventCommandSignal" SG_ 925 IPS_OBCState3 0;
+BA_ "Remark" SG_ 925 IPS_OBCState3 "";
+BA_ "GenSigTimeoutValue" SG_ 925 IPS_OBCState3 0;
+BA_ "GenSigStartValue" SG_ 925 IPS_OBCState2 0;
+BA_ "GenSigInvalidValue" SG_ 925 IPS_OBCState2 0;
+BA_ "GenSigInactiveValue" SG_ 925 IPS_OBCState2 0;
+BA_ "GenSigSendType" SG_ 925 IPS_OBCState2 1;
+BA_ "GatewayedSignals" SG_ 925 IPS_OBCState2 0;
+BA_ "EventCommandSignal" SG_ 925 IPS_OBCState2 0;
+BA_ "Remark" SG_ 925 IPS_OBCState2 "";
+BA_ "GenSigTimeoutValue" SG_ 925 IPS_OBCState2 0;
+BA_ "GenSigStartValue" SG_ 925 IPS_OBCState1 0;
+BA_ "GenSigInvalidValue" SG_ 925 IPS_OBCState1 0;
+BA_ "GenSigInactiveValue" SG_ 925 IPS_OBCState1 0;
+BA_ "GenSigSendType" SG_ 925 IPS_OBCState1 1;
+BA_ "GatewayedSignals" SG_ 925 IPS_OBCState1 0;
+BA_ "EventCommandSignal" SG_ 925 IPS_OBCState1 0;
+BA_ "Remark" SG_ 925 IPS_OBCState1 "";
+BA_ "GenSigTimeoutValue" SG_ 925 IPS_OBCState1 0;
+BA_ "GenSigStartValue" SG_ 925 Notused1 0;
+BA_ "GenSigInvalidValue" SG_ 925 Notused1 0;
+BA_ "GenSigInactiveValue" SG_ 925 Notused1 0;
+BA_ "GenSigSendType" SG_ 925 Notused1 1;
+BA_ "GatewayedSignals" SG_ 925 Notused1 0;
+BA_ "EventCommandSignal" SG_ 925 Notused1 0;
+BA_ "Remark" SG_ 925 Notused1 "";
+BA_ "GenSigTimeoutValue" SG_ 925 Notused1 0;
+BA_ "GenSigStartValue" SG_ 924 Notused4 0;
+BA_ "GenSigInvalidValue" SG_ 924 Notused4 0;
+BA_ "GenSigInactiveValue" SG_ 924 Notused4 0;
+BA_ "GenSigSendType" SG_ 924 Notused4 1;
+BA_ "GatewayedSignals" SG_ 924 Notused4 0;
+BA_ "EventCommandSignal" SG_ 924 Notused4 0;
+BA_ "Remark" SG_ 924 Notused4 "";
+BA_ "GenSigTimeoutValue" SG_ 924 Notused4 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCStStep 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCStStep 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCStStep 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCStStep 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCStStep 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCStStep 0;
+BA_ "Remark" SG_ 924 IPS_OBCStStep "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCStStep 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCCPVolt 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCCPVolt 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCCPVolt 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCCPVolt 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCCPVolt 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCCPVolt 0;
+BA_ "Remark" SG_ 924 IPS_OBCCPVolt "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCCPVolt 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCCp_DutyCycle 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCCp_DutyCycle 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCCp_DutyCycle 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCCp_DutyCycle 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCCp_DutyCycle 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCCp_DutyCycle 0;
+BA_ "Remark" SG_ 924 IPS_OBCCp_DutyCycle "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCCp_DutyCycle 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCCPSt 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCCPSt 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCCPSt 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCCPSt 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCCPSt 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCCPSt 0;
+BA_ "Remark" SG_ 924 IPS_OBCCPSt "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCCPSt 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCCpFreqSt 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCCpFreqSt 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCCpFreqSt 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCCpFreqSt 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCCpFreqSt 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCCpFreqSt 0;
+BA_ "Remark" SG_ 924 IPS_OBCCpFreqSt "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCCpFreqSt 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCCpS2St 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCCpS2St 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCCpS2St 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCCpS2St 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCCpS2St 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCCpS2St 0;
+BA_ "Remark" SG_ 924 IPS_OBCCpS2St "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCCpS2St 0;
+BA_ "GenSigStartValue" SG_ 924 Notuse5 0;
+BA_ "GenSigInvalidValue" SG_ 924 Notuse5 0;
+BA_ "GenSigInactiveValue" SG_ 924 Notuse5 0;
+BA_ "GenSigSendType" SG_ 924 Notuse5 1;
+BA_ "GatewayedSignals" SG_ 924 Notuse5 0;
+BA_ "EventCommandSignal" SG_ 924 Notuse5 0;
+BA_ "Remark" SG_ 924 Notuse5 "";
+BA_ "GenSigTimeoutValue" SG_ 924 Notuse5 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_ACHvilSt 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_ACHvilSt 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_ACHvilSt 0;
+BA_ "GenSigSendType" SG_ 924 IPS_ACHvilSt 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_ACHvilSt 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_ACHvilSt 0;
+BA_ "Remark" SG_ 924 IPS_ACHvilSt "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_ACHvilSt 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCModeSt 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCModeSt 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCModeSt 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCModeSt 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCModeSt 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCModeSt 0;
+BA_ "Remark" SG_ 924 IPS_OBCModeSt "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCModeSt 0;
+BA_ "GenSigStartValue" SG_ 924 Notused3 0;
+BA_ "GenSigInvalidValue" SG_ 924 Notused3 0;
+BA_ "GenSigInactiveValue" SG_ 924 Notused3 0;
+BA_ "GenSigSendType" SG_ 924 Notused3 1;
+BA_ "GatewayedSignals" SG_ 924 Notused3 0;
+BA_ "EventCommandSignal" SG_ 924 Notused3 0;
+BA_ "Remark" SG_ 924 Notused3 "";
+BA_ "GenSigTimeoutValue" SG_ 924 Notused3 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCDschCPSt 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCDschCPSt 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCDschCPSt 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCDschCPSt 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCDschCPSt 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCDschCPSt 0;
+BA_ "Remark" SG_ 924 IPS_OBCDschCPSt "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCDschCPSt 0;
+BA_ "GenSigStartValue" SG_ 924 Notused2 0;
+BA_ "GenSigInvalidValue" SG_ 924 Notused2 0;
+BA_ "GenSigInactiveValue" SG_ 924 Notused2 0;
+BA_ "GenSigSendType" SG_ 924 Notused2 1;
+BA_ "GatewayedSignals" SG_ 924 Notused2 0;
+BA_ "EventCommandSignal" SG_ 924 Notused2 0;
+BA_ "Remark" SG_ 924 Notused2 "";
+BA_ "GenSigTimeoutValue" SG_ 924 Notused2 0;
+BA_ "GenSigStartValue" SG_ 924 IPS_OBCPP_St 0;
+BA_ "GenSigInvalidValue" SG_ 924 IPS_OBCPP_St 0;
+BA_ "GenSigInactiveValue" SG_ 924 IPS_OBCPP_St 0;
+BA_ "GenSigSendType" SG_ 924 IPS_OBCPP_St 1;
+BA_ "GatewayedSignals" SG_ 924 IPS_OBCPP_St 0;
+BA_ "EventCommandSignal" SG_ 924 IPS_OBCPP_St 0;
+BA_ "Remark" SG_ 924 IPS_OBCPP_St "";
+BA_ "GenSigTimeoutValue" SG_ 924 IPS_OBCPP_St 0;
+BA_ "GenSigStartValue" SG_ 924 Notused1 0;
+BA_ "GenSigInvalidValue" SG_ 924 Notused1 0;
+BA_ "GenSigInactiveValue" SG_ 924 Notused1 0;
+BA_ "GenSigSendType" SG_ 924 Notused1 1;
+BA_ "GatewayedSignals" SG_ 924 Notused1 0;
+BA_ "EventCommandSignal" SG_ 924 Notused1 0;
+BA_ "Remark" SG_ 924 Notused1 "";
+BA_ "GenSigTimeoutValue" SG_ 924 Notused1 0;
+BA_ "GenSigStartValue" SG_ 897 Notused3 0;
+BA_ "GenSigInvalidValue" SG_ 897 Notused3 0;
+BA_ "GenSigInactiveValue" SG_ 897 Notused3 0;
+BA_ "GenSigSendType" SG_ 897 Notused3 1;
+BA_ "GatewayedSignals" SG_ 897 Notused3 0;
+BA_ "EventCommandSignal" SG_ 897 Notused3 0;
+BA_ "Remark" SG_ 897 Notused3 "";
+BA_ "GenSigTimeoutValue" SG_ 897 Notused3 0;
+BA_ "GenSigStartValue" SG_ 897 IPS_DCDCFlowReq 0;
+BA_ "GenSigInvalidValue" SG_ 897 IPS_DCDCFlowReq 0;
+BA_ "GenSigInactiveValue" SG_ 897 IPS_DCDCFlowReq 0;
+BA_ "GenSigSendType" SG_ 897 IPS_DCDCFlowReq 1;
+BA_ "GatewayedSignals" SG_ 897 IPS_DCDCFlowReq 0;
+BA_ "EventCommandSignal" SG_ 897 IPS_DCDCFlowReq 0;
+BA_ "Remark" SG_ 897 IPS_DCDCFlowReq "";
+BA_ "GenSigTimeoutValue" SG_ 897 IPS_DCDCFlowReq 0;
+BA_ "GenSigStartValue" SG_ 897 IPS_DCDCState5 0;
+BA_ "GenSigInvalidValue" SG_ 897 IPS_DCDCState5 0;
+BA_ "GenSigInactiveValue" SG_ 897 IPS_DCDCState5 0;
+BA_ "GenSigSendType" SG_ 897 IPS_DCDCState5 1;
+BA_ "GatewayedSignals" SG_ 897 IPS_DCDCState5 0;
+BA_ "EventCommandSignal" SG_ 897 IPS_DCDCState5 0;
+BA_ "Remark" SG_ 897 IPS_DCDCState5 "";
+BA_ "GenSigTimeoutValue" SG_ 897 IPS_DCDCState5 0;
+BA_ "GenSigStartValue" SG_ 897 IPS_DCDCState4 0;
+BA_ "GenSigInvalidValue" SG_ 897 IPS_DCDCState4 0;
+BA_ "GenSigInactiveValue" SG_ 897 IPS_DCDCState4 0;
+BA_ "GenSigSendType" SG_ 897 IPS_DCDCState4 1;
+BA_ "GatewayedSignals" SG_ 897 IPS_DCDCState4 0;
+BA_ "EventCommandSignal" SG_ 897 IPS_DCDCState4 0;
+BA_ "Remark" SG_ 897 IPS_DCDCState4 "";
+BA_ "GenSigTimeoutValue" SG_ 897 IPS_DCDCState4 0;
+BA_ "GenSigStartValue" SG_ 897 IPS_DCDCState3 0;
+BA_ "GenSigInvalidValue" SG_ 897 IPS_DCDCState3 0;
+BA_ "GenSigInactiveValue" SG_ 897 IPS_DCDCState3 0;
+BA_ "GenSigSendType" SG_ 897 IPS_DCDCState3 1;
+BA_ "GatewayedSignals" SG_ 897 IPS_DCDCState3 0;
+BA_ "EventCommandSignal" SG_ 897 IPS_DCDCState3 0;
+BA_ "Remark" SG_ 897 IPS_DCDCState3 "";
+BA_ "GenSigTimeoutValue" SG_ 897 IPS_DCDCState3 0;
+BA_ "GenSigStartValue" SG_ 897 IPS_DCDCState2 0;
+BA_ "GenSigInvalidValue" SG_ 897 IPS_DCDCState2 0;
+BA_ "GenSigInactiveValue" SG_ 897 IPS_DCDCState2 0;
+BA_ "GenSigSendType" SG_ 897 IPS_DCDCState2 1;
+BA_ "GatewayedSignals" SG_ 897 IPS_DCDCState2 0;
+BA_ "EventCommandSignal" SG_ 897 IPS_DCDCState2 0;
+BA_ "Remark" SG_ 897 IPS_DCDCState2 "";
+BA_ "GenSigTimeoutValue" SG_ 897 IPS_DCDCState2 0;
+BA_ "GenSigStartValue" SG_ 897 IPS_DCDCState1 0;
+BA_ "GenSigInvalidValue" SG_ 897 IPS_DCDCState1 0;
+BA_ "GenSigInactiveValue" SG_ 897 IPS_DCDCState1 0;
+BA_ "GenSigSendType" SG_ 897 IPS_DCDCState1 1;
+BA_ "GatewayedSignals" SG_ 897 IPS_DCDCState1 0;
+BA_ "EventCommandSignal" SG_ 897 IPS_DCDCState1 0;
+BA_ "Remark" SG_ 897 IPS_DCDCState1 "";
+BA_ "GenSigTimeoutValue" SG_ 897 IPS_DCDCState1 0;
+BA_ "GenSigStartValue" SG_ 897 Notused2 0;
+BA_ "GenSigInvalidValue" SG_ 897 Notused2 0;
+BA_ "GenSigInactiveValue" SG_ 897 Notused2 0;
+BA_ "GenSigSendType" SG_ 897 Notused2 1;
+BA_ "GatewayedSignals" SG_ 897 Notused2 0;
+BA_ "EventCommandSignal" SG_ 897 Notused2 0;
+BA_ "Remark" SG_ 897 Notused2 "";
+BA_ "GenSigTimeoutValue" SG_ 897 Notused2 0;
+BA_ "GenSigStartValue" SG_ 897 IPS_DCDCFaultLampInd 0;
+BA_ "GenSigInvalidValue" SG_ 897 IPS_DCDCFaultLampInd 0;
+BA_ "GenSigInactiveValue" SG_ 897 IPS_DCDCFaultLampInd 0;
+BA_ "GenSigSendType" SG_ 897 IPS_DCDCFaultLampInd 1;
+BA_ "GatewayedSignals" SG_ 897 IPS_DCDCFaultLampInd 1;
+BA_ "EventCommandSignal" SG_ 897 IPS_DCDCFaultLampInd 0;
+BA_ "Remark" SG_ 897 IPS_DCDCFaultLampInd "";
+BA_ "GenSigTimeoutValue" SG_ 897 IPS_DCDCFaultLampInd 0;
+BA_ "GenSigStartValue" SG_ 889 IPS_DCDCVoltHvAct 0;
+BA_ "GenSigInvalidValue" SG_ 889 IPS_DCDCVoltHvAct 0;
+BA_ "GenSigInactiveValue" SG_ 889 IPS_DCDCVoltHvAct 0;
+BA_ "GenSigSendType" SG_ 889 IPS_DCDCVoltHvAct 1;
+BA_ "GatewayedSignals" SG_ 889 IPS_DCDCVoltHvAct 0;
+BA_ "EventCommandSignal" SG_ 889 IPS_DCDCVoltHvAct 0;
+BA_ "Remark" SG_ 889 IPS_DCDCVoltHvAct "";
+BA_ "GenSigTimeoutValue" SG_ 889 IPS_DCDCVoltHvAct 0;
+BA_ "GenSigStartValue" SG_ 889 Notused 0;
+BA_ "GenSigInvalidValue" SG_ 889 Notused 0;
+BA_ "GenSigInactiveValue" SG_ 889 Notused 0;
+BA_ "GenSigSendType" SG_ 889 Notused 1;
+BA_ "GatewayedSignals" SG_ 889 Notused 0;
+BA_ "EventCommandSignal" SG_ 889 Notused 0;
+BA_ "Remark" SG_ 889 Notused "";
+BA_ "GenSigTimeoutValue" SG_ 889 Notused 0;
+BA_ "GenSigStartValue" SG_ 889 IPS_DCDCTempAct 0;
+BA_ "GenSigInvalidValue" SG_ 889 IPS_DCDCTempAct 0;
+BA_ "GenSigInactiveValue" SG_ 889 IPS_DCDCTempAct 0;
+BA_ "GenSigSendType" SG_ 889 IPS_DCDCTempAct 1;
+BA_ "GatewayedSignals" SG_ 889 IPS_DCDCTempAct 0;
+BA_ "EventCommandSignal" SG_ 889 IPS_DCDCTempAct 0;
+BA_ "Remark" SG_ 889 IPS_DCDCTempAct "";
+BA_ "GenSigTimeoutValue" SG_ 889 IPS_DCDCTempAct 0;
+BA_ "GenSigStartValue" SG_ 889 IPS_DCDCCurrLvAct 0;
+BA_ "GenSigInvalidValue" SG_ 889 IPS_DCDCCurrLvAct 0;
+BA_ "GenSigInactiveValue" SG_ 889 IPS_DCDCCurrLvAct 0;
+BA_ "GenSigSendType" SG_ 889 IPS_DCDCCurrLvAct 1;
+BA_ "GatewayedSignals" SG_ 889 IPS_DCDCCurrLvAct 0;
+BA_ "EventCommandSignal" SG_ 889 IPS_DCDCCurrLvAct 0;
+BA_ "Remark" SG_ 889 IPS_DCDCCurrLvAct "";
+BA_ "GenSigTimeoutValue" SG_ 889 IPS_DCDCCurrLvAct 0;
+BA_ "GenSigStartValue" SG_ 889 IPS_DCDCCurrHvAct 0;
+BA_ "GenSigInvalidValue" SG_ 889 IPS_DCDCCurrHvAct 0;
+BA_ "GenSigInactiveValue" SG_ 889 IPS_DCDCCurrHvAct 0;
+BA_ "GenSigSendType" SG_ 889 IPS_DCDCCurrHvAct 1;
+BA_ "GatewayedSignals" SG_ 889 IPS_DCDCCurrHvAct 0;
+BA_ "EventCommandSignal" SG_ 889 IPS_DCDCCurrHvAct 0;
+BA_ "Remark" SG_ 889 IPS_DCDCCurrHvAct "";
+BA_ "GenSigTimeoutValue" SG_ 889 IPS_DCDCCurrHvAct 0;
+BA_ "GenSigStartValue" SG_ 889 IPS_DCDCVoltLvAct 0;
+BA_ "GenSigInvalidValue" SG_ 889 IPS_DCDCVoltLvAct 0;
+BA_ "GenSigInactiveValue" SG_ 889 IPS_DCDCVoltLvAct 0;
+BA_ "GenSigSendType" SG_ 889 IPS_DCDCVoltLvAct 1;
+BA_ "GatewayedSignals" SG_ 889 IPS_DCDCVoltLvAct 0;
+BA_ "EventCommandSignal" SG_ 889 IPS_DCDCVoltLvAct 0;
+BA_ "Remark" SG_ 889 IPS_DCDCVoltLvAct "";
+BA_ "GenSigTimeoutValue" SG_ 889 IPS_DCDCVoltLvAct 0;
+BA_ "GenSigStartValue" SG_ 889 IPS_HVDCHVilSt 0;
+BA_ "GenSigInvalidValue" SG_ 889 IPS_HVDCHVilSt 0;
+BA_ "GenSigInactiveValue" SG_ 889 IPS_HVDCHVilSt 0;
+BA_ "GenSigSendType" SG_ 889 IPS_HVDCHVilSt 1;
+BA_ "GatewayedSignals" SG_ 889 IPS_HVDCHVilSt 0;
+BA_ "EventCommandSignal" SG_ 889 IPS_HVDCHVilSt 0;
+BA_ "Remark" SG_ 889 IPS_HVDCHVilSt "";
+BA_ "GenSigTimeoutValue" SG_ 889 IPS_HVDCHVilSt 0;
+BA_ "GenSigStartValue" SG_ 889 IPS_DCDCModeSt 0;
+BA_ "GenSigInvalidValue" SG_ 889 IPS_DCDCModeSt 0;
+BA_ "GenSigInactiveValue" SG_ 889 IPS_DCDCModeSt 0;
+BA_ "GenSigSendType" SG_ 889 IPS_DCDCModeSt 1;
+BA_ "GatewayedSignals" SG_ 889 IPS_DCDCModeSt 0;
+BA_ "EventCommandSignal" SG_ 889 IPS_DCDCModeSt 0;
+BA_ "Remark" SG_ 889 IPS_DCDCModeSt "";
+BA_ "GenSigTimeoutValue" SG_ 889 IPS_DCDCModeSt 0;
+VAL_ 3221225472 IPS_DCDCVoltLvOvrErr 1 "Err" 0 "NoErr" ;
+VAL_ 3221225472 IPS_DCDCVoltLvUndErr 1 "Err" 0 "NoErr" ;
+VAL_ 3221225472 IPS_DCDCVoltHvUndErr 1 "Err" 0 "NoErr" ;
+VAL_ 3221225472 IPS_DCDCVoltHvOvrErr 1 "Err" 0 "NoErr" ;
+VAL_ 3221225472 IPS_DCDCIntErr 1 "Err" 0 "NoErr" ;
+VAL_ 3221225472 IPS_DCDCCurrLvOvrErr 1 "Err" 0 "NoErr" ;
+VAL_ 3221225472 IPS_DCDCCurrHvOvrErr 1 "Err" 0 "NoErr" ;
+VAL_ 3221225472 BCM_KeySt 3 "Crank" 2 "On" 1 "Acc" 0 "Off" ;
+VAL_ 3221225472 VCU_NMWakeupOrigin_E 18 "IGN ON" 1 "Message wake up" 0 "Default value" ;
+VAL_ 3221225472 DCU_NMWakeupOrigin 18 "IGN ON" 1 "Message wake up" 0 "Default value" ;
+VAL_ 3221225472 BMS_NMWakeupOrigin 96 "PP" 18 "IGN ON" 1 "Message wake up" 0 "Default value" ;
+VAL_ 3221225472 IPS_NMWakeupOrigin 0 "Default value" 97 "CP" 96 "CC" 18 "IGN ON" 1 "Message wake up" ;
+VAL_ 3221225472 IPS_TEL_DCDCModeSt 3 "Reserved" 2 "OFF" 1 "Buck" 0 "Init" ;
+VAL_ 3221225472 IPS_TEL_DCDCTempOvrErr 1 "Error" 0 "OK" ;
+VAL_ 3221225472 IPS_TEL_DCDCFaultLampInd 1 "Lamp on" 0 "Lamp off" ;
+VAL_ 3221225472 BMS_PwrDwnReq 1 "Request" 0 "NotRequest" ;
+VAL_ 673 VCU_IPS_OBCModeReq 7 "Reserved" 6 "Reserved" 5 "Reserved" 3 "Discharging" 2 "Charging" 1 "Standby" 0 "no request" ;
+VAL_ 680 VCU_IPS_DCDCModeReq 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Service_General" 3 "Reserved" 2 "Buck Mode request" 1 "Standby requested - No power conversion" 0 "no request, sleep indication allowed" ;
+VAL_ 1630 Debug_Set_PP 7 "Notuse" 6 "Notuse" 5 "Notuse" 4 "Connect" 3 "Notuse" 2 "HalfConnect" 1 "DisConnect" 0 "Notuse" ;
+VAL_ 1630 Disable_Vol 1 "Disable" 0 "No-operation" ;
+VAL_ 1630 Disable_Roll 1 "Disable" 0 "No-operation" ;
+VAL_ 1630 Disable_DchgCp 1 "Disable" 0 "No-operation" ;
+VAL_ 1630 Disable_Crc 1 "Disable" 0 "No-operation" ;
+VAL_ 1630 Disable_CP 1 "Disable" 0 "No-operation" ;
+VAL_ 1630 DebugModeReq 7 "Notuse" 6 "Notuse" 5 "Notuse" 4 "Notuse" 3 "Notuse" 2 "Notuse" 1 "DebugON" 0 "DebugOFF" ;
+VAL_ 1743 DCCmd_DCWorkMode 4 "Reserve" 3 "DCDC_CMD_SERVICE" 2 "DCDC_CMD_BUCK" 1 "DCDC_CMD_STANDBY" 0 "DCDC_CMD_SLEEP" ;
+VAL_ 1742 OBC_WorkState 3 "OBC_CMD_ON_PRE" 2 "OBC_CMD_ON_SOURCE" 1 "OBC_CMD_ON_HEAT" 0 "OBC_CMD_ON_NULL" ;
+VAL_ 1742 OBC_Cmd 1 "OBC_CMD_ON" 0 "OBC_CMD_OFF" ;
+VAL_ 884 IPS_OBCEnergyDirCap 1 "Bidirectional" 0 "Unidirectional" ;
+VAL_ 884 IPS_OBCFaultLampInd 1 "Lamp on" 0 "Lamp off" ;
+VAL_ 924 IPS_OBCStStep 3 "Step4" 2 "Step3" 1 "Step2" 0 "Step1" ;
+VAL_ 924 IPS_OBCCPSt 1 "CP Duty&Frequency&Volt is OK" 0 "CP state is not oK" ;
+VAL_ 924 IPS_OBCCpFreqSt 1 "CP frequency is in range " 0 "CP frequency is out of range" ;
+VAL_ 924 IPS_OBCCpS2St 1 "S2 is on" 0 "S2 is off" ;
+VAL_ 924 IPS_ACHvilSt 2 "HVIL is interrupted" 1 "HVIL is closed" 0 "Init" ;
+VAL_ 924 IPS_OBCModeSt 7 "Failure" 6 "Discharge Overload" 5 "Active -  V2V discharging" 4 "Active - V2L discharging" 3 "Active - Charging" 2 "Connected (HV is active)" 1 "Disconnected" 0 "Init" ;
+VAL_ 924 IPS_OBCDschCPSt 1 "CP Duty&Frequency&Volt is OK" 0 "CP state is not oK" ;
+VAL_ 924 IPS_OBCPP_St 7 " failure" 4 " Connected V2L" 3 " not used" 2 " Connected charging/ V2V" 1 " half connected charging/ V2V/ V2L" 0 " disconnected" ;
+VAL_ 897 IPS_DcdcHwSt 1 "DCDC" 0 "IPS" ;
+VAL_ 897 IPS_DCDCHwErr 1 "Err" 0 "NoErr" ;
+VAL_ 897 IPS_DCDCFaultLampInd 1 "Lamp on" 0 "Lamp off" ;
+VAL_ 889 IPS_HVDCHVilSt 2 "HVIL is interrupted" 1 "HVIL is closed" 0 "Init" ;
+VAL_ 889 IPS_DCDCModeSt 7 "Failure" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Active - Buck Mode" 2 "Connected (HV is active)" 1 "Disconnected" 0 "Init" ;
+

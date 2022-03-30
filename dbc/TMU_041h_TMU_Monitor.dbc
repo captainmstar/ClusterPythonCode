@@ -1,0 +1,69 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 65 TMU_041h: 5 Vector__XXX
+ SG_ Monitor_ModeDrSts : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Monitor_ModePsSts : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Monitor_RecSts : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Monitor_ACSts : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_HeaterSts : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_DEFSts : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_AutoSts : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_SyncSts : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_BlowerStepSts : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Monitor_PowerSts : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_SetTempDrSts : 24|8@1+ (1,66) [66|90] "" Vector__XXX
+ SG_ Monitor_SetTempPsSts : 32|8@1+ (1,66) [66|90] "" Vector__XXX
+
+
+
+CM_ BO_ 65 "This is the CAN messag that TMU sends to the IVI.";
+CM_ SG_ 65 Monitor_ModeDrSts "TMU Mode Driver Status";
+CM_ SG_ 65 Monitor_ModePsSts "TMU Mode Passenger Status";
+CM_ SG_ 65 Monitor_RecSts "TMU Recirculation Status";
+CM_ SG_ 65 Monitor_ACSts "TMU AC Status
+";
+CM_ SG_ 65 Monitor_HeaterSts "TMU Heater Status";
+CM_ SG_ 65 Monitor_DEFSts "TMU Defog Status";
+CM_ SG_ 65 Monitor_AutoSts "TMU Auto Status";
+CM_ SG_ 65 Monitor_SyncSts "TMU Sync Status";
+CM_ SG_ 65 Monitor_BlowerStepSts "TMU Blower Step Status";
+CM_ SG_ 65 Monitor_PowerSts "TMU Power Status";
+CM_ SG_ 65 Monitor_SetTempDrSts "TMU Driver Set Temp Stauts";
+CM_ SG_ 65 Monitor_SetTempPsSts "TMU Passenger Set Temp Status";
+

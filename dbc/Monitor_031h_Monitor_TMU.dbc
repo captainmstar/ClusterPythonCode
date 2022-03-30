@@ -1,0 +1,88 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 49 Monitor_031h: 6 Vector__XXX
+ SG_ Monitor_ModeDefDrCmd : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_ModePanelDrCmd : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_ModeFootDrCmd : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_ModeDefPsCmd : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_ModePanelPsCmd : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_ModeFootsPsCmd : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_RecCmd : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Monitor_ACCmd : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_HeaterCmd : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_DEFCmd : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_AutoCmd : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_SyncCmd : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_BlowerStepsCmd : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Monitor_PowerCmd : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Monitor_BlrLimitReq : 21|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Monitor_SetTempDrCmd : 24|8@1+ (1,66) [66|90] "" Vector__XXX
+ SG_ Monitor_SetTempPsCmd : 32|8@1+ (1,66) [66|90] "" Vector__XXX
+ SG_ Monitor_SetTempDrUpCmd : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Monitor_SetTempDrDownCmd : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Monitor_SetTempPsUpCmd : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Monitor_SetTempPsDownCmd : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ BO_ 49 "This is the CAN message that the IVI sends to the TMU.";
+CM_ SG_ 49 Monitor_ModeDefDrCmd "TCU Mode Driver Defrost Command";
+CM_ SG_ 49 Monitor_ModePanelDrCmd "TCU Mode Driver Panel Command";
+CM_ SG_ 49 Monitor_ModeFootDrCmd "TCU Mode Driver Foot Command";
+CM_ SG_ 49 Monitor_ModeDefPsCmd "TCU Mode Passenger Defrost Command";
+CM_ SG_ 49 Monitor_ModePanelPsCmd "TCU Mode Passenger Panel Command";
+CM_ SG_ 49 Monitor_ModeFootsPsCmd "TCU Mode Passenger Foot Command";
+CM_ SG_ 49 Monitor_RecCmd "TMU Recirculation Command";
+CM_ SG_ 49 Monitor_ACCmd "TMU AC Command";
+CM_ SG_ 49 Monitor_HeaterCmd "TMU Heater Command";
+CM_ SG_ 49 Monitor_DEFCmd "TMU Defod Command";
+CM_ SG_ 49 Monitor_AutoCmd "TMU Auto Command";
+CM_ SG_ 49 Monitor_SyncCmd "TMU Sync Command";
+CM_ SG_ 49 Monitor_BlowerStepsCmd "TMU Blower Step Command";
+CM_ SG_ 49 Monitor_PowerCmd "TMU Power Command";
+CM_ SG_ 49 Monitor_BlrLimitReq "IVI Blower Limitation Request for BT Cell";
+CM_ SG_ 49 Monitor_SetTempDrCmd "TMU Driver Set Temp Command";
+CM_ SG_ 49 Monitor_SetTempPsCmd "TMU Passenger Set Temp Command";
+CM_ SG_ 49 Monitor_SetTempDrUpCmd "TMU Driver Set Temp Up Command";
+CM_ SG_ 49 Monitor_SetTempDrDownCmd "TMU Driver Set Temp Down Command";
+CM_ SG_ 49 Monitor_SetTempPsUpCmd "TMU Passenger Set Temp Up Command";
+CM_ SG_ 49 Monitor_SetTempPsDownCmd "TMU Pasenger Set Temp Down Command";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+
