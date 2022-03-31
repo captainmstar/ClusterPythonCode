@@ -40,10 +40,15 @@ class NetServer:
 
 
 class Message:
-    def __init__(self, duration, speed, acceleration):
+    def __init__(self, duration, speed, acceleration, rpm, shifter_position, battery_voltage, battery_soc, battery_mode):
         self.duration = duration
         self.speed = speed
         self.acceleration = acceleration
+        self.rpm = rpm
+        self.shifter_position = shifter_position
+        self.battery_voltage = battery_voltage
+        self.battery_soc = battery_soc
+        self.battery_mode = battery_mode
 
 
 class ClientThread(Thread):
@@ -55,7 +60,9 @@ class ClientThread(Thread):
         if self.conn is not None:
             # Create json message to send
             jsonData = {"message": 1, "duration": message.duration, "speed": message.speed,
-                        "acceleration": message.acceleration}
+                        "acceleration": message.acceleration, "rpm": message.rpm,
+                        "shifter_position": message.shifter_position, "battery_voltage": message.battery_voltage,
+                        "battery_soc": message.battery_soc, "battery_mode": message.battery_mode}
             jsonstr = json.dumps(jsonData).encode('ascii')
             # Setup message to send over socket
             msg_len = struct.pack('i', len(jsonstr))

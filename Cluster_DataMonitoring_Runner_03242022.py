@@ -149,7 +149,7 @@ class Cluster(can.Listener):
     def send_can_message(self):
         duration = time.time() - self.last_time
         acceleration = get_acceleration(self.last_speed, self.vehicleSpeed, duration)
-        message = Message(duration, self.vehicleSpeed, acceleration)
+        message = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifter, self.batteryVoltage, self.batterySOC, self.batteryMode)
         self.net_server.send_message(message)
         # Set last_time to now and last speed
         self.last_time = time.time()
@@ -168,12 +168,22 @@ class Cluster(can.Listener):
                 rel_time = row["Time (rel)"]
                 # speed of vehicle in kph
                 speed = row["IprVehSpdKph"]
+                rpm = row["CAN1.MCU_General.MCU_ActRotSpd"]
+                shifter_position = row["ShcGearAct"]
+                battery_voltage = row["BmnBatteryVoltage"]
+                battery_soc = row["IprBattSoc"]
+                battery_mode = row["CAN1.BCU_DEBUG.BMS_Mode"]
                 # duration is how long vehicle has been traveling at this speed
                 duration = rel_time - last_time
                 last_time = rel_time
                 # calculate acceleration
                 acceleration = get_acceleration(last_speed, speed, duration)
                 self.vehicleSpeed = speed
+                self.RPM = rpm
+                self.shifter = shifter_position
+                self.batteryVoltage = battery_voltage
+                self.batterySOC = battery_soc
+                self.batteryMode = battery_mode
                 self.send_can_message()
                 # sleep for duration to simulate time delay of real CAN message
                 time.sleep(duration)
