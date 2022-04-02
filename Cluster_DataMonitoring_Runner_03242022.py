@@ -2,21 +2,20 @@
 Interface for CAN data monitoring Runner and showing that on the cluster 
 @author Kasra <kasramokhtari@indiev.com>
 """
-from collections import deque
 import can
 import cantools
-import time
 import threading
 from os import path
 import math
 import csv
 import time
-from multiprocessing import Process
 from apscheduler.schedulers.background import BackgroundScheduler
+from queue import SimpleQueue, Empty
+from typing import Any, AsyncIterator, Awaitable, Optional
+from can.message import Message
 from NetServer import NetServer
 from NetServer import Message
 import pandas as pd
-import struct
 
 # Defines the paths to the dbc files for different electric components (FrontEDU, Shifter, and BMS)
 path_to_dbc_FrontEDU = path.abspath(path.join(path.dirname(__file__), 'dbc', 'CANcommunicationProtocol_V1.7_20200803.dbc'))
@@ -30,10 +29,11 @@ kvaserInterface = False
 # Defines the parameter the vehicle paramters
 gearRatio = 10.2
 wheelsDiameter = 744 * 0.001  # in meter
+currentTime = time.time()
 
 lock = threading.Lock()
 
-TEST = False
+TEST = True
 
 
 class SendCANThread(threading.Thread):
@@ -49,12 +49,14 @@ class Cluster(can.Listener):
     last_speed = 0.0
 
     # Creates an instance of a cluster 
-    def __init__(self, channel, gearRatio, wheelsDiameter, net: NetServer):
+    def __init__(self, net: NetServer):
         # Defines the can interface that we are using
         if not TEST:
-            self.bus = can.interface.Bus(bustype='vector', channel='1', bitrate=500000)
-            #self.bus = can.interface.Bus(bustype='kvaser', channel='0', bitrate=500000)
+            # self.bus = can.ThreadSafeBus(bustype='kvaser', channel='0', bitrate=500000)
+            self.bus = can.ThreadSafeBus(bustype='vector', channel='1', bitrate=500000)
             print('Connected to the CAN successfully!')
+            self.buffer: SimpleQueue[Message] = SimpleQueue()
+            self.is_stopped = False
             # Reads the dbc files using Pyhton CAN library
             self.db_FrontEDU = cantools.database.load_file(path_to_dbc_FrontEDU)
             self.db_Shifter = cantools.database.load_file(path_to_dbc_Shifter)
@@ -63,14 +65,14 @@ class Cluster(can.Listener):
         self.threadActive = True
         self.RPM = 0
         self.vehicleSpeed = 0
-        self.shifter = 0
+        self.shifter = 'P'
         self.batteryVoltage = 0
         self.batterySOC = 0
         self.batteryMode = 'DisConnected'
         self.gearRatio = 10.2
         self.wheelsDiameter = 744 * 0.001  # in meter
+        self.shifterReq = 'P'
         self.net_server = net  # socket connection to VR game and cluster
-        self.shifterprev = 'P'
 
     def start(self):
         # Starts the Clsuer
@@ -79,45 +81,79 @@ class Cluster(can.Listener):
 
     def stop(self):
         # Ends the cluster session
+        """Prohibits any more additions to this reader."""
+        self.is_stopped = True
         print("Stopping Cluster monitoring data")
         self.threadActive = False
         self.xmitThread.join()
 
     def on_message_received(self, msg: can.Message):
         # Runs this section everytime CAN receives new data (Called when a message on the bus is received)
-        #print(msg)
-        if msg.arbitration_id == int('0x121', 16):
-            message_FrontEDU = self.db_FrontEDU.get_message_by_frame_id(msg.arbitration_id)
-            ActRotSpd = message_FrontEDU.decode(msg.data)['MCU_ActRotSpd']
-            MCU_StMode = message_FrontEDU.decode(msg.data)['MCU_StMode']
-            MCU_ActTorq = message_FrontEDU.decode(msg.data)['MCU_ActTorq']
-            MCU_General_ctRoll = message_FrontEDU.decode(msg.data)['MCU_General_ctRoll']
-            self.RPM = ActRotSpd
-            self.vehicleSpeed = ((ActRotSpd * 3.6 * math.pi * wheelsDiameter) / (gearRatio * 60)) * (0.621371)
+        """Append a message to the buffer.
 
-        if msg.arbitration_id == int('0xC010305', 16):
-            message_Shifter = self.db_Shifter.get_message_by_frame_id(msg.arbitration_id)
-            Shifter_dbc = message_Shifter.decode(msg.data)['Shift_Req']
-            if Shifter_dbc != "idel":
-                self.shifter = Shifter_dbc
-                self.shifterprev = Shifter_dbc
-            else:
-                self.shifter = self.shifterprev
+                :raises: BufferError
+                    if the reader has already been stopped
+                """
+        '''
+        if self.is_stopped:
+            raise RuntimeError("reader has already been stopped")
+        else:
+            self.buffer.put(msg)
+        '''
+        try:
+            if msg.arbitration_id == int('0x121', 16):
+                message_FrontEDU = self.db_FrontEDU.get_message_by_frame_id(msg.arbitration_id)
+                ActRotSpd = message_FrontEDU.decode(msg.data)['MCU_ActRotSpd']
+                MCU_StMode = message_FrontEDU.decode(msg.data)['MCU_StMode']
+                MCU_ActTorq = message_FrontEDU.decode(msg.data)['MCU_ActTorq']
+                MCU_General_ctRoll = message_FrontEDU.decode(msg.data)['MCU_General_ctRoll']
+                self.RPM = ActRotSpd
+                self.vehicleSpeed = ((ActRotSpd * 3.6 * math.pi * wheelsDiameter) / (gearRatio * 60)) * (0.621371)
 
-        if msg.arbitration_id == int('0x821', 16):
-            message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
-            Voltage = message_BMS.decode(msg.data)['BatteryPackVoltage']
-            self.batteryVoltage = Voltage
+            if msg.arbitration_id == int('0xc010305', 16):
+                message_Shifter = self.db_Shifter.get_message_by_frame_id(msg.arbitration_id)
+                Shifter_dbc = message_Shifter.decode(msg.data)['Shift_Req']
+                if Shifter_dbc != 'Idel':
+                    self.shifterReq = Shifter_dbc
 
-        if msg.arbitration_id == int('0x821', 16):
-            message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
-            BMS_Mode = message_BMS.decode(msg.data)['BMS_Mode']
-            self.batteryMode = BMS_Mode
+            if msg.arbitration_id == int('0x821', 16):
+                message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
+                Voltage = message_BMS.decode(msg.data)['BatteryPackVoltage']
+                self.batteryVoltage = Voltage
 
-        if msg.arbitration_id == int('0x822', 16):
-            message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
-            SOC = message_BMS.decode(msg.data)['SOC']
-            self.batterySOC = SOC
+            if msg.arbitration_id == int('0x821', 16):
+                message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
+                BMS_Mode = message_BMS.decode(msg.data)['BMS_Mode']
+                self.batteryMode = BMS_Mode
+
+            if msg.arbitration_id == int('0x822', 16):
+                message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
+                SOC = message_BMS.decode(msg.data)['SOC']
+                self.batterySOC = SOC
+        except Exception as e:
+            print("Exception thrown in on_message_received: ", e)
+
+    def get_message(self, timeout: float = 2.0) -> Optional[Message]:
+        """
+        Attempts to retrieve the latest message received by the instance. If no message is
+        available it blocks for given timeout or until a message is received, or else
+        returns None (whichever is shorter). This method does not block after
+        :meth:`can.BufferedReader.stop` has been called.
+
+        :param timeout: The number of seconds to wait for a new message.
+        :return: the Message if there is one, or None if there is not.
+        """
+
+        try:
+            pass
+        except Empty:
+            print('--------------------------------------------------------------------')
+            print('------------------------Reinitiating CAN----------------------------')
+            # self.bus = can.ThreadSafeBus(bustype='kvaser', channel='0', bitrate=500000)
+            self.bus = can.ThreadSafeBus(bustype='vector', channel='1', bitrate=500000)
+            print('-----------------CAN Connection is reestablished--------------------')
+            print('--------------------------------------------------------------------')
+            return None
 
     def startLog(self):
         header = ['Time', 'RPM', 'vehicleSpeed', 'shifter', 'batteryVoltage', 'batterySOC', 'batteryMode']
@@ -133,7 +169,7 @@ class Cluster(can.Listener):
 
     def updatelog(self):
         # Writes the data rows
-        data = [time.time() - self.currentTime, self.RPM, self.vehicleSpeed, self.shifter, self.batteryVoltage,
+        data = [time.time() - currentTime, self.RPM, self.vehicleSpeed, self.shifterReq, self.batteryVoltage,
                 self.batterySOC, self.batteryMode]
         with open(self.filename, 'a', newline='') as csvfile:
             self.csvwriter = csv.writer(csvfile)
@@ -145,12 +181,12 @@ class Cluster(can.Listener):
         duration = time.time() - self.last_time
         acceleration = get_acceleration(self.last_speed, self.vehicleSpeed, duration)
         if not TEST:
-            message = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifter.name, self.batteryVoltage, self.batterySOC, self.batteryMode.name)
+            msg = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifterReq, self.batteryVoltage, self.batterySOC, self.batteryMode.name)
         else:
-            message = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifter,
-                              self.batteryVoltage, self.batterySOC, self.batteryMode)
-        print(message)
-        self.net_server.send_message(message)
+            msg = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifterReq,
+                          self.batteryVoltage, self.batterySOC, self.batteryMode)
+        # print(message)
+        self.net_server.send_message(msg)
         # Set last_time to now and last speed
         self.last_time = time.time()
         self.last_speed = self.vehicleSpeed
@@ -202,7 +238,7 @@ if __name__ == "__main__":
     print('Initializing the NetServer...')
     net_server = NetServer()
     print('Initializing the Cluster...')
-    clusterRunner = Cluster(0, gearRatio, wheelsDiameter, net_server)
+    clusterRunner = Cluster(net_server)
     clusterRunner.start()
     clusterRunner.startLog()
     if not TEST:
@@ -211,9 +247,11 @@ if __name__ == "__main__":
         sched.add_job(clusterRunner.updatelog, 'interval', seconds=0.5)
         sched.start()
         print('Data is been logged into a csv file...')
+        time.sleep(1.0)
     else:
         clusterRunner.updatelog_test()
     while True:
+        clusterRunner.get_message()
         time.sleep(1.0)
     # Shut down server if this is killed
     net_server.close()
