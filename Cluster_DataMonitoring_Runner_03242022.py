@@ -19,8 +19,7 @@ import pandas as pd
 import struct
 
 # Defines the paths to the dbc files for different electric components (FrontEDU, Shifter, and BMS)
-path_to_dbc_FrontEDU = path.abspath(
-    path.join(path.dirname(__file__), 'dbc', 'CANcommunicationProtocol_V1.7_20200803.dbc'))
+path_to_dbc_FrontEDU = path.abspath(path.join(path.dirname(__file__), 'dbc', 'CANcommunicationProtocol_V1.7_20200803.dbc'))
 path_to_dbc_Shifter = path.abspath(path.join(path.dirname(__file__), 'dbc', 'Arens.dbc'))
 path_to_dbc_BMS = path.abspath(path.join(path.dirname(__file__), 'dbc', 'INDI_BMS_v2.dbc'))
 
@@ -34,7 +33,7 @@ wheelsDiameter = 744 * 0.001  # in meter
 
 lock = threading.Lock()
 
-TEST = True
+TEST = False
 
 
 class SendCANThread(threading.Thread):
@@ -54,7 +53,7 @@ class Cluster(can.Listener):
         # Defines the can interface that we are using
         if not TEST:
             self.bus = can.interface.Bus(bustype='vector', channel='1', bitrate=500000)
-            # self.bus = can.interface.Bus(bustype='kvaser', channel='0', bitrate=500000)
+            #self.bus = can.interface.Bus(bustype='kvaser', channel='0', bitrate=500000)
             print('Connected to the CAN successfully!')
             # Reads the dbc files using Pyhton CAN library
             self.db_FrontEDU = cantools.database.load_file(path_to_dbc_FrontEDU)
@@ -71,6 +70,7 @@ class Cluster(can.Listener):
         self.gearRatio = 10.2
         self.wheelsDiameter = 744 * 0.001  # in meter
         self.net_server = net  # socket connection to VR game and cluster
+        self.shifterprev = 'P'
 
     def start(self):
         # Starts the Clsuer
@@ -85,7 +85,8 @@ class Cluster(can.Listener):
 
     def on_message_received(self, msg: can.Message):
         # Runs this section everytime CAN receives new data (Called when a message on the bus is received)
-        try:
+        #print(msg)
+        if msg.arbitration_id == int('0x121', 16):
             message_FrontEDU = self.db_FrontEDU.get_message_by_frame_id(msg.arbitration_id)
             ActRotSpd = message_FrontEDU.decode(msg.data)['MCU_ActRotSpd']
             MCU_StMode = message_FrontEDU.decode(msg.data)['MCU_StMode']
@@ -93,36 +94,30 @@ class Cluster(can.Listener):
             MCU_General_ctRoll = message_FrontEDU.decode(msg.data)['MCU_General_ctRoll']
             self.RPM = ActRotSpd
             self.vehicleSpeed = ((ActRotSpd * 3.6 * math.pi * wheelsDiameter) / (gearRatio * 60)) * (0.621371)
-        except:
-            pass
 
-        try:
+        if msg.arbitration_id == int('0xC010305', 16):
             message_Shifter = self.db_Shifter.get_message_by_frame_id(msg.arbitration_id)
-            Shifter_dbc = message_Shifter.decode(msg.data)['ShifterDisplay']
-            self.shifter = Shifter_dbc
-        except:
-            pass
+            Shifter_dbc = message_Shifter.decode(msg.data)['Shift_Req']
+            if Shifter_dbc != "idel":
+                self.shifter = Shifter_dbc
+                self.shifterprev = Shifter_dbc
+            else:
+                self.shifter = self.shifterprev
 
-        try:
+        if msg.arbitration_id == int('0x821', 16):
             message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
             Voltage = message_BMS.decode(msg.data)['BatteryPackVoltage']
             self.batteryVoltage = Voltage
-        except:
-            pass
 
-        try:
+        if msg.arbitration_id == int('0x821', 16):
             message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
             BMS_Mode = message_BMS.decode(msg.data)['BMS_Mode']
             self.batteryMode = BMS_Mode
-        except:
-            pass
 
-        try:
+        if msg.arbitration_id == int('0x822', 16):
             message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
             SOC = message_BMS.decode(msg.data)['SOC']
             self.batterySOC = SOC
-        except:
-            pass
 
     def startLog(self):
         header = ['Time', 'RPM', 'vehicleSpeed', 'shifter', 'batteryVoltage', 'batterySOC', 'batteryMode']
@@ -149,7 +144,12 @@ class Cluster(can.Listener):
     def send_can_message(self):
         duration = time.time() - self.last_time
         acceleration = get_acceleration(self.last_speed, self.vehicleSpeed, duration)
-        message = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifter, self.batteryVoltage, self.batterySOC, self.batteryMode)
+        if not TEST:
+            message = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifter.name, self.batteryVoltage, self.batterySOC, self.batteryMode.name)
+        else:
+            message = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifter,
+                              self.batteryVoltage, self.batterySOC, self.batteryMode)
+        print(message)
         self.net_server.send_message(message)
         # Set last_time to now and last speed
         self.last_time = time.time()
@@ -208,7 +208,7 @@ if __name__ == "__main__":
     if not TEST:
         sched = BackgroundScheduler()
         # Logs the data every 10 seconds
-        sched.add_job(clusterRunner.updatelog, 'interval', seconds=0.1)
+        sched.add_job(clusterRunner.updatelog, 'interval', seconds=0.5)
         sched.start()
         print('Data is been logged into a csv file...')
     else:

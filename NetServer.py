@@ -6,7 +6,7 @@ import struct
 import threading
 from threading import Thread
 
-gHost = "localhost"
+gHost = "127.0.0.1"
 gPort = 50021
 
 logger = logging.getLogger(__name__)
@@ -72,7 +72,7 @@ class ClientThread(Thread):
             try:
                 self.conn.sendall(senddata)
             except BaseException as err:
-                print("BaseException in run(): ", err.message)
+                print("BaseException in run(): ", err)
             print("sent message:", senddata)
 
 
