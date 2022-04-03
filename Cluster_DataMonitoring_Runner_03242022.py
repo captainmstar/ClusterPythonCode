@@ -114,7 +114,7 @@ class Cluster(can.Listener):
                 message_Shifter = self.db_Shifter.get_message_by_frame_id(msg.arbitration_id)
                 Shifter_dbc = message_Shifter.decode(msg.data)['Shift_Req']
                 if Shifter_dbc != 'Idel':
-                    self.shifterReq = Shifter_dbc
+                    self.shifterReq = Shifter_dbc.name
 
             if msg.arbitration_id == int('0x821', 16):
                 message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)

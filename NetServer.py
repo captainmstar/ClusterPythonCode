@@ -56,25 +56,6 @@ class ClientThread(Thread):
         Thread.__init__(self)
         self.conn = conn
 
-    def send(self, message: Message):
-        if self.conn is not None:
-            # Create json message to send
-            jsonData = {"message": 1, "duration": message.duration, "speed": message.speed,
-                        "acceleration": message.acceleration, "rpm": message.rpm,
-                        "shifter_position": message.shifter_position, "battery_voltage": message.battery_voltage,
-                        "battery_soc": message.battery_soc, "battery_mode": message.battery_mode}
-            jsonstr = json.dumps(jsonData).encode('ascii')
-            # Setup message to send over socket
-            msg_len = struct.pack('i', len(jsonstr))
-            senddata = bytes()
-            senddata += msg_len
-            senddata += jsonstr
-            try:
-                self.conn.sendall(senddata)
-            except BaseException as err:
-                print("BaseException in run(): ", err)
-            print("sent message:", senddata)
-
     # def send(self, message: Message):
     #     if self.conn is not None:
     #         # Create json message to send
@@ -82,12 +63,31 @@ class ClientThread(Thread):
     #                     "acceleration": message.acceleration, "rpm": message.rpm,
     #                     "shifter_position": message.shifter_position, "battery_voltage": message.battery_voltage,
     #                     "battery_soc": message.battery_soc, "battery_mode": message.battery_mode}
-    #         jsonstr = json.dumps(jsonData).encode('utf-8')
+    #         jsonstr = json.dumps(jsonData).encode('ascii')
+    #         # Setup message to send over socket
+    #         msg_len = struct.pack('i', len(jsonstr))
+    #         senddata = bytes()
+    #         senddata += msg_len
+    #         senddata += jsonstr
     #         try:
-    #             self.conn.send(jsonstr)
+    #             self.conn.sendall(senddata)
     #         except BaseException as err:
     #             print("BaseException in run(): ", err)
-    #         print("sent message:", jsonstr)
+    #         print("sent message:", senddata)
+
+    def send(self, message: Message):
+        if self.conn is not None:
+            # Create json message to send
+            jsonData = {"message": 1, "duration": message.duration, "speed": message.speed,
+                        "acceleration": message.acceleration, "rpm": message.rpm,
+                        "shifter_position": message.shifter_position, "battery_voltage": message.battery_voltage,
+                        "battery_soc": message.battery_soc, "battery_mode": message.battery_mode}
+            jsonstr = json.dumps(jsonData).encode('utf-8')
+            try:
+                self.conn.send(jsonstr)
+            except BaseException as err:
+                print("BaseException in run(): ", err)
+            print("sent message:", jsonstr)
 
 
 if __name__ == "__main__":
