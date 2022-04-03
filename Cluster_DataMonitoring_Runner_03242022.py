@@ -33,7 +33,7 @@ currentTime = time.time()
 
 lock = threading.Lock()
 
-TEST = True
+TEST = False
 
 
 class SendCANThread(threading.Thread):
@@ -52,8 +52,8 @@ class Cluster(can.Listener):
     def __init__(self, net: NetServer):
         # Defines the can interface that we are using
         if not TEST:
-            # self.bus = can.ThreadSafeBus(bustype='kvaser', channel='0', bitrate=500000)
-            self.bus = can.ThreadSafeBus(bustype='vector', channel='1', bitrate=500000)
+            self.bus = can.ThreadSafeBus(bustype='kvaser', channel='0', bitrate=500000)
+            # self.bus = can.ThreadSafeBus(bustype='vector', channel='1', bitrate=500000)
             print('Connected to the CAN successfully!')
             self.buffer: SimpleQueue[Message] = SimpleQueue()
             self.is_stopped = False
