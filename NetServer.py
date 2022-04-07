@@ -17,27 +17,43 @@ class NetServer:
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.s.bind((gHost, gPort))
         self.s.listen(10)
-        self.acceptthread = threading.Thread(target=self.acceptthreadproc, args=(self.s, self,)).start()
-        self.client_thread = None
-        pass
+        self.acceptthread = threading.Thread(target=self.acceptthreadproc, args=(self.s,)).start()
+        # initialize list/set of all connected client's sockets
+        self.client_threads = set()
+        self.closed_threads = set()
 
-    def Close(self):
+    def close(self):
+        print("NetServer close")
+        for client_thread in self.client_threads:
+            client_thread.close()
         self.s.close()
 
-    def acceptthreadproc(self, s, netserver):
+    def acceptthreadproc(self, s):
         while True:
-            conn, addr = s.accept()
-            print("client connect!")
+            client_socket, addr = s.accept()
+            print("client connect!" + addr[0] + ':' + str(addr[1]))
             # Create new thread to send CAN data messages to game
-            self.client_thread = ClientThread(conn)
-            self.client_thread.start()
-            # threading.Thread(target=self.clientthread, args=(conn, netserver,)).start()
+            client_thread = ClientThread(client_socket)
+            client_thread.daemon = True
+            client_thread.start()
+            self.client_threads.add(client_thread)
             time.sleep(1.0)
 
     def send_message(self, message):
-        if self.client_thread is not None:
-            self.client_thread.send(message)
+        # Check for any closed connections
+        self.check_closed_threads()
+        for client_thread in self.client_threads:
+            try:
+                client_thread.send(message)
+            except BaseException as err:
+                print("Removing client_thread")
+                self.closed_threads.add(client_thread)
 
+    def check_closed_threads(self):
+        if len(self.closed_threads) > 0:
+            for closed_thread in self.closed_threads:
+                self.client_threads.remove(closed_thread)
+            self.closed_threads.clear()
 
 class Message:
     def __init__(self, duration, speed, acceleration, rpm, shifter_position, battery_voltage, battery_soc, battery_mode):
@@ -72,8 +88,14 @@ class ClientThread(Thread):
             try:
                 self.conn.sendall(senddata)
             except BaseException as err:
-                print("BaseException in run(): ", err)
+                print("BaseException in send(): ", err)
+                raise err
             print("sent message:", senddata)
+
+    def close(self):
+        print("ClientThread close")
+        if self.conn is not None:
+            self.conn.close()
 
 
 if __name__ == "__main__":
