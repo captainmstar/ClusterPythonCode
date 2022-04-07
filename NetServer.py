@@ -55,6 +55,7 @@ class NetServer:
                 self.client_threads.remove(closed_thread)
             self.closed_threads.clear()
 
+
 class Message:
     def __init__(self, duration, speed, acceleration, rpm, shifter_position, battery_voltage, battery_soc, battery_mode):
         self.duration = duration
