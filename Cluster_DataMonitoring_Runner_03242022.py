@@ -33,7 +33,7 @@ currentTime = time.time()
 
 lock = threading.Lock()
 
-TEST = False
+TEST = True
 
 
 class SendCANThread(threading.Thread):
@@ -72,6 +72,7 @@ class Cluster(can.Listener):
         self.gearRatio = 10.2
         self.wheelsDiameter = 744 * 0.001  # in meter
         self.shifterReq = 'P'
+        self.batteryVoltage12v = 0
         self.net_server = net  # socket connection to VR game and cluster
 
     def start(self):
@@ -121,6 +122,8 @@ class Cluster(can.Listener):
                 Voltage = message_BMS.decode(msg.data)['BatteryPackVoltage']
                 self.batteryVoltage = Voltage
 
+            # @todo - Add check with batteryVoltage12v
+
             if msg.arbitration_id == int('0x821', 16):
                 message_BMS = self.db_BMS.get_message_by_frame_id(msg.arbitration_id)
                 BMS_Mode = message_BMS.decode(msg.data)['BMS_Mode']
@@ -156,7 +159,7 @@ class Cluster(can.Listener):
             return None
 
     def startLog(self):
-        header = ['Time', 'RPM', 'vehicleSpeed', 'shifter', 'batteryVoltage', 'batterySOC', 'batteryMode']
+        header = ['Time', 'RPM', 'vehicleSpeed', 'shifter', 'batteryVoltage', 'batterySOC', 'batteryMode', 'batteryVoltage12v']
         # Defines name of csv file 
         self.filename = "clusterLogger.csv"
 
@@ -170,7 +173,7 @@ class Cluster(can.Listener):
     def updatelog(self):
         # Writes the data rows
         data = [time.time() - currentTime, self.RPM, self.vehicleSpeed, self.shifterReq, self.batteryVoltage,
-                self.batterySOC, self.batteryMode]
+                self.batterySOC, self.batteryMode, self.batteryVoltage12v]
         with open(self.filename, 'a', newline='') as csvfile:
             self.csvwriter = csv.writer(csvfile)
             self.csvwriter.writerow(data)
@@ -181,10 +184,10 @@ class Cluster(can.Listener):
         duration = time.time() - self.last_time
         acceleration = get_acceleration(self.last_speed, self.vehicleSpeed, duration)
         if not TEST:
-            msg = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifterReq, self.batteryVoltage, self.batterySOC, self.batteryMode.name)
+            msg = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifterReq, self.batteryVoltage, self.batterySOC, self.batteryMode.name, self.batteryVoltage12v)
         else:
             msg = Message(duration, self.vehicleSpeed, acceleration, self.RPM, self.shifterReq,
-                          self.batteryVoltage, self.batterySOC, self.batteryMode)
+                          self.batteryVoltage, self.batterySOC, self.batteryMode, self.batteryVoltage12v)
         # print(message)
         self.net_server.send_message(msg)
         # Set last_time to now and last speed
@@ -207,6 +210,7 @@ class Cluster(can.Listener):
                 rpm = row["CAN1.MCU_General.MCU_ActRotSpd"]
                 shifter_position = row["ShcGearAct"]
                 battery_voltage = row["BmnBatteryVoltage"]
+                battery_voltage_12v = row["CAN1.MCU_General_R.MCU_General_ctRoll"] # just using this column for testing
                 battery_soc = row["IprBattSoc"]
                 battery_mode = row["CAN1.BCU_DEBUG.BMS_Mode"]
                 # duration is how long vehicle has been traveling at this speed
@@ -220,6 +224,7 @@ class Cluster(can.Listener):
                 self.batteryVoltage = battery_voltage
                 self.batterySOC = battery_soc
                 self.batteryMode = battery_mode
+                self.batteryVoltage12v = battery_voltage_12v
                 self.send_can_message()
                 # sleep for duration to simulate time delay of real CAN message
                 time.sleep(duration)
