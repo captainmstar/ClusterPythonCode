@@ -33,7 +33,7 @@ currentTime = time.time()
 
 lock = threading.Lock()
 
-TEST = True
+TEST = False
 
 
 class SendCANThread(threading.Thread):
@@ -105,11 +105,10 @@ class Cluster(can.Listener):
             if msg.arbitration_id == int('0x121', 16):
                 message_FrontEDU = self.db_FrontEDU.get_message_by_frame_id(msg.arbitration_id)
                 ActRotSpd = message_FrontEDU.decode(msg.data)['MCU_ActRotSpd']
-                MCU_StMode = message_FrontEDU.decode(msg.data)['MCU_StMode']
-                MCU_ActTorq = message_FrontEDU.decode(msg.data)['MCU_ActTorq']
-                MCU_General_ctRoll = message_FrontEDU.decode(msg.data)['MCU_General_ctRoll']
+                LVbatteryVolt = message_FrontEDU.decode(msg.data)['ParkPawl_Voltage_V']
                 self.RPM = ActRotSpd
                 self.vehicleSpeed = ((ActRotSpd * 3.6 * math.pi * wheelsDiameter) / (gearRatio * 60)) * (0.621371)
+                self.batteryVoltage12v = LVbatteryVolt
 
             if msg.arbitration_id == int('0xc010305', 16):
                 message_Shifter = self.db_Shifter.get_message_by_frame_id(msg.arbitration_id)
