@@ -72,7 +72,7 @@ class Cluster(can.Listener):
         self.gearRatio = 10.2
         self.wheelsDiameter = 744 * 0.001  # in meter
         self.shifterReq = 'P'
-        self.batteryVoltage12v = 0
+        self.batteryVoltage12v = 0.0
         self.net_server = net  # socket connection to VR game and cluster
 
     def start(self):
@@ -105,9 +105,13 @@ class Cluster(can.Listener):
             if msg.arbitration_id == int('0x121', 16):
                 message_FrontEDU = self.db_FrontEDU.get_message_by_frame_id(msg.arbitration_id)
                 ActRotSpd = message_FrontEDU.decode(msg.data)['MCU_ActRotSpd']
-                LVbatteryVolt = message_FrontEDU.decode(msg.data)['ParkPawl_Voltage_V']
                 self.RPM = ActRotSpd
                 self.vehicleSpeed = ((ActRotSpd * 3.6 * math.pi * wheelsDiameter) / (gearRatio * 60)) * (0.621371)
+
+            if msg.arbitration_id == int('0x5c2', 16):
+                message_ParkPawlSignal = self.db_FrontEDU.get_message_by_frame_id(msg.arbitration_id)
+                LVbatteryVolt = message_ParkPawlSignal.decode(msg.data)['ParkPawl_Voltage_V']
+                print("LVbatteryVolt: ", LVbatteryVolt)
                 self.batteryVoltage12v = LVbatteryVolt
 
             if msg.arbitration_id == int('0xc010305', 16):
