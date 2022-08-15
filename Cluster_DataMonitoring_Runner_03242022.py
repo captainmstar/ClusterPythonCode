@@ -111,7 +111,7 @@ class Cluster(can.Listener):
             if msg.arbitration_id == int('0x5c2', 16):
                 message_ParkPawlSignal = self.db_FrontEDU.get_message_by_frame_id(msg.arbitration_id)
                 LVbatteryVolt = message_ParkPawlSignal.decode(msg.data)['ParkPawl_Voltage_V']
-                print("LVbatteryVolt: ", LVbatteryVolt)
+                # print("LVbatteryVolt: ", LVbatteryVolt)
                 self.batteryVoltage12v = LVbatteryVolt
 
             if msg.arbitration_id == int('0xc010305', 16):
