@@ -33,7 +33,7 @@ currentTime = time.time()
 
 lock = threading.Lock()
 
-TEST = False
+TEST = True
 
 
 class SendCANThread(threading.Thread):
@@ -199,23 +199,36 @@ class Cluster(can.Listener):
 
     def updatelog_test(self):
         # Read test data from 1 lap
-        df = pd.read_csv('OneLapTest.csv')
+        df = pd.read_csv('OneLapTestVernonHalloween.csv')
 
         last_time = 0.0
         last_speed = 0.0
 
         try:
             for index, row in df.iterrows():
+                # # relative time from start of CAN bus
+                # rel_time = row["Time (rel)"]
+                # # speed of vehicle in kph
+                # speed = row["IprVehSpdKph"]
+                # rpm = row["CAN1.MCU_General.MCU_ActRotSpd"]
+                # shifter_position = row["ShcGearAct"]
+                # battery_voltage = row["BmnBatteryVoltage"]
+                # battery_voltage_12v = row["CAN1.MCU_General_R.MCU_General_ctRoll"] # just using this column for testing
+                # battery_soc = row["IprBattSoc"]
+                # battery_mode = row["CAN1.BCU_DEBUG.BMS_Mode"]
+                # # duration is how long vehicle has been traveling at this speed
+                # duration = rel_time - last_time
+                # last_time = rel_time
                 # relative time from start of CAN bus
-                rel_time = row["Time (rel)"]
+                rel_time = row["Time"]
                 # speed of vehicle in kph
-                speed = row["IprVehSpdKph"]
-                rpm = row["CAN1.MCU_General.MCU_ActRotSpd"]
-                shifter_position = row["ShcGearAct"]
-                battery_voltage = row["BmnBatteryVoltage"]
-                battery_voltage_12v = row["CAN1.MCU_General_R.MCU_General_ctRoll"] # just using this column for testing
-                battery_soc = row["IprBattSoc"]
-                battery_mode = row["CAN1.BCU_DEBUG.BMS_Mode"]
+                speed = row["vehicleSpeed"]
+                rpm = row["RPM"]
+                shifter_position = row["shifter"]
+                battery_voltage = row["batteryVoltage"]
+                battery_voltage_12v = row["batteryVoltage12v"]  # just using this column for testing
+                battery_soc = row["batterySOC"]
+                battery_mode = row["batteryMode"]
                 # duration is how long vehicle has been traveling at this speed
                 duration = rel_time - last_time
                 last_time = rel_time
